@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-        GIT_NAME = "volto-addon-template"
+        GIT_NAME = "volto-eea-kitkat"
         NAMESPACE = "@eeacms"
         SONARQUBE_TAGS = "volto.eea.europa.eu"
         DEPENDENCIES = ""
@@ -206,4 +206,6 @@ pipeline {
       }
     }
   }
+}
+}
 }

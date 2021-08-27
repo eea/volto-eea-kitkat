@@ -42,10 +42,10 @@
     "@eeacms/volto-metadata-block",
     "@eeacms/volto-group-block",
     "@eeacms/volto-columns-block",
-    "@eeacms/volto-tabs-block",
-    "@eeacms/volto-block-image-cards",
     "@eeacms/volto-resize-helper",
-    "@eeacms/volto-block-style"
+    "@eeacms/volto-block-style",
+    "@eeacms/volto-tabs-block",
+    "@eeacms/volto-block-image-cards"
   ],
   "dependencies": {
     "@eeacms/volto-accordion-block": "3.2.4",

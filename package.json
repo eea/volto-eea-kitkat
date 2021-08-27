@@ -66,13 +66,13 @@
     "@eeacms/volto-slate-footnote": "2.4.0",
     "@eeacms/volto-slate-metadata-mentions": "2.4.0",
     "@eeacms/volto-slate-zotero": "2.1.5",
-    "@eeacms/volto-tabs-block": "1.2.5",
+    "@eeacms/volto-tabs-block": "1.2.7",
     "@eeacms/volto-taxonomy": "2.0.2",
     "@eeacms/volto-widget-geolocation": "3.0.1",
     "@eeacms/volto-widget-temporal-coverage": "3.0.1",
     "@eeacms/volto-widget-toggle": "2.2.3",
     "@eeacms/volto-widgets-view": "2.1.2",
-    "volto-slate": "2.9.2"
+    "volto-slate": "2.9.3"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.5",
@@ -92,6 +92,7 @@
     "lint": "if [ -d ./project ]; then ./project/node_modules/eslint/bin/eslint.js --max-warnings=0 'src/**/*.{js,jsx}'; else ../../../node_modules/eslint/bin/eslint.js --max-warnings=0 'src/**/*.{js,jsx}'; fi",
     "lint:fix": "if [ -d ./project ]; then ./project/node_modules/eslint/bin/eslint.js --fix 'src/**/*.{js,jsx}'; else ../../../node_modules/eslint/bin/eslint.js --fix 'src/**/*.{js,jsx}'; fi",
     "cypress:run": "if [ -d ./project ]; then ./project/node_modules/cypress/bin/cypress run; else ../../../node_modules/cypress/bin/cypress run; fi",
-    "cypress:open": "if [ -d ./project ]; then ./project/node_modules/cypress/bin/cypress open; else ../../../node_modules/cypress/bin/cypress open; fi"
+    "cypress:open": "if [ -d ./project ]; then ./project/node_modules/cypress/bin/cypress open; else ../../../node_modules/cypress/bin/cypress open; fi",
+    "update": "./scripts/update.sh"
   }
 }

@@ -3,7 +3,7 @@
 [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-eea-kitkat%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-eea-kitkat/job/master/display/redirect)
 [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-eea-kitkat%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-eea-kitkat/job/develop/display/redirect)
 
-[Volto](https://github.com/plone/volto) add-on
+[Volto](https://github.com/plone/volto) Add-ons bundle - A known good set of Volto addons to be used within all EEA projects and beyond
 
 ## Features
 
@@ -55,8 +55,8 @@ Demo GIF
 
    ```
    npm install -g yo @plone/generator-volto
-   yo @plone/volto my-volto-project --addon @eeacms/volto-eea-kitkat
-   cd my-volto-project
+   yo @plone/volto kitkat-volto-project --addon @eeacms/volto-eea-kitkat
+   cd kitkat-volto-project
    ```
 
 1. Install new add-ons and restart Volto:
@@ -68,7 +68,7 @@ Demo GIF
 
 1. Go to http://localhost:3000
 
-1. Happy editing!
+1. Happy hacking!
 
 ## How to contribute
 
@@ -82,8 +82,5 @@ All Rights Reserved.
 See [LICENSE.md](https://github.com/eea/volto-eea-kitkat/blob/master/LICENSE.md) for details.
 
 ## Funding
-
-[European Environment Agency (EU)](http://eea.europa.eu)
-g
 
 [European Environment Agency (EU)](http://eea.europa.eu)

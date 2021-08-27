@@ -1,13 +1,17 @@
 {
   "name": "@eeacms/volto-eea-kitkat",
   "version": "0.1.0",
-  "description": "@eeacms/volto-eea-kitkat: Volto add-on",
+  "description": "@eeacms/volto-eea-kitkat: Volto Add-ons bundle - A known good set of Volto addons to be used within all EEA projects and beyond",
   "main": "src/index.js",
   "author": "European Environment Agency: IDM2 A-Team",
   "license": "MIT",
   "homepage": "https://github.com/eea/volto-eea-kitkat",
   "keywords": [
     "volto-addon",
+    "volto-bundle",
+    "volto-addons-bundle",
+    "volto-addons-kit",
+    "volto-kitkat",
     "volto",
     "plone",
     "react"
@@ -34,8 +38,5 @@
     "lint:fix": "../../../node_modules/eslint/bin/eslint.js --fix 'src/**/*.{js,jsx}'",
     "cypress:run": "../../../node_modules/cypress/bin/cypress run",
     "cypress:open": "../../../node_modules/cypress/bin/cypress open"
-  }
-}
-ess open"
   }
 }

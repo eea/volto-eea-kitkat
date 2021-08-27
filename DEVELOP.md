@@ -1,5 +1,7 @@
 # volto-eea-kitkat
 
+[Volto](https://github.com/plone/volto) Add-ons bundle - A known good set of Volto addons to be used within all EEA projects and beyond
+
 ## Develop
 
 Before starting make sure your development environment is properly set. See [Volto Developer Documentation](https://docs.voltocms.com/getting-started/install/)
@@ -10,8 +12,8 @@ Before starting make sure your development environment is properly set. See [Vol
 
 1.  Create new volto app
 
-        yo @plone/volto my-volto-project --addon @eeacms/volto-eea-kitkat --skip-install
-        cd my-volto-project
+        yo @plone/volto kitkat-volto-project --addon @eeacms/volto-eea-kitkat --skip-install
+        cd kitkat-volto-project
 
 1.  Add the following to `mrs.developer.json`:
 
@@ -49,4 +51,3 @@ Before starting make sure your development environment is properly set. See [Vol
 1.  Happy hacking!
 
         cd src/addons/volto-eea-kitkat/
-s/volto-addon-template/

@@ -58,7 +58,7 @@
 
 1. Make sure you have a [Plone backend](https://plone.org/download) up-and-running at http://localhost:8080/Plone
 
-1. Start Volto frontend
+1. Setup Volto frontend
 
    * Update `package.json`:
 
@@ -66,16 +66,12 @@
       "addons": [
          "@eeacms/volto-eea-kitkat"
       ],
-
-      "dependencies": {
-         "@eeacms/volto-eea-kitkat": "*"
-      }
       ```
 
    * Install new add-ons and restart Volto:
 
       ```
-      yarn
+      yarn add -W @eeacms/volto-eea-kitkat
       yarn start
       ```
 

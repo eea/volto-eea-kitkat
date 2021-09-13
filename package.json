@@ -65,7 +65,7 @@
     "@eeacms/volto-object-widget": "3.0.0",
     "@eeacms/volto-resize-helper": "0.2.4",
     "@eeacms/volto-sentry-rancher-config": "2.1.2",
-    "@eeacms/volto-slate-footnote": "3.1.1",
+    "@eeacms/volto-slate-footnote": "3.2.0",
     "@eeacms/volto-slate-metadata-mentions": "3.0.2",
     "@eeacms/volto-slate-zotero": "3.0.0",
     "@eeacms/volto-staging-banner": "0.1.6",

@@ -71,7 +71,7 @@
     "@eeacms/volto-staging-banner": "0.1.6",
     "@eeacms/volto-tabs-block": "1.2.7",
     "@eeacms/volto-taxonomy": "2.0.2",
-    "@eeacms/volto-widget-geolocation": "3.0.2",
+    "@eeacms/volto-widget-geolocation": "3.0.3",
     "@eeacms/volto-widget-temporal-coverage": "3.0.2",
     "@eeacms/volto-widget-toggle": "2.2.3",
     "@eeacms/volto-widgets-view": "3.0.0",

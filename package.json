@@ -45,7 +45,6 @@
     "@eeacms/volto-resize-helper",
     "@eeacms/volto-block-style",
     "@eeacms/volto-tabs-block",
-    "@eeacms/volto-workflow-progress",
     "@eeacms/volto-staging-banner",
     "@eeacms/volto-block-image-cards"
   ],
@@ -75,7 +74,6 @@
     "@eeacms/volto-widget-temporal-coverage": "3.0.2",
     "@eeacms/volto-widget-toggle": "2.2.3",
     "@eeacms/volto-widgets-view": "3.0.0",
-    "@eeacms/volto-workflow-progress": "2.3.7",
     "volto-slate": "3.1.1"
   },
   "devDependencies": {

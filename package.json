@@ -66,7 +66,7 @@
     "@eeacms/volto-sentry-rancher-config": "2.1.2",
     "@eeacms/volto-slate-footnote": "4.0.0",
     "@eeacms/volto-slate-metadata-mentions": "3.0.2",
-    "@eeacms/volto-slate-zotero": "3.0.0",
+    "@eeacms/volto-slate-zotero": "4.0.0",
     "@eeacms/volto-staging-banner": "0.1.6",
     "@eeacms/volto-tabs-block": "1.2.7",
     "@eeacms/volto-taxonomy": "2.0.2",

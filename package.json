@@ -31,7 +31,7 @@
     "@eeacms/volto-widget-toggle",
     "@eeacms/volto-widget-temporal-coverage",
     "@eeacms/volto-widget-geolocation",
-    "volto-slate:asDefault,tableButton",
+    "volto-slate:asDefault",
     "@eeacms/volto-slate-metadata-mentions",
     "@eeacms/volto-slate-footnote",
     "@eeacms/volto-slate-zotero",

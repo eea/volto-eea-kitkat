@@ -1,4 +1,4 @@
-# volto-eea-kitkat
+# volto-eea-kitkat :chocolate_bar:
 [![Releases](https://img.shields.io/github/v/release/eea/volto-eea-kitkat)](https://github.com/eea/volto-eea-kitkat/releases)
 [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-eea-kitkat%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-eea-kitkat/job/master/display/redirect)
 [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-eea-kitkat%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-eea-kitkat/job/develop/display/redirect)

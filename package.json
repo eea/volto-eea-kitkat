@@ -45,7 +45,7 @@
     "@eeacms/volto-resize-helper",
     "@eeacms/volto-block-style",
     "@eeacms/volto-tabs-block",
-    "@eeacms/volto-staging-banner",
+    "@eeacms/volto-banner",
     "@eeacms/volto-block-image-cards"
   ],
   "dependencies": {
@@ -67,7 +67,7 @@
     "@eeacms/volto-slate-footnote": "4.0.1",
     "@eeacms/volto-slate-metadata-mentions": "4.0.0",
     "@eeacms/volto-slate-zotero": "4.0.0",
-    "@eeacms/volto-staging-banner": "0.1.7",
+    "@eeacms/volto-banner": "1.0.0",
     "@eeacms/volto-tabs-block": "1.2.7",
     "@eeacms/volto-taxonomy": "2.0.2",
     "@eeacms/volto-widget-geolocation": "4.0.0",

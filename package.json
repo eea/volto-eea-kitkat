@@ -1,6 +1,6 @@
 {
   "name": "@eeacms/volto-eea-kitkat",
-  "version": "4.0.2",
+  "version": "4.1.0",
   "description": "@eeacms/volto-eea-kitkat: Volto Add-ons bundle - A known good set of Volto addons to be used within all EEA projects and beyond",
   "main": "src/index.js",
   "author": "European Environment Agency: IDM2 A-Team",
@@ -55,7 +55,7 @@
     "@eeacms/volto-block-image-cards": "0.1.4",
     "@eeacms/volto-block-style": "3.5.0",
     "@eeacms/volto-block-toc": "2.2.2",
-    "@eeacms/volto-columns-block": "4.4.5",
+    "@eeacms/volto-columns-block": "4.4.6",
     "@eeacms/volto-corsproxy": "2.1.2",
     "@eeacms/volto-depiction": "0.1.2",
     "@eeacms/volto-group-block": "4.3.1",
@@ -74,7 +74,7 @@
     "@eeacms/volto-widget-temporal-coverage": "4.0.0",
     "@eeacms/volto-widget-toggle": "2.2.3",
     "@eeacms/volto-widgets-view": "3.0.0",
-    "volto-slate": "4.0.3"
+    "volto-slate": "4.1.0"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.5",

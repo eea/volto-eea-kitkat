@@ -80,7 +80,7 @@ pipeline {
       // Exclude Pull-Requests. Already running on branch
       when {
         allOf {
-          environment name: 'CHANGE_ID', value: ''
+          environment name: 'CHANGE_ID', value: 'skip'
         }
       }
       steps {

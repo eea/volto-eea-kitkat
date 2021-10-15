@@ -74,7 +74,7 @@
     "@eeacms/volto-widget-temporal-coverage": "4.0.0",
     "@eeacms/volto-widget-toggle": "2.2.3",
     "@eeacms/volto-widgets-view": "3.0.0",
-    "volto-slate": "4.1.0"
+    "volto-slate": "4.0.3"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.5",

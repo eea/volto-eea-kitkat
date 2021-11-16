@@ -13,6 +13,7 @@ pipeline {
   stages {
 
     stage('Code') {
+      when { not { branch 'master' } }
       steps {
         parallel(
 
@@ -38,6 +39,7 @@ pipeline {
     }
 
     stage('Tests') {
+      when { not { branch 'master' } }
       steps {
         parallel(
 
@@ -81,7 +83,8 @@ pipeline {
       when {
         allOf {
           environment name: 'CHANGE_ID', value: ''
-        }
+          not { branch 'master' } 
+         }
       }
       steps {
         parallel(

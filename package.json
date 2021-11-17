@@ -61,7 +61,7 @@
     "@eeacms/volto-group-block": "4.3.1",
     "@eeacms/volto-listing-block": "0.1.2",
     "@eeacms/volto-matomo": "2.0.3",
-    "@eeacms/volto-metadata-block": "4.0.1",
+    "@eeacms/volto-metadata-block": "4.0.2",
     "@eeacms/volto-object-widget": "3.0.0",
     "@eeacms/volto-resize-helper": "0.2.5",
     "@eeacms/volto-sentry-rancher-config": "2.1.2",

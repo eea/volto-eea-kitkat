@@ -137,6 +137,7 @@ pipeline {
       when {
         allOf {
           environment name: 'CHANGE_ID', value: ''
+          when { not { branch 'master' } }
         }
       }
       steps {

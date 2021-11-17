@@ -83,7 +83,7 @@ pipeline {
       when {
         allOf {
           environment name: 'CHANGE_ID', value: ''
-          not { branch 'master' } 
+          not { branch 'master' }
          }
       }
       steps {
@@ -137,7 +137,7 @@ pipeline {
       when {
         allOf {
           environment name: 'CHANGE_ID', value: ''
-          when { not { branch 'master' } }
+          not { branch 'master' }
         }
       }
       steps {

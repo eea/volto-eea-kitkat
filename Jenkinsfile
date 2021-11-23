@@ -13,7 +13,13 @@ pipeline {
   stages {
 
     stage('Code') {
-      when { not { branch 'master' } }
+      when {
+        allOf {
+          environment name: 'CHANGE_ID', value: ''
+          not { branch 'master' }
+          not { changelog '.*^Automated release [0-9\\.]+$' }
+        }
+      }
       steps {
         parallel(
 
@@ -39,7 +45,13 @@ pipeline {
     }
 
     stage('Tests') {
-      when { not { branch 'master' } }
+      when {
+        allOf {
+          environment name: 'CHANGE_ID', value: ''
+          not { branch 'master' }
+          not { changelog '.*^Automated release [0-9\\.]+$' }
+        }
+      }
       steps {
         parallel(
 
@@ -79,12 +91,12 @@ pipeline {
     }
 
     stage('Integration tests') {
-      // Exclude Pull-Requests. Already running on branch
       when {
         allOf {
           environment name: 'CHANGE_ID', value: ''
           not { branch 'master' }
-         }
+          not { changelog '.*^Automated release [0-9\\.]+$' }
+        }
       }
       steps {
         parallel(
@@ -133,12 +145,13 @@ pipeline {
     }
 
     stage('Report to SonarQube') {
-      // Exclude Pull-Requests
       when {
-        allOf {
           environment name: 'CHANGE_ID', value: ''
-          not { branch 'master' }
-        }
+          anyOf {
+            branch 'master'
+            branch 'develop'
+          }
+          not { changelog '.*^Automated release [0-9\\.]+$' }
       }
       steps {
         node(label: 'swarm') {
@@ -168,8 +181,8 @@ pipeline {
       steps {
         node(label: 'docker') {
           script {
-            if ( env.CHANGE_BRANCH != "develop" &&  !( env.CHANGE_BRANCH.startsWith("hotfix")) ) {
-                error "Pipeline aborted due to PR not made from develop or hotfix branch"
+            if ( env.CHANGE_BRANCH != "develop" ) {
+                error "Pipeline aborted due to PR not made from develop branch"
             }
            withCredentials([string(credentialsId: 'eea-jenkins-token', variable: 'GITHUB_TOKEN')]) {
             sh '''docker pull eeacms/gitflow'''

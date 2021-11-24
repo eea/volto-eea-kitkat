@@ -123,7 +123,7 @@ pipeline {
                              reportName: 'CypressCoverage',
                              reportTitles: 'Integration Tests Code Coverage'])
                     }
-                    archiveArtifacts artifacts: 'cypress-reports/videos/**/*.mp4', fingerprint: true
+                    archiveArtifacts artifacts: 'cypress-reports/videos/**/*.mp4', fingerprint: true, allowEmptyArchive: true
                     stash name: "cypress-coverage", includes: "cypress-coverage/**", allowEmpty: true
                   }
                   finally {

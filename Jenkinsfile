@@ -109,6 +109,8 @@ pipeline {
                     sh '''mkdir -p cypress-reports cypress-results cypress-coverage'''
                     sh '''docker cp $BUILD_TAG-cypress:/opt/frontend/my-volto-project/src/addons/$GIT_NAME/cypress/videos cypress-reports/'''
                     sh '''docker cp $BUILD_TAG-cypress:/opt/frontend/my-volto-project/src/addons/$GIT_NAME/cypress/reports cypress-results/'''
+                    sh '''ls -ltr cypress-results/*'''
+                    sh '''find . -name *.xml'''
                     coverage = sh script: '''docker cp $BUILD_TAG-cypress:/opt/frontend/my-volto-project/src/addons/$GIT_NAME/coverage cypress-coverage/''', returnStatus: true
                     if ( coverage == 0 ) {
                          publishHTML (target : [allowMissing: false,
@@ -127,7 +129,7 @@ pipeline {
       post {
         always {
           catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
-                        junit testResults: 'cypress-results/**/*.xml', allowEmptyResults: true
+              junit testResults: 'cypress-results/**/*.xml', allowEmptyResults: true
           }
           sh script: "docker stop $BUILD_TAG-plone", returnStatus: true
           sh script: "docker rm -v $BUILD_TAG-plone", returnStatus: true
@@ -168,10 +170,13 @@ pipeline {
 
     stage('Pull Request') {
       when {
-        not {
-          environment name: 'CHANGE_ID', value: ''
+        allOf {
+          not {
+            environment name: 'CHANGE_ID', value: ''
+          }
+          environment name: 'CHANGE_TARGET', value: 'master'
+          not { changelog '.*^Automated release [0-9\\.]+$' }
         }
-        environment name: 'CHANGE_TARGET', value: 'master'
       }
       steps {
         node(label: 'docker') {

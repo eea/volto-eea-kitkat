@@ -122,7 +122,7 @@ pipeline {
                              reportTitles: 'Integration Tests Code Coverage'])
                     }
                     stash name: "cypress-coverage", includes: "cypress-coverage/**", allowEmpty: true
-                    stash name: "cypress-results", includes: "cypress-results/**", allowEmpty: true
+                    archiveArtifacts artifacts: 'cypress-results/**', fingerprint: true, allowEmptyArchive: true  
                 }
               }
             }

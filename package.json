@@ -106,14 +106,15 @@
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.5",
-    "babel-plugin-transform-class-properties": "^6.24.1"
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "@plone/scripts": "*"
   },
   "scripts": {
     "release": "release-it",
     "bootstrap": "npm install -g ejs; npm link ejs; node bootstrap",
     "test": "make test",
     "test:fix": "make test-update",
-    "i18n": "rm -rf build/messages && NODE_ENV=production node src/i18n.js",
+    "i18n": "rm -rf build/messages && NODE_ENV=production i18n --addon",
     "pre-commit": "yarn stylelint:fix && yarn prettier:fix && yarn lint:fix",
     "stylelint": "if [ -d ./project ]; then ./project/node_modules/stylelint/bin/stylelint.js --allow-empty-input 'src/**/*.{css,less}'; else ../../../node_modules/stylelint/bin/stylelint.js --allow-empty-input 'src/**/*.{css,less}'; fi",
     "stylelint:overrides": "if [ -d ./project ]; then ./project/node_modules/.bin/stylelint --syntax less --allow-empty-input 'theme/**/*.overrides' 'src/**/*.overrides'; else ../../../node_modules/.bin/stylelint --syntax less --allow-empty-input 'theme/**/*.overrides' 'src/**/*.overrides'; fi",

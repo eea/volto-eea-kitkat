@@ -122,6 +122,7 @@ pipeline {
                              reportTitles: 'Integration Tests Code Coverage'])
                     }
                     stash name: "cypress-coverage", includes: "cypress-coverage/**", allowEmpty: true
+                    stash name: "cypress-results", includes: "cypress-results/**", allowEmpty: true
                 }
               }
             }
@@ -129,7 +130,7 @@ pipeline {
       post {
         always {
           catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
-              junit testResults: 'cypress-results/**/*.xml', allowEmptyResults: true
+              junit testResults: 'cypress-results/*.xml', allowEmptyResults: true
           }
           sh script: "docker stop $BUILD_TAG-plone", returnStatus: true
           sh script: "docker rm -v $BUILD_TAG-plone", returnStatus: true

@@ -130,6 +130,8 @@ pipeline {
       post {
         always {
           catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
+              sh '''ls -ltr cypress-results/*'''
+              sh '''find . -name *.xml'''
               junit testResults: 'cypress-results/*.xml', allowEmptyResults: true
           }
           sh script: "docker stop $BUILD_TAG-plone", returnStatus: true

@@ -122,7 +122,7 @@ pipeline {
                              reportTitles: 'Integration Tests Code Coverage'])
                     }
                     stash name: "cypress-coverage", includes: "cypress-coverage/**", allowEmpty: true
-                    archiveArtifacts artifacts: 'cypress-results/**', fingerprint: true, allowEmptyArchive: true  
+                    stash name: "cypress-results", includes: "cypress-results/**", allowEmpty: true 
                 }
               }
             }
@@ -130,6 +130,7 @@ pipeline {
       post {
         always {
           catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
+              unstash "cypress-results"
               sh '''ls -ltr cypress-results/*'''
               sh '''find . -name *.xml'''
               junit testResults: 'cypress-results/*.xml', allowEmptyResults: true

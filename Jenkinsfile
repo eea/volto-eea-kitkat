@@ -133,7 +133,7 @@ pipeline {
               unstash "cypress-results"
               sh '''ls -ltr cypress-results/*'''
               sh '''find . -name *.xml'''
-              junit testResults: 'cypress-results/*.xml', allowEmptyResults: true
+              junit testResults: 'cypress-results/reports/*.xml', allowEmptyResults: true
           }
           sh script: "docker stop $BUILD_TAG-plone", returnStatus: true
           sh script: "docker rm -v $BUILD_TAG-plone", returnStatus: true

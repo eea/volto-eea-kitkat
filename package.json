@@ -73,7 +73,7 @@
     "@eeacms/volto-widget-geolocation": "4.0.0",
     "@eeacms/volto-widget-temporal-coverage": "4.0.0",
     "@eeacms/volto-widget-toggle": "2.2.3",
-    "@eeacms/volto-widgets-view": "3.0.1",
+    "@eeacms/volto-widgets-view": "3.0.2",
     "volto-slate": "5.1.3"
   },
   "resolutions": {
@@ -101,7 +101,7 @@
     "@eeacms/volto-widget-geolocation": "4.0.0",
     "@eeacms/volto-widget-temporal-coverage": "4.0.0",
     "@eeacms/volto-widget-toggle": "2.2.3",
-    "@eeacms/volto-widgets-view": "3.0.1",
+    "@eeacms/volto-widgets-view": "3.0.2",
     "volto-slate": "5.1.3"
   },
   "devDependencies": {

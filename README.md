@@ -1,7 +1,19 @@
 # volto-eea-kitkat :chocolate_bar:
+
 [![Releases](https://img.shields.io/github/v/release/eea/volto-eea-kitkat)](https://github.com/eea/volto-eea-kitkat/releases)
+
 [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-eea-kitkat%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-eea-kitkat/job/master/display/redirect)
+[![Lines of Code](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-eea-kitkat-master&metric=ncloc)](https://sonarqube.eea.europa.eu/dashboard?id=volto-eea-kitkat-master)
+[![Coverage](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-eea-kitkat-master&metric=coverage)](https://sonarqube.eea.europa.eu/dashboard?id=volto-eea-kitkat-master)
+[![Bugs](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-eea-kitkat-master&metric=bugs)](https://sonarqube.eea.europa.eu/dashboard?id=volto-eea-kitkat-master)
+[![Duplicated Lines (%)](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-eea-kitkat-master&metric=duplicated_lines_density)](https://sonarqube.eea.europa.eu/dashboard?id=volto-eea-kitkat-master)
+
 [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-eea-kitkat%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-eea-kitkat/job/develop/display/redirect)
+[![Lines of Code](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-eea-kitkat-develop&metric=ncloc)](https://sonarqube.eea.europa.eu/dashboard?id=volto-eea-kitkat-develop)
+[![Coverage](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-eea-kitkat-develop&metric=coverage)](https://sonarqube.eea.europa.eu/dashboard?id=volto-eea-kitkat-develop)
+[![Bugs](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-eea-kitkat-develop&metric=bugs)](https://sonarqube.eea.europa.eu/dashboard?id=volto-eea-kitkat-develop)
+[![Duplicated Lines (%)](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-eea-kitkat-develop&metric=duplicated_lines_density)](https://sonarqube.eea.europa.eu/dashboard?id=volto-eea-kitkat-develop)
+
 
 [Volto](https://github.com/plone/volto) Add-ons bundle - A known good set of Volto addons to be used within all EEA projects and beyond
 

@@ -124,7 +124,7 @@ pipeline {
               script {
                 try {
                   sh '''docker pull plone; docker run -d --name="$BUILD_TAG-plone" -e SITE="Plone" -e ADDONS="$PLONE_ADDONS" -e VERSIONS="$PLONE_VERSIONS" -e PROFILES="profile-plone.restapi:blocks" plone fg'''
-                  sh '''docker pull plone/volto-addon-ci; docker run -i --name="$BUILD_TAG-cypress" --link $BUILD_TAG-plone:plone -e NAMESPACE="$NAMESPACE" -e GIT_NAME=$GIT_NAME -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" -e DEPENDENCIES="$DEPENDENCIES" plone/volto-addon-ci cypress'''
+                  sh '''docker pull plone/volto-addon-ci; docker run -i --name="$BUILD_TAG-cypress" --link $BUILD_TAG-plone:plone -e NAMESPACE="$NAMESPACE" -e GIT_NAME=$GIT_NAME -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" -e DEPENDENCIES="$DEPENDENCIES" -e NODE_ENV=development plone/volto-addon-ci cypress'''
                 } finally {
                     sh '''rm -rf cypress-reports cypress-results cypress-coverage'''
                     sh '''mkdir -p cypress-reports cypress-results cypress-coverage'''
@@ -141,6 +141,7 @@ pipeline {
                              reportTitles: 'Integration Tests Code Coverage'])
                     }
                     stash name: "cypress-coverage", includes: "cypress-coverage/**", allowEmpty: true
+                    stash name: "cypress-results", includes: "cypress-results/**", allowEmpty: true 
                 }
               }
             }
@@ -148,7 +149,8 @@ pipeline {
       post {
         always {
           catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
-                        junit testResults: 'cypress-results/**/*.xml', allowEmptyResults: true
+              unstash "cypress-results"
+              junit testResults: 'cypress-results/reports/*.xml', allowEmptyResults: true
           }
           sh script: "docker stop $BUILD_TAG-plone", returnStatus: true
           sh script: "docker rm -v $BUILD_TAG-plone", returnStatus: true
@@ -193,10 +195,13 @@ pipeline {
 
     stage('Pull Request') {
       when {
-        not {
-          environment name: 'CHANGE_ID', value: ''
+        allOf {
+          not {
+            environment name: 'CHANGE_ID', value: ''
+          }
+          environment name: 'CHANGE_TARGET', value: 'master'
+          not { changelog '.*^Automated release [0-9\\.]+$' }
         }
-        environment name: 'CHANGE_TARGET', value: 'master'
       }
       steps {
         node(label: 'docker') {

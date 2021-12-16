@@ -142,6 +142,7 @@ pipeline {
                     }
                     stash name: "cypress-coverage", includes: "cypress-coverage/**", allowEmpty: true
                     stash name: "cypress-results", includes: "cypress-results/**", allowEmpty: true 
+                    stash name: "cypress-reports", includes: "cypress-reports/**", allowEmpty: true 
                 }
               }
             }
@@ -157,7 +158,8 @@ pipeline {
           sh script: "docker rm -v $BUILD_TAG-cypress", returnStatus: true
         }
         failure {
-          archiveArtifacts artifacts: 'cypress-reports/videos/**/*.mp4', fingerprint: true, allowEmptyArchive: true  
+          unstash "cypress-reports"
+          archiveArtifacts artifacts: 'cypress-reports/**/*.mp4', fingerprint: true, allowEmptyArchive: true  
         }
       }
     }

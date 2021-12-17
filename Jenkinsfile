@@ -159,6 +159,8 @@ pipeline {
         }
         failure {
           unstash "cypress-reports"
+          sh '''ls -ltr cypress-reports/*'''
+          sh '''find . -name *.mp4'''
           archiveArtifacts artifacts: 'cypress-reports/**/*.mp4', fingerprint: true, allowEmptyArchive: true  
         }
       }

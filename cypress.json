@@ -16,7 +16,7 @@
   },
   "integrationFolder": "../../../node_modules/@eeacms",
   "testFiles": "**/cypress/integration/**/*.js",
-  "fixturesFolder": "**/cypress/fixtures/**/*.js",
+  "fixturesFolder": "**/cypress/fixtures/**/*.json",
   "videoUploadOnPasses": false,
   "screenshotOnRunFailure": false
 }

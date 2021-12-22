@@ -5,19 +5,36 @@ pipeline {
         GIT_NAME = "volto-eea-kitkat"
         NAMESPACE = "@eeacms"
         DEPENDENCIES = ""
-        SONARQUBE_TAGS = "volto.eea.europa.eu,climate-energy.eea.europa.eu,forest.eea.europa.eu,biodiversity.europa.eu,www.eea.europa.eu-ims,sustainability.eionet.europa.eu,clms.land.copernicus.eu,industry.eea.europa.eu"
+        SONARQUBE_TAGS = "volto.eea.europa.eu,climate-energy.eea.europa.eu,forest.eea.europa.eu,biodiversity.europa.eu,www.eea.europa.eu-ims,sustainability.eionet.europa.eu,clms.land.copernicus.eu,industry.eea.europa.eu,water.europa.eu-freshwater"
         PLONE_VERSIONS = "plone.schema=1.3.0 plone.restapi=8.9.1"
         PLONE_ADDONS = "eea.schema.slate"
     }
 
   stages {
 
+    stage('Release') {
+      when {
+        allOf {
+          environment name: 'CHANGE_ID', value: ''
+          branch 'master'
+        }
+      }
+      steps {
+        node(label: 'docker') {
+          withCredentials([string(credentialsId: 'eea-jenkins-token', variable: 'GITHUB_TOKEN'),string(credentialsId: 'eea-jenkins-npm-token', variable: 'NPM_TOKEN')]) {
+            sh '''docker pull eeacms/gitflow'''
+            sh '''docker run -i --rm --name="$BUILD_TAG-gitflow-master" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_NAME="$GIT_NAME" -e GIT_TOKEN="$GITHUB_TOKEN" -e NPM_TOKEN="$NPM_TOKEN" -e LANGUAGE=javascript eeacms/gitflow'''
+          }
+        }
+      }
+    }
+
     stage('Code') {
       when {
         allOf {
           environment name: 'CHANGE_ID', value: ''
-          not { branch 'master' }
           not { changelog '.*^Automated release [0-9\\.]+$' }
+          not { branch 'master' }
         }
       }
       steps {
@@ -48,8 +65,10 @@ pipeline {
       when {
         allOf {
           environment name: 'CHANGE_ID', value: ''
-          not { branch 'master' }
-          not { changelog '.*^Automated release [0-9\\.]+$' }
+          anyOf {
+           not { changelog '.*^Automated release [0-9\\.]+$' }
+           branch 'master'
+          }
         }
       }
       steps {
@@ -94,16 +113,18 @@ pipeline {
       when {
         allOf {
           environment name: 'CHANGE_ID', value: ''
-          not { branch 'master' }
-          not { changelog '.*^Automated release [0-9\\.]+$' }
+          anyOf {
+           not { changelog '.*^Automated release [0-9\\.]+$' }
+           branch 'master'
+          }
         }
       }
       steps {
             node(label: 'docker') {
               script {
                 try {
-                  sh '''docker pull plone; docker run -d --name="$BUILD_TAG-plone" -e SITE="Plone" -e ADDONS="$PLONE_ADDONS" -e VERSIONS="$PLONE_VERSIONS" -e PROFILES="profile-plone.restapi:blocks" plone fg'''
-                  sh '''docker pull plone/volto-addon-ci; docker run -i --name="$BUILD_TAG-cypress" --link $BUILD_TAG-plone:plone -e NAMESPACE="$NAMESPACE" -e GIT_NAME=$GIT_NAME -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" -e DEPENDENCIES="$DEPENDENCIES" plone/volto-addon-ci cypress'''
+                  sh '''docker pull plone; timeout 4h docker run --rm -d --name="$BUILD_TAG-plone" -e SITE="Plone" -e ADDONS="$PLONE_ADDONS" -e VERSIONS="$PLONE_VERSIONS" -e PROFILES="profile-plone.restapi:blocks" plone fg'''
+                  sh '''docker pull plone/volto-addon-ci; docker run -i --name="$BUILD_TAG-cypress" --link $BUILD_TAG-plone:plone -e NAMESPACE="$NAMESPACE" -e GIT_NAME=$GIT_NAME -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" -e DEPENDENCIES="$DEPENDENCIES" -e NODE_ENV=development plone/volto-addon-ci cypress'''
                 } finally {
                     sh '''rm -rf cypress-reports cypress-results cypress-coverage'''
                     sh '''mkdir -p cypress-reports cypress-results cypress-coverage'''
@@ -120,6 +141,8 @@ pipeline {
                              reportTitles: 'Integration Tests Code Coverage'])
                     }
                     stash name: "cypress-coverage", includes: "cypress-coverage/**", allowEmpty: true
+                    stash name: "cypress-results", includes: "cypress-results/**", allowEmpty: true 
+                    stash name: "cypress-reports", includes: "cypress-reports/**", allowEmpty: true 
                 }
               }
             }
@@ -127,26 +150,34 @@ pipeline {
       post {
         always {
           catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
-                        junit testResults: 'cypress-results/**/*.xml', allowEmptyResults: true
+              unstash "cypress-results"
+              junit testResults: 'cypress-results/reports/*.xml', allowEmptyResults: true
           }
           sh script: "docker stop $BUILD_TAG-plone", returnStatus: true
           sh script: "docker rm -v $BUILD_TAG-plone", returnStatus: true
           sh script: "docker rm -v $BUILD_TAG-cypress", returnStatus: true
         }
         failure {
-          archiveArtifacts artifacts: 'cypress-reports/videos/**/*.mp4', fingerprint: true, allowEmptyArchive: true  
+          unstash "cypress-reports"
+          sh '''ls -ltr cypress-reports/*'''
+          sh '''find . -name *.mp4'''
+          archiveArtifacts artifacts: 'cypress-reports/**/*.mp4', fingerprint: true, allowEmptyArchive: true  
         }
       }
     }
 
     stage('Report to SonarQube') {
       when {
+        allOf {
           environment name: 'CHANGE_ID', value: ''
           anyOf {
             branch 'master'
-            branch 'develop'
+            allOf {
+              branch 'develop'
+              not { changelog '.*^Automated release [0-9\\.]+$' }
+            }
           }
-          not { changelog '.*^Automated release [0-9\\.]+$' }
+        }
       }
       steps {
         node(label: 'swarm') {
@@ -168,10 +199,13 @@ pipeline {
 
     stage('Pull Request') {
       when {
-        not {
-          environment name: 'CHANGE_ID', value: ''
+        allOf {
+          not {
+            environment name: 'CHANGE_ID', value: ''
+          }
+          environment name: 'CHANGE_TARGET', value: 'master'
+          not { changelog '.*^Automated release [0-9\\.]+$' }
         }
-        environment name: 'CHANGE_TARGET', value: 'master'
       }
       steps {
         node(label: 'docker') {
@@ -183,23 +217,6 @@ pipeline {
             sh '''docker pull eeacms/gitflow'''
             sh '''docker run -i --rm --name="$BUILD_TAG-gitflow-pr" -e GIT_CHANGE_TARGET="$CHANGE_TARGET" -e GIT_CHANGE_BRANCH="$CHANGE_BRANCH" -e GIT_CHANGE_AUTHOR="$CHANGE_AUTHOR" -e GIT_CHANGE_TITLE="$CHANGE_TITLE" -e GIT_TOKEN="$GITHUB_TOKEN" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" -e GIT_ORG="$GIT_ORG" -e GIT_NAME="$GIT_NAME" -e LANGUAGE=javascript eeacms/gitflow'''
            }
-          }
-        }
-      }
-    }
-
-    stage('Release') {
-      when {
-        allOf {
-          environment name: 'CHANGE_ID', value: ''
-          branch 'master'
-        }
-      }
-      steps {
-        node(label: 'docker') {
-          withCredentials([string(credentialsId: 'eea-jenkins-token', variable: 'GITHUB_TOKEN'),string(credentialsId: 'eea-jenkins-npm-token', variable: 'NPM_TOKEN')]) {
-            sh '''docker pull eeacms/gitflow'''
-            sh '''docker run -i --rm --name="$BUILD_TAG-gitflow-master" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_NAME="$GIT_NAME" -e GIT_TOKEN="$GITHUB_TOKEN" -e NPM_TOKEN="$NPM_TOKEN" -e LANGUAGE=javascript eeacms/gitflow'''
           }
         }
       }

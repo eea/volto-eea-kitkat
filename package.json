@@ -67,14 +67,14 @@
     "@eeacms/volto-sentry-rancher-config": "2.1.4",
     "@eeacms/volto-slate-footnote": "4.0.3",
     "@eeacms/volto-slate-metadata-mentions": "4.0.1",
-    "@eeacms/volto-slate-zotero": "4.0.2",
+    "@eeacms/volto-slate-zotero": "4.0.3",
     "@eeacms/volto-tabs-block": "1.2.9",
     "@eeacms/volto-taxonomy": "2.0.4",
     "@eeacms/volto-widget-geolocation": "4.0.2",
-    "@eeacms/volto-widget-temporal-coverage": "4.0.2",
+    "@eeacms/volto-widget-temporal-coverage": "4.0.3",
     "@eeacms/volto-widget-toggle": "2.2.5",
     "@eeacms/volto-widgets-view": "3.0.3",
-    "volto-slate": "5.2.0"
+    "volto-slate": "5.2.1"
   },
   "resolutions": {
     "@eeacms/volto-accordion-block": "3.4.11",
@@ -95,14 +95,14 @@
     "@eeacms/volto-sentry-rancher-config": "2.1.4",
     "@eeacms/volto-slate-footnote": "4.0.3",
     "@eeacms/volto-slate-metadata-mentions": "4.0.1",
-    "@eeacms/volto-slate-zotero": "4.0.2",
+    "@eeacms/volto-slate-zotero": "4.0.3",
     "@eeacms/volto-tabs-block": "1.2.9",
     "@eeacms/volto-taxonomy": "2.0.4",
     "@eeacms/volto-widget-geolocation": "4.0.2",
-    "@eeacms/volto-widget-temporal-coverage": "4.0.2",
+    "@eeacms/volto-widget-temporal-coverage": "4.0.3",
     "@eeacms/volto-widget-toggle": "2.2.5",
     "@eeacms/volto-widgets-view": "3.0.3",
-    "volto-slate": "5.2.0"
+    "volto-slate": "5.2.1"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.5",

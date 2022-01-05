@@ -4,7 +4,7 @@ pipeline {
   environment {
         GIT_NAME = "volto-eea-kitkat"
         NAMESPACE = "@eeacms"
-        DEPENDENCIES = "volto-slate:asCypressDefault"
+        DEPENDENCIES = ""
         SONARQUBE_TAGS = "volto.eea.europa.eu,climate-energy.eea.europa.eu,forest.eea.europa.eu,biodiversity.europa.eu,www.eea.europa.eu-ims,sustainability.eionet.europa.eu,clms.land.copernicus.eu,industry.eea.europa.eu,water.europa.eu-freshwater"
     }
 
@@ -107,7 +107,7 @@ pipeline {
       }
     }
 
-    
+
 
     stage('Integration tests') {
       when {
@@ -205,8 +205,8 @@ pipeline {
         )
       }
     }
-    
-    
+
+
 
     stage('Report to SonarQube') {
       when {

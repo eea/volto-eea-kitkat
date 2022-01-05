@@ -14,9 +14,9 @@
     "jenkinsMode": true,
     "toConsole": true
   },
-  "integrationFolder": "../",
+  "integrationFolder": "../../../node_modules/@eeacms",
   "testFiles": "**/cypress/integration/**/*.js",
-  "fixturesFolder": "../volto-slate-zotero/cypress/fixtures",
+  "fixturesFolder": "../../../node_modules/@eeacms/volto-slate-zotero/cypress/fixtures",
   "videoUploadOnPasses": false,
   "screenshotOnRunFailure": false
 }

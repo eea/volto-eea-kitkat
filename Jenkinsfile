@@ -126,7 +126,7 @@ pipeline {
             node(label: 'docker') {
               script {
                 try {
-                  sh '''docker pull eeacms/plone-backend; docker run --rm -d --name="$BUILD_TAG-plone-eeacms" -e SITE="Plone" eeacms/plone-backend'''
+                  sh '''docker pull eeacms/plone-backend; docker run --rm -d --name="$BUILD_TAG-plone-eeacms" -e SITE="Plone" -e PROFILES="eea.kitkat:testing" eeacms/plone-backend'''
                   sh '''docker pull plone/volto-addon-ci; docker run -i --name="$BUILD_TAG-cypress-eeacms" --link $BUILD_TAG-plone-eeacms:plone -e NAMESPACE="$NAMESPACE" -e GIT_NAME=$GIT_NAME -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" -e DEPENDENCIES="$DEPENDENCIES" -e NODE_ENV=development plone/volto-addon-ci cypress run --config-file=cypress.eeacms.json'''
                 } finally {
                   try {
@@ -166,7 +166,7 @@ pipeline {
             node(label: 'docker') {
               script {
                 try {
-                  sh '''docker pull eeacms/plone-backend; docker run --rm -d --name="$BUILD_TAG-plone-slate" -e SITE="Plone" eeacms/plone-backend'''
+                  sh '''docker pull eeacms/plone-backend; docker run --rm -d --name="$BUILD_TAG-plone-slate" -e SITE="Plone" -e PROFILES="eea.kitkat:testing" eeacms/plone-backend'''
                   sh '''docker pull plone/volto-addon-ci; docker run -i --name="$BUILD_TAG-cypress-slate" --link $BUILD_TAG-plone-slate:plone -e NAMESPACE="$NAMESPACE" -e GIT_NAME=$GIT_NAME -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" -e DEPENDENCIES="$DEPENDENCIES" -e NODE_ENV=development plone/volto-addon-ci cypress run --config-file=cypress.slate.json'''
                 } finally {
                   try {

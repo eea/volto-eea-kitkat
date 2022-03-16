@@ -1,6 +1,6 @@
 {
   "name": "@eeacms/volto-eea-kitkat",
-  "version": "5.2.5",
+  "version": "5.2.6",
   "description": "@eeacms/volto-eea-kitkat: Volto Add-ons bundle - A known good set of Volto addons to be used within all EEA projects and beyond",
   "main": "src/index.js",
   "author": "European Environment Agency: IDM2 A-Team",
@@ -66,7 +66,7 @@
     "@eeacms/volto-resize-helper": "0.2.8",
     "@eeacms/volto-sentry-rancher-config": "2.1.5",
     "@eeacms/volto-slate-footnote": "4.0.4",
-    "@eeacms/volto-slate-metadata-mentions": "4.0.2",
+    "@eeacms/volto-slate-metadata-mentions": "4.0.3",
     "@eeacms/volto-slate-zotero": "4.0.4",
     "@eeacms/volto-tabs-block": "1.2.12",
     "@eeacms/volto-taxonomy": "2.0.4",
@@ -74,7 +74,7 @@
     "@eeacms/volto-widget-temporal-coverage": "4.0.5",
     "@eeacms/volto-widget-toggle": "2.2.6",
     "@eeacms/volto-widgets-view": "3.0.4",
-    "volto-slate": "5.3.5"
+    "volto-slate": "5.4.0"
   },
   "resolutions": {
     "@eeacms/volto-accordion-block": "3.4.14",
@@ -94,7 +94,7 @@
     "@eeacms/volto-resize-helper": "0.2.8",
     "@eeacms/volto-sentry-rancher-config": "2.1.5",
     "@eeacms/volto-slate-footnote": "4.0.4",
-    "@eeacms/volto-slate-metadata-mentions": "4.0.2",
+    "@eeacms/volto-slate-metadata-mentions": "4.0.3",
     "@eeacms/volto-slate-zotero": "4.0.4",
     "@eeacms/volto-tabs-block": "1.2.12",
     "@eeacms/volto-taxonomy": "2.0.4",
@@ -102,7 +102,7 @@
     "@eeacms/volto-widget-temporal-coverage": "4.0.5",
     "@eeacms/volto-widget-toggle": "2.2.6",
     "@eeacms/volto-widgets-view": "3.0.4",
-    "volto-slate": "5.3.5"
+    "volto-slate": "5.4.0"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.5",

@@ -15,7 +15,9 @@
 [![Duplicated Lines (%)](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-eea-kitkat-develop&metric=duplicated_lines_density)](https://sonarqube.eea.europa.eu/dashboard?id=volto-eea-kitkat-develop)
 
 
-[Volto](https://github.com/plone/volto) Add-ons bundle - A known good set of Volto addons to be used within all EEA projects and beyond
+[Volto](https://github.com/plone/volto) Add-ons bundle - A known good set of Volto addons to be used within all EEA projects and beyond.
+
+The [eea.kitkat](https://github.com/eea/eea.kitkat) Plone add-on is the backend support for volto-eea-kitkat.
 
 ## Included Volto Add-ons
 

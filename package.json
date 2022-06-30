@@ -76,7 +76,7 @@
     "@eeacms/volto-widget-temporal-coverage": "4.0.5",
     "@eeacms/volto-widget-toggle": "2.2.6",
     "@eeacms/volto-widgets-view": "3.0.5",
-    "volto-slate": "6.2.1"
+    "volto-slate": "6.2.2"
   },
   "resolutions": {
     "@eeacms/volto-accordion-block": "3.5.0",
@@ -105,7 +105,7 @@
     "@eeacms/volto-widget-temporal-coverage": "4.0.5",
     "@eeacms/volto-widget-toggle": "2.2.6",
     "@eeacms/volto-widgets-view": "3.0.5",
-    "volto-slate": "6.2.1"
+    "volto-slate": "6.2.2"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.5",

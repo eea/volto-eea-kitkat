@@ -13,10 +13,5 @@
     "mochaFile": "cypress/reports/cypress-[hash].xml",
     "jenkinsMode": true,
     "toConsole": true
-  },
-  "integrationFolder": "../",
-  "testFiles": "**/cypress/integration/**/*.js",
-  "fixturesFolder": "../volto-slate-zotero/cypress/fixtures",
-  "videoUploadOnPasses": false,
-  "screenshotOnRunFailure": false
+  }
 }

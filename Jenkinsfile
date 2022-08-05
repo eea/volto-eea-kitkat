@@ -71,9 +71,6 @@ pipeline {
         }
       }
       steps {
-        parallel(
-
-          "Volto": {
             node(label: 'docker') {
               script {
                 try {
@@ -86,15 +83,17 @@ pipeline {
                   sh '''docker cp $BUILD_TAG-volto:/opt/frontend/my-volto-project/unit_tests_log.txt xunit-reports/'''
                   stash name: "xunit-reports", includes: "xunit-reports/**"
                   archiveArtifacts artifacts: "xunit-reports/unit_tests_log.txt", fingerprint: true
-                  publishHTML (target : [
-                    allowMissing: false,
-                    alwaysLinkToLastBuild: true,
-                    keepAll: true,
-                    reportDir: 'xunit-reports/coverage/lcov-report',
-                    reportFiles: 'index.html',
-                    reportName: 'UTCoverage',
-                    reportTitles: 'Unit Tests Code Coverage'
-                  ])
+                  catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
+                    publishHTML (target : [
+                      allowMissing: false,
+                      alwaysLinkToLastBuild: true,
+                      keepAll: true,
+                      reportDir: 'xunit-reports/coverage/lcov-report',
+                      reportFiles: 'index.html',
+                      reportName: 'UTCoverage',
+                      reportTitles: 'Unit Tests Code Coverage'
+                    ])
+                   }
                 } finally {
                     catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
                         junit testResults: 'xunit-reports/junit.xml', allowEmptyResults: true
@@ -104,8 +103,6 @@ pipeline {
               }
             }
           }
-        )
-      }
     }
 
 

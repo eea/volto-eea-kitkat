@@ -11,7 +11,8 @@ module.exports = {
     '@package/(.*)$': '<rootDir>/src/$1',
     '@plone/volto-quanta/(.*)$': '<rootDir>/src/addons/volto-quanta/src/$1',
     '@eeacms/(.*?)/(.*)$': '<rootDir>/src/addons/$1/src/$2',
-    'volto-slate/(.*)$': '<rootDir>/src/addons/volto-slate/src/$1',
+    '@plone/volto-slate':
+      '<rootDir>/node_modules/@plone/volto/packages/volto-slate/src',
     '~/(.*)$': '<rootDir>/src/$1',
     'load-volto-addons':
       '<rootDir>/node_modules/@plone/volto/jest-addons-loader.js',

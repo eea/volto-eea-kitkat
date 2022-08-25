@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import { Grid, Label, Header, Container } from 'semantic-ui-react';
+import { Grid, Label, Header } from 'semantic-ui-react';
 import { formatDate } from '@plone/volto/helpers/Utils/Date';
 import { version as voltoVersion } from '@plone/volto/../package.json';
 

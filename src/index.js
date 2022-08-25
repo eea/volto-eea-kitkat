@@ -1,3 +1,6 @@
+import { version as frontendVersion } from '../../../../package.json';
+import { name as frontendName } from '../../../../package.json';
+
 const applyConfig = (config) => {
   if (process.env.NODE_ENV !== 'production') {
     // Enable description block for cypress
@@ -15,15 +18,19 @@ const applyConfig = (config) => {
     process.env.RAZZLE_CHANGELOG_PREFIX ||
     'releases';
 
+  config.settings.frontendVersion =
+    config.settings.frontendVersion ||
+    process.env.FRONTEND_VERSION ||
+    frontendVersion;
+
   config.settings.frontendName =
-    config.settings.frontendName ||
-    process.env.RAZZLE_FRONTEND_NAME ||
-    'eea-website-frontend';
+    config.settings.frontendName || process.env.FRONTEND_NAME || frontendName;
+
+  config.settings.backendVersion =
+    config.settings.backendVersion || process.env.BACKEND_VERSION || '';
 
   config.settings.backendName =
-    config.settings.backendName ||
-    process.env.RAZZLE_BACKEND_NAME ||
-    'eea-website-backend';
+    config.settings.backendName || process.env.BACKEND_NAME || 'plone-backend';
 
   return config;
 };

@@ -25,6 +25,8 @@ const VersionOverview = ({
 }) => {
   const { addonsInfo } = config.settings;
   const locale = config.settings.dateLocale || 'en-gb';
+  const frontendVersion = frontend.version || config.settings.frontendVersion;
+  const backendVersion = backend.version || config.settings.backendVersion;
 
   return (
     <Grid columns={2} stackable>
@@ -44,9 +46,9 @@ const VersionOverview = ({
             </Label>
           )}
           <Header as="h3">
-            <span>Frontend {frontend.version ? frontend.version : ''}</span>
+            <span>Frontend {frontendVersion ? frontendVersion : ''}</span>
           </Header>
-          {frontend.version && (
+          {frontendVersion && (
             <a
               href={[
                 config.settings.changelogUrlPrefix,
@@ -56,7 +58,7 @@ const VersionOverview = ({
               target="_blank"
               rel="noreferrer"
             >
-              History: {frontend.old_version} ⇢ {frontend.version}
+              History: {frontend.old_version} ⇢ {frontendVersion}
             </a>
           )}
           <ul style={{ fontSize: '16px', fontFamily: 'Monospace' }}>
@@ -81,22 +83,20 @@ const VersionOverview = ({
             </Label>
           )}
           <Header as="h3" textAlign="right">
-            Backend {backend.version ? backend.version : ''}
+            Backend {backendVersion ? backendVersion : ''}
           </Header>
-          {backend.version && (
-            <a
-              className="ui right aligned container"
-              href={[
-                config.settings.changelogUrlPrefix,
-                config.settings.backendName,
-                config.settings.changelogUrlSuffix,
-              ].join('/')}
-              target="_blank"
-              rel="noreferrer"
-            >
-              History: {backend.old_version} ⇢ {backend.version}
-            </a>
-          )}
+          <a
+            className="ui right aligned container"
+            href={[
+              config.settings.changelogUrlPrefix,
+              config.settings.backendName,
+              config.settings.changelogUrlSuffix,
+            ].join('/')}
+            target="_blank"
+            rel="noreferrer"
+          >
+            History: {backend.old_version} ⇢ {backendVersion}
+          </a>
           <ul
             style={{
               fontSize: '16px',

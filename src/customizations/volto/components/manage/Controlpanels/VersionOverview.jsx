@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import { Grid, Label } from 'semantic-ui-react';
+import { Grid, Label, Header, Container } from 'semantic-ui-react';
 import { formatDate } from '@plone/volto/helpers/Utils/Date';
 import { version as voltoVersion } from '@plone/volto/../package.json';
 
@@ -30,9 +30,9 @@ const VersionOverview = ({
     <Grid columns={2} stackable>
       <Grid.Row>
         <Grid.Column>
-          {frontend.date && frontend.old_version && (
+          {frontend.date && (
             <Label className="highlight" ribbon>
-              updated on{' '}
+              Updated:{' '}
               {formatDate({
                 date: frontend.date,
                 format: {
@@ -41,10 +41,24 @@ const VersionOverview = ({
                 },
                 locale: locale,
               })}{' '}
-              from v{frontend.old_version}
             </Label>
           )}
-          <h3>Frontend {frontend.version ? frontend.version : ''}</h3>
+          <Header as="h3">
+            <span>Frontend {frontend.version ? frontend.version : ''}</span>
+          </Header>
+          {frontend.old_version && frontend.version && (
+            <a
+              href={[
+                config.settings.changelogUrlPrefix,
+                config.settings.frontendName,
+                config.settings.changelogUrlSuffix,
+              ].join('/')}
+              target="_blank"
+              rel="noreferrer"
+            >
+              History: {frontend.old_version} ⇢ {frontend.version}
+            </a>
+          )}
           <ul style={{ fontSize: '16px', fontFamily: 'Monospace' }}>
             {voltoVersion && <li>Volto {voltoVersion}</li>}
             {addonsInfo.map((addon) => (
@@ -53,9 +67,9 @@ const VersionOverview = ({
           </ul>
         </Grid.Column>
         <Grid.Column>
-          {backend.date && backend.old_version && (
+          {backend.date && (
             <Label className="high" ribbon="right">
-              updated on{' '}
+              Updated:{' '}
               {formatDate({
                 date: backend.date,
                 format: {
@@ -63,11 +77,26 @@ const VersionOverview = ({
                   timeStyle: 'short',
                 },
                 locale: locale,
-              })}{' '}
-              from v{backend.old_version}
+              })}
             </Label>
           )}
-          <h3>Backend {backend.version ? backend.version : ''}</h3>
+          <Header as="h3" textAlign="right">
+            Backend {backend.version ? backend.version : ''}
+          </Header>
+          {backend.old_version && backend.version && (
+            <a
+              className="ui right aligned container"
+              href={[
+                config.settings.changelogUrlPrefix,
+                config.settings.backendName,
+                config.settings.changelogUrlSuffix,
+              ].join('/')}
+              target="_blank"
+              rel="noreferrer"
+            >
+              History: {backend.old_version} ⇢ {backend.version}
+            </a>
+          )}
           <ul
             style={{
               fontSize: '16px',

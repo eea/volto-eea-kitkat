@@ -46,7 +46,7 @@ const VersionOverview = ({
           <Header as="h3">
             <span>Frontend {frontend.version ? frontend.version : ''}</span>
           </Header>
-          {frontend.old_version && frontend.version && (
+          {frontend.version && (
             <a
               href={[
                 config.settings.changelogUrlPrefix,
@@ -83,7 +83,7 @@ const VersionOverview = ({
           <Header as="h3" textAlign="right">
             Backend {backend.version ? backend.version : ''}
           </Header>
-          {backend.old_version && backend.version && (
+          {backend.version && (
             <a
               className="ui right aligned container"
               href={[

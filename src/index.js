@@ -1,10 +1,16 @@
 import { version as frontendVersion } from '../../../../package.json';
 import { name as frontendName } from '../../../../package.json';
+import { updateSystemInfo } from '@eeacms/volto-eea-kitkat/system';
 
 const applyConfig = (config) => {
   if (process.env.NODE_ENV !== 'production') {
     // Enable description block for cypress
     config.blocks.blocksConfig.description.restricted = false;
+  }
+
+  // Persist FRONTEND_VERSION on backend registry
+  if (__SERVER__) {
+    updateSystemInfo(config);
   }
 
   // Changelogs

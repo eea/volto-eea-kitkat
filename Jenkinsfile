@@ -160,45 +160,45 @@ pipeline {
             }
           },
 
-          "Cypress: slate": {
-            node(label: 'docker') {
-              script {
-                try {
-                  sh '''docker pull eeacms/plone-backend; docker run --rm -d --name="$BUILD_TAG-plone-slate" -e SITE="Plone" -e PROFILES="eea.kitkat:testing" eeacms/plone-backend'''
-                  sh '''docker pull plone/volto-addon-ci; docker run -i --name="$BUILD_TAG-cypress-slate" --link $BUILD_TAG-plone-slate:plone -e NAMESPACE="$NAMESPACE" -e GIT_NAME=$GIT_NAME -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" -e DEPENDENCIES="$DEPENDENCIES" -e NODE_ENV=development -e VOLTO="$VOLTO" plone/volto-addon-ci cypress run --config-file=cypress.slate.json'''
-                } finally {
-                  try {
-                    sh '''rm -rf cypress-reports cypress-results cypress-coverage'''
-                    sh '''mkdir -p cypress-reports cypress-results cypress-coverage'''
-                    sh '''docker cp $BUILD_TAG-cypress-slate:/opt/frontend/my-volto-project/src/addons/$GIT_NAME/cypress/videos cypress-reports/'''
-                    sh '''docker cp $BUILD_TAG-cypress-slate:/opt/frontend/my-volto-project/src/addons/$GIT_NAME/cypress/reports cypress-results/'''
-                    coverage = sh script: '''docker cp $BUILD_TAG-cypress-slate:/opt/frontend/my-volto-project/src/addons/$GIT_NAME/coverage cypress-coverage/''', returnStatus: true
-                    if ( coverage == 0 ) {
-                         publishHTML (target : [allowMissing: false,
-                             alwaysLinkToLastBuild: true,
-                             keepAll: true,
-                             reportDir: 'cypress-coverage/coverage/lcov-report',
-                             reportFiles: 'index.html',
-                             reportName: 'CypressCoverage',
-                             reportTitles: 'Integration Tests Code Coverage'])
-                    }
-                    sh '''touch empty_file; for ok_test in $(grep -E 'file=.*failures="0"' $(grep 'testsuites .*failures="0"' $(find cypress-results -name *.xml) empty_file | awk -F: '{print $1}') empty_file | sed 's/.* file="\\(.*\\)" time.*/\\1/' | sed 's#^cypress/integration/##g' | sed 's#^../../../node_modules/volto-slate/##g' | sed 's#^../../../node_modules/@eeacms/##g'); do rm -f cypress-reports/videos/$ok_test.mp4; rm -f cypress-reports/$ok_test.mp4; done'''
-                    archiveArtifacts artifacts: 'cypress-reports/**/*.mp4', fingerprint: true, allowEmptyArchive: true
-                    stash name: "cypress-coverage", includes: "cypress-coverage/**", allowEmpty: true
-                  }
-                  finally {
-                    catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
-                        junit testResults: 'cypress-results/**/*.xml', allowEmptyResults: true
-                    }
-                    sh script: "docker stop $BUILD_TAG-plone-slate", returnStatus: true
-                    sh script: "docker rm -v $BUILD_TAG-plone-slate", returnStatus: true
-                    sh script: "docker rm -v $BUILD_TAG-cypress-slate", returnStatus: true
+          // "Cypress: slate": {
+          //   node(label: 'docker') {
+          //     script {
+          //       try {
+          //         sh '''docker pull eeacms/plone-backend; docker run --rm -d --name="$BUILD_TAG-plone-slate" -e SITE="Plone" -e PROFILES="eea.kitkat:testing" eeacms/plone-backend'''
+          //         sh '''docker pull plone/volto-addon-ci; docker run -i --name="$BUILD_TAG-cypress-slate" --link $BUILD_TAG-plone-slate:plone -e NAMESPACE="$NAMESPACE" -e GIT_NAME=$GIT_NAME -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" -e DEPENDENCIES="$DEPENDENCIES" -e NODE_ENV=development -e VOLTO="$VOLTO" plone/volto-addon-ci cypress run --config-file=cypress.slate.json'''
+          //       } finally {
+          //         try {
+          //           sh '''rm -rf cypress-reports cypress-results cypress-coverage'''
+          //           sh '''mkdir -p cypress-reports cypress-results cypress-coverage'''
+          //           sh '''docker cp $BUILD_TAG-cypress-slate:/opt/frontend/my-volto-project/src/addons/$GIT_NAME/cypress/videos cypress-reports/'''
+          //           sh '''docker cp $BUILD_TAG-cypress-slate:/opt/frontend/my-volto-project/src/addons/$GIT_NAME/cypress/reports cypress-results/'''
+          //           coverage = sh script: '''docker cp $BUILD_TAG-cypress-slate:/opt/frontend/my-volto-project/src/addons/$GIT_NAME/coverage cypress-coverage/''', returnStatus: true
+          //           if ( coverage == 0 ) {
+          //                publishHTML (target : [allowMissing: false,
+          //                    alwaysLinkToLastBuild: true,
+          //                    keepAll: true,
+          //                    reportDir: 'cypress-coverage/coverage/lcov-report',
+          //                    reportFiles: 'index.html',
+          //                    reportName: 'CypressCoverage',
+          //                    reportTitles: 'Integration Tests Code Coverage'])
+          //           }
+          //           sh '''touch empty_file; for ok_test in $(grep -E 'file=.*failures="0"' $(grep 'testsuites .*failures="0"' $(find cypress-results -name *.xml) empty_file | awk -F: '{print $1}') empty_file | sed 's/.* file="\\(.*\\)" time.*/\\1/' | sed 's#^cypress/integration/##g' | sed 's#^../../../node_modules/volto-slate/##g' | sed 's#^../../../node_modules/@eeacms/##g'); do rm -f cypress-reports/videos/$ok_test.mp4; rm -f cypress-reports/$ok_test.mp4; done'''
+          //           archiveArtifacts artifacts: 'cypress-reports/**/*.mp4', fingerprint: true, allowEmptyArchive: true
+          //           stash name: "cypress-coverage", includes: "cypress-coverage/**", allowEmpty: true
+          //         }
+          //         finally {
+          //           catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
+          //               junit testResults: 'cypress-results/**/*.xml', allowEmptyResults: true
+          //           }
+          //           sh script: "docker stop $BUILD_TAG-plone-slate", returnStatus: true
+          //           sh script: "docker rm -v $BUILD_TAG-plone-slate", returnStatus: true
+          //           sh script: "docker rm -v $BUILD_TAG-cypress-slate", returnStatus: true
 
-                  }
-                }
-              }
-            }
-          }
+          //         }
+          //       }
+          //     }
+          //   }
+          // }
 
         )
       }

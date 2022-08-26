@@ -3,7 +3,7 @@ export const updateSystemInfo = (config) => {
   var fetch = require('node-fetch');
   const internalApi =
     config.settings.internalApiPath || config.settings.devProxyToApiPath;
-  const version = process.env.FRONTEND_VERSION;
+  const version = config.settings.frontendVersion;
 
   // Nothing to do
   if (!version || !internalApi) {

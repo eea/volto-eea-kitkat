@@ -8,11 +8,6 @@ const applyConfig = (config) => {
     config.blocks.blocksConfig.description.restricted = false;
   }
 
-  // Persist FRONTEND_VERSION on backend registry
-  if (__SERVER__) {
-    updateSystemInfo(config);
-  }
-
   // Changelogs
   config.settings.changelogUrlPrefix =
     config.settings.changelogPrefix ||
@@ -37,6 +32,11 @@ const applyConfig = (config) => {
 
   config.settings.backendName =
     config.settings.backendName || process.env.BACKEND_NAME || 'plone-backend';
+
+  // Persist FRONTEND_VERSION on backend registry
+  if (__SERVER__) {
+    updateSystemInfo(config);
+  }
 
   return config;
 };

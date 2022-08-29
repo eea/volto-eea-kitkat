@@ -10,28 +10,34 @@ const applyConfig = (config) => {
 
   // Changelogs
   config.settings.changelogUrlPrefix =
-    config.settings.changelogPrefix ||
-    process.env.RAZZLE_CHANGELOG_PREFIX ||
-    'https://github.com/eea';
+    config.settings.changelogPrefix || __SERVER__
+      ? process.env.RAZZLE_CHANGELOG_PREFIX
+      : window.env.RAZZLE_CHANGELOG_PREFIX || 'https://github.com/eea';
 
   config.settings.changelogUrlSuffix =
-    config.settings.changelogSuffix ||
-    process.env.RAZZLE_CHANGELOG_PREFIX ||
-    'releases';
+    config.settings.changelogSuffix || __SERVER__
+      ? process.env.RAZZLE_CHANGELOG_SUFFIX
+      : window.env.RAZZLE_CHANGELOG_SUFFIX || 'releases';
 
   config.settings.frontendVersion =
-    config.settings.frontendVersion ||
-    process.env.FRONTEND_VERSION ||
-    frontendVersion;
+    config.settings.frontendVersion || __SERVER__
+      ? process.env.RAZZLE_FRONTEND_VERSION
+      : window.env.RAZZLE_FRONTEND_VERSION || frontendVersion;
 
   config.settings.frontendName =
-    config.settings.frontendName || process.env.FRONTEND_NAME || frontendName;
+    config.settings.frontendName || __SERVER__
+      ? process.env.RAZZLE_FRONTEND_NAME
+      : window.env.RAZZLE_FRONTEND_NAME || frontendName;
 
   config.settings.backendVersion =
-    config.settings.backendVersion || process.env.BACKEND_VERSION || '';
+    config.settings.backendVersion || __SERVER__
+      ? process.env.RAZZLE_BACKEND_VERSION
+      : window.env.RAZZLE_BACKEND_VERSION || '';
 
   config.settings.backendName =
-    config.settings.backendName || process.env.BACKEND_NAME || 'plone-backend';
+    config.settings.backendName || __SERVER__
+      ? process.env.RAZZLE_BACKEND_NAME
+      : window.env.RAZZLE_BACKEND_NAME || 'plone-backend';
 
   // Persist FRONTEND_VERSION on backend registry
   if (__SERVER__) {

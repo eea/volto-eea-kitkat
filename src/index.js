@@ -8,6 +8,11 @@ const applyConfig = (config) => {
     config.blocks.blocksConfig.description.restricted = false;
   }
 
+  // Disable non-GDPR compliant blocks
+  config.blocks.blocksConfig.video.restricted = true;
+  config.blocks.blocksConfig.maps.restricted = true;
+  config.blocks.blocksConfig.html.restricted = true;
+
   // Changelogs
   config.settings.changelogUrlPrefix =
     config.settings.changelogPrefix || __SERVER__

@@ -1,6 +1,6 @@
 {
   "name": "@eeacms/volto-eea-kitkat",
-  "version": "8.0.0",
+  "version": "8.1.0",
   "description": "@eeacms/volto-eea-kitkat: Volto Add-ons bundle - A known good set of Volto addons to be used within all EEA projects and beyond",
   "main": "src/index.js",
   "author": "European Environment Agency: IDM2 A-Team",
@@ -54,7 +54,7 @@
     "@eeacms/volto-banner": "2.2.1",
     "@eeacms/volto-block-divider": "3.0.2",
     "@eeacms/volto-block-image-cards": "0.6.5",
-    "@eeacms/volto-block-style": "3.6.3",
+    "@eeacms/volto-block-style": "3.7.0",
     "@eeacms/volto-block-toc": "3.0.1",
     "@eeacms/volto-columns-block": "4.5.3",
     "@eeacms/volto-corsproxy": "2.1.6",
@@ -76,14 +76,14 @@
     "@eeacms/volto-widget-temporal-coverage": "4.0.6",
     "@eeacms/volto-widget-toggle": "2.2.7",
     "@eeacms/volto-widgets-view": "3.0.5",
-    "volto-slate": "6.3.0"
+    "volto-slate": "6.4.0"
   },
   "resolutions": {
     "@eeacms/volto-accordion-block": "3.5.0",
     "@eeacms/volto-banner": "2.2.1",
     "@eeacms/volto-block-divider": "3.0.2",
     "@eeacms/volto-block-image-cards": "0.6.5",
-    "@eeacms/volto-block-style": "3.6.2",
+    "@eeacms/volto-block-style": "3.7.0",
     "@eeacms/volto-block-toc": "3.0.1",
     "@eeacms/volto-columns-block": "4.5.3",
     "@eeacms/volto-corsproxy": "2.1.6",
@@ -105,7 +105,7 @@
     "@eeacms/volto-widget-temporal-coverage": "4.0.6",
     "@eeacms/volto-widget-toggle": "2.2.7",
     "@eeacms/volto-widgets-view": "3.0.5",
-    "volto-slate": "6.3.0"
+    "volto-slate": "6.4.0"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.5",

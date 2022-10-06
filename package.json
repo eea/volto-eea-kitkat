@@ -1,6 +1,6 @@
 {
   "name": "@eeacms/volto-eea-kitkat",
-  "version": "8.2.2",
+  "version": "8.2.3",
   "description": "@eeacms/volto-eea-kitkat: Volto Add-ons bundle - A known good set of Volto addons to be used within all EEA projects and beyond",
   "main": "src/index.js",
   "author": "European Environment Agency: IDM2 A-Team",
@@ -50,7 +50,7 @@
     "@eeacms/volto-block-image-cards"
   ],
   "dependencies": {
-    "@eeacms/volto-accordion-block": "4.0.0",
+    "@eeacms/volto-accordion-block": "4.1.0",
     "@eeacms/volto-banner": "2.2.1",
     "@eeacms/volto-block-divider": "3.0.2",
     "@eeacms/volto-block-image-cards": "0.6.5",
@@ -79,7 +79,7 @@
     "volto-slate": "6.4.0"
   },
   "resolutions": {
-    "@eeacms/volto-accordion-block": "4.0.0",
+    "@eeacms/volto-accordion-block": "4.1.0",
     "@eeacms/volto-banner": "2.2.1",
     "@eeacms/volto-block-divider": "3.0.2",
     "@eeacms/volto-block-image-cards": "0.6.5",
@@ -110,7 +110,8 @@
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.5",
     "@plone/scripts": "*",
-    "babel-plugin-transform-class-properties": "^6.24.1"
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "md5": "^2.3.0"
   },
   "scripts": {
     "release": "release-it",

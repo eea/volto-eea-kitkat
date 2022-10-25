@@ -1,6 +1,6 @@
 {
   "name": "@eeacms/volto-eea-kitkat",
-  "version": "8.2.3",
+  "version": "9.0.0",
   "description": "@eeacms/volto-eea-kitkat: Volto Add-ons bundle - A known good set of Volto addons to be used within all EEA projects and beyond",
   "main": "src/index.js",
   "author": "European Environment Agency: IDM2 A-Team",
@@ -105,8 +105,8 @@
     "@eeacms/volto-widgets-view": "3.0.5"
   },
   "devDependencies": {
-    "@cypress/code-coverage": "^3.9.5",
     "@plone/scripts": "*",
+    "@cypress/code-coverage": "^3.10.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "md5": "^2.3.0"
   },

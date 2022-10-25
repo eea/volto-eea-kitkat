@@ -18,6 +18,8 @@ module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
       // e2e testing node events setup code
+      require('@cypress/code-coverage/task')(on, config);
+      return config;
     },
     baseUrl: 'http://localhost:3000',
   },

@@ -59,7 +59,7 @@
     "@eeacms/volto-corsproxy": "2.1.6",
     "@eeacms/volto-depiction": "0.1.6",
     "@eeacms/volto-group-block": "4.3.8",
-    "@eeacms/volto-listing-block": "0.6.8",
+    "@eeacms/volto-listing-block": "1.0.0",
     "@eeacms/volto-matomo": "2.0.9",
     "@eeacms/volto-metadata-block": "4.0.8",
     "@eeacms/volto-object-widget": "4.0.2",
@@ -87,7 +87,7 @@
     "@eeacms/volto-corsproxy": "2.1.6",
     "@eeacms/volto-depiction": "0.1.6",
     "@eeacms/volto-group-block": "4.3.8",
-    "@eeacms/volto-listing-block": "0.6.8",
+    "@eeacms/volto-listing-block": "1.0.0",
     "@eeacms/volto-matomo": "2.0.9",
     "@eeacms/volto-metadata-block": "4.0.8",
     "@eeacms/volto-object-widget": "4.0.2",
@@ -105,8 +105,8 @@
     "@eeacms/volto-widgets-view": "3.0.5"
   },
   "devDependencies": {
-    "@plone/scripts": "*",
     "@cypress/code-coverage": "^3.10.0",
+    "@plone/scripts": "*",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "md5": "^2.3.0"
   },

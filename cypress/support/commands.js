@@ -1,5 +1,8 @@
 /* eslint no-console: ["error", { allow: ["log"] }] */
 
+const SLATE_SELECTOR = '.content-area .slate-editor [contenteditable=true]';
+const SLATE_TITLE_SELECTOR = '.block.inner.title [contenteditable="true"]';
+
 // --- AUTOLOGIN -------------------------------------------------------------
 Cypress.Commands.add('autologin', () => {
   let api_url, user, password;
@@ -68,8 +71,7 @@ Cypress.Commands.add(
           id: contentId,
           title: contentTitle,
           image: {
-            data:
-              'iVBORw0KGgoAAAANSUhEUgAAANcAAAA4CAMAAABZsZ3QAAAAM1BMVEX29fK42OU+oMvn7u9drtIPisHI4OhstdWZyt4fkcXX5+sAg74umMhNp86p0eJ7vNiKw9v/UV4wAAAAAXRSTlMAQObYZgAABBxJREFUeF7tmuty4yAMhZG4X2zn/Z92J5tsBJwWXG/i3XR6frW2Y/SBLIRAfaQUDNt8E5tLUt9BycfcKfq3R6Mlfyimtx4rzp+K3dtibXkor99zsEqLYZltblTecciogoh+TXfY1Ve4dn07rCDGG9dHSEEOg/GmXl0U1XDxTKxNK5De7BxsyyBr6gGm2/vPxKJ8F6f7BXKfRMp1xIWK9A+5ks25alSb353dWnDJN1k35EL5f8dVGifTf/4tjUuuFq7u4srmXC60yAmldLXIWbg65RKU87lcGxJCFqUPv0IacW0PmSivOZFLE908inPToMmii/roG+MRV/O8FU88i8tFsxV3a06MFUw0Qu7RmAtdV5/HVVaOVMTWNOWSwMljLhzhcB6XIS7OK5V6AvRDNN7t5VJWQs1J40UmalbK56usBG/CuCHSYuc+rkUGeMCViNRARPrzW52N3oQLe6WifNliSuuGaH3czbVNudI9s7ZLUCLHVwWlyES522o1t14uvmbblmVTKqFjaZYJFSTPP4dLL1kU1z7p0lzdbRulmEWLxoQX+z9ce7A8GqEEucllLxePuZwdJl1Lezu0hoswvTPt61DrFcRuujV/2cmlxaGBC7Aw6cpovGANwRiSdOAWJ5AGy4gLL64dl0QhUEAuEUNws+XxV+OKGPdw/hESGYF9XEGaFC7sNLMSXWJjHsnanYi87VK428N2uxpOjOFANcagLM5l+7mSycM8KknZpKLcGi6jmzWGr/vLurZ/0g4u9AZuAoeb5r1ceQhyiTPY1E4wUR6u/F3H2ojSpXMMriBPT9cezTto8Cx+MsglHL4fv1Rxrb1LVw9yvyQpJ3AhFnLZfuRLH2QsOG3FGGD20X/th/u5bFAt16Bt308KjF+MNOXgl/SquIEySX3GhaZvc67KZbDxcCDORz2N8yCWPaY5lyQZO7lQ29fnZbt3Xu6qoge4+DjXl/MocySPOp9rlvdyznahRyHEYd77v3LhugOXDv4J65QXfl803BDAdaWBEDhfVx7nKofjoVCgxnUAqw/UAUDPn788BDvQuG4TDtdtUPvzjSlXAB8DvaDOhhrmhwbywylXAm8CvaouikJTL93gs3y7Yy4VYbIxOHrcMizPqWOjqO9l3Uz52kibQy4xxOgqhJvD+w5rvokOcAlGvNCfeqCv1ste1stzLm0f71Iq3ZfTrPfuE5nhPtF+LvQE2lffQC7pYtQy3tdzdrKvd5TLVVzDetScS3nEKmmwDyt1Cev1kX3YfbvzNK4fzrlw+cB6vm+uiUgf2zdXI62241LawCb7Pi5FXFPF8KpzDoF/Sw2lg+GrHNbno1mhPu+VCF/vfMnw06PnUl6j48dVHD3jHNHPua+fc3o/5yp/zsGi0vYtzi3Pz5mHd4T6BWMIlewacd63AAAAAElFTkSuQmCC',
+            data: 'iVBORw0KGgoAAAANSUhEUgAAANcAAAA4CAMAAABZsZ3QAAAAM1BMVEX29fK42OU+oMvn7u9drtIPisHI4OhstdWZyt4fkcXX5+sAg74umMhNp86p0eJ7vNiKw9v/UV4wAAAAAXRSTlMAQObYZgAABBxJREFUeF7tmuty4yAMhZG4X2zn/Z92J5tsBJwWXG/i3XR6frW2Y/SBLIRAfaQUDNt8E5tLUt9BycfcKfq3R6Mlfyimtx4rzp+K3dtibXkor99zsEqLYZltblTecciogoh+TXfY1Ve4dn07rCDGG9dHSEEOg/GmXl0U1XDxTKxNK5De7BxsyyBr6gGm2/vPxKJ8F6f7BXKfRMp1xIWK9A+5ks25alSb353dWnDJN1k35EL5f8dVGifTf/4tjUuuFq7u4srmXC60yAmldLXIWbg65RKU87lcGxJCFqUPv0IacW0PmSivOZFLE908inPToMmii/roG+MRV/O8FU88i8tFsxV3a06MFUw0Qu7RmAtdV5/HVVaOVMTWNOWSwMljLhzhcB6XIS7OK5V6AvRDNN7t5VJWQs1J40UmalbK56usBG/CuCHSYuc+rkUGeMCViNRARPrzW52N3oQLe6WifNliSuuGaH3czbVNudI9s7ZLUCLHVwWlyES522o1t14uvmbblmVTKqFjaZYJFSTPP4dLL1kU1z7p0lzdbRulmEWLxoQX+z9ce7A8GqEEucllLxePuZwdJl1Lezu0hoswvTPt61DrFcRuujV/2cmlxaGBC7Aw6cpovGANwRiSdOAWJ5AGy4gLL64dl0QhUEAuEUNws+XxV+OKGPdw/hESGYF9XEGaFC7sNLMSXWJjHsnanYi87VK428N2uxpOjOFANcagLM5l+7mSycM8KknZpKLcGi6jmzWGr/vLurZ/0g4u9AZuAoeb5r1ceQhyiTPY1E4wUR6u/F3H2ojSpXMMriBPT9cezTto8Cx+MsglHL4fv1Rxrb1LVw9yvyQpJ3AhFnLZfuRLH2QsOG3FGGD20X/th/u5bFAt16Bt308KjF+MNOXgl/SquIEySX3GhaZvc67KZbDxcCDORz2N8yCWPaY5lyQZO7lQ29fnZbt3Xu6qoge4+DjXl/MocySPOp9rlvdyznahRyHEYd77v3LhugOXDv4J65QXfl803BDAdaWBEDhfVx7nKofjoVCgxnUAqw/UAUDPn788BDvQuG4TDtdtUPvzjSlXAB8DvaDOhhrmhwbywylXAm8CvaouikJTL93gs3y7Yy4VYbIxOHrcMizPqWOjqO9l3Uz52kibQy4xxOgqhJvD+w5rvokOcAlGvNCfeqCv1ste1stzLm0f71Iq3ZfTrPfuE5nhPtF+LvQE2lffQC7pYtQy3tdzdrKvd5TLVVzDetScS3nEKmmwDyt1Cev1kX3YfbvzNK4fzrlw+cB6vm+uiUgf2zdXI62241LawCb7Pi5FXFPF8KpzDoF/Sw2lg+GrHNbno1mhPu+VCF/vfMnw06PnUl6j48dVHD3jHNHPua+fc3o/5yp/zsGi0vYtzi3Pz5mHd4T6BWMIlewacd63AAAAAElFTkSuQmCC',
             encoding: 'base64',
             filename: 'image.png',
             'content-type': 'image/png',
@@ -122,7 +124,7 @@ Cypress.Commands.add(
         })
         .then(() => console.log(`${contentType} created`));
     }
-  },
+  }
 );
 
 // --- Add DX Content-Type ----------------------------------------------------------
@@ -215,7 +217,7 @@ Cypress.Commands.add('removeSlateJSONField', (type, name) => {
       body: {},
     })
     .then(() =>
-      console.log(`${name} SlateJSONField field removed from ${type}`),
+      console.log(`${name} SlateJSONField field removed from ${type}`)
     );
 });
 
@@ -249,7 +251,7 @@ Cypress.Commands.add('typeInSlate', { prevSubject: true }, (subject, text) => {
           new InputEvent('beforeinput', {
             inputType: 'insertText',
             data: text,
-          }),
+          })
         );
         return subject;
       })
@@ -265,7 +267,7 @@ Cypress.Commands.add('lineBreakInSlate', { prevSubject: true }, (subject) => {
       .wrap(subject)
       .then((subject) => {
         subject[0].dispatchEvent(
-          new InputEvent('beforeinput', { inputType: 'insertLineBreak' }),
+          new InputEvent('beforeinput', { inputType: 'insertLineBreak' })
         );
         return subject;
       })
@@ -313,7 +315,7 @@ Cypress.Commands.add(
         include_children: include_children,
       },
     });
-  },
+  }
 );
 
 // --- waitForResourceToLoad ----------------------------------------------------------
@@ -373,15 +375,45 @@ Cypress.Commands.add(
         setBaseAndExtent(anchorNode, anchorOffset, focusNode, focusOffset);
       }
     });
-  },
+  }
 );
 
-Cypress.Commands.add('getSlateEditorAndType', (type) => {
-  cy.get('.content-area .slate-editor [contenteditable=true]')
+Cypress.Commands.add('getSlate', ({ createNewSlate = true } = {}) => {
+  let slate;
+  cy.getIfExists(
+    SLATE_SELECTOR,
+    () => {
+      slate = cy.get(SLATE_SELECTOR).last();
+    },
+    () => {
+      if (createNewSlate) {
+        cy.get('.block.inner').last().type('{moveToEnd}{enter}');
+      }
+      slate = cy.get(SLATE_SELECTOR, { timeout: 10000 }).last();
+    }
+  );
+  return slate;
+});
+
+Cypress.Commands.add('clearSlate', (selector) => {
+  return cy
+    .get(selector)
     .focus()
     .click()
     .wait(1000)
-    .type(type);
+    .type('{selectAll}')
+    .wait(1000)
+    .type('{backspace}');
+});
+
+Cypress.Commands.add('getSlateTitle', () => {
+  return cy.get(SLATE_TITLE_SELECTOR, {
+    timeout: 10000,
+  });
+});
+
+Cypress.Commands.add('clearSlateTitle', () => {
+  return cy.clearSlate(SLATE_TITLE_SELECTOR);
 });
 
 Cypress.Commands.add('setSlateSelection', (subject, query, endQuery) => {
@@ -389,7 +421,11 @@ Cypress.Commands.add('setSlateSelection', (subject, query, endQuery) => {
     .focus()
     .click()
     .setSelection(subject, query, endQuery)
-    .wait(1000);
+    .wait(1000); // this wait is needed for the selection change to be detected after
+});
+
+Cypress.Commands.add('getSlateEditorAndType', (type) => {
+  cy.getSlate().focus().click().type(type);
 });
 
 Cypress.Commands.add('setSlateCursor', (subject, query, endQuery) => {
@@ -401,7 +437,9 @@ Cypress.Commands.add('setSlateCursor', (subject, query, endQuery) => {
 });
 
 Cypress.Commands.add('clickSlateButton', (button) => {
-  cy.get(`.slate-inline-toolbar .button-wrapper a[title="${button}"]`).click();
+  cy.get(`.slate-inline-toolbar .button-wrapper a[title="${button}"]`, {
+    timeout: 10000,
+  }).click({ force: true }); //force click is needed to ensure the button in visible in view.
 });
 
 Cypress.Commands.add('toolbarSave', () => {
@@ -432,7 +470,7 @@ Cypress.Commands.add(
     });
     // Depending on what you're testing, you may need to chain a `.click()` here to ensure
     // further commands are picked up by whatever you're testing (this was required for Slate, for example).
-  },
+  }
 );
 
 Cypress.Commands.add(
@@ -440,7 +478,7 @@ Cypress.Commands.add(
   { prevSubject: true },
   (subject, query) => {
     cy.wrap(subject).setCursor(query, true);
-  },
+  }
 );
 
 Cypress.Commands.add(
@@ -448,7 +486,7 @@ Cypress.Commands.add(
   { prevSubject: true },
   (subject, query) => {
     cy.wrap(subject).setCursor(query);
-  },
+  }
 );
 
 // Helper functions
@@ -483,3 +521,16 @@ Cypress.Commands.add('store', () => {
 Cypress.Commands.add('settings', (key, value) => {
   return cy.window().its('settings');
 });
+
+Cypress.Commands.add(
+  'getIfExists',
+  (selector, successAction = () => {}, failAction = () => {}) => {
+    cy.get('body').then((body) => {
+      if (body.find(selector).length > 0 && successAction) {
+        successAction();
+      } else if (failAction) {
+        failAction();
+      }
+    });
+  }
+);

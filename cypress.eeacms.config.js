@@ -22,9 +22,9 @@ module.exports = defineConfig({
       // e2e testing node events setup code
     },
     baseUrl: 'http://localhost:3000',
-    specPattern: '../../../node_modules/@eeacms/**/cypress/e2e/**/*.js',
+    specPattern: '../../../node_modules/@eeacms/**/cypress/e2e/**/*.cy.js',
     excludeSpecPattern:
-      '../../../node_modules/@eeacms/volto-slate-zotero/cypress/e2e/**/*.js',
+      '../../../node_modules/@eeacms/volto-slate-zotero/cypress/e2e/**/*.cy.js',
     fixturesFolder:
       '../../../node_modules/@eeacms/volto-slate-zotero/cypress/fixtures',
   },

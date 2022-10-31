@@ -6,9 +6,8 @@ describe('Blocks Tests', () => {
 
   it('Add Block: Empty', () => {
     // Change page title
-    cy.get('[contenteditable=true]').first().clear();
-
-    cy.get('[contenteditable=true]').first().type('My Add-on Page');
+    cy.clearSlateTitle();
+    cy.getSlateTitle().type('My Add-on Page');
 
     cy.get('.documentFirstHeading').contains('My Add-on Page');
 

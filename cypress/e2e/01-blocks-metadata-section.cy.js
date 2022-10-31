@@ -6,23 +6,20 @@ describe('Blocks Tests', () => {
 
   it('Add Metadata block: Description', () => {
     // without this the clear command below does nothing sometimes
-    cy.wait(500);
-
-    // Change page title
-    cy.get('[contenteditable=true]').first().clear();
-
-    cy.get('[contenteditable=true]').first().type('My Add-on Page');
+    cy.clearSlateTitle();
+    cy.getSlateTitle().type('My Add-on Page');
 
     cy.get('.documentFirstHeading').contains('My Add-on Page');
 
-    cy.get('[contenteditable=true]').first().type('{enter}');
+    cy.getSlate().click();
 
-    // Add metadata block
+    // Add Metadata Section block
     cy.get('.ui.basic.icon.button.block-add-button').first().click();
     cy.get('.blocks-chooser .title').contains('Common').click();
-    cy.get('.ui.basic.icon.button.metadataSection')
+    cy.get('.content.active.common .button.metadataSection')
       .contains('Metadata Section')
-      .click();
+      .click({ force: true });
+
     cy.get('.objectlist-widget button').contains('Add Field').click();
     cy.get('.objectlist-widget .react-select__value-container')
       .click()

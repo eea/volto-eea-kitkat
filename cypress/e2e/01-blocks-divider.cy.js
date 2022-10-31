@@ -6,21 +6,22 @@ describe('Blocks Tests', () => {
 
   it('Add Block: Empty', () => {
     // without this the clear command below does nothing sometimes
-    cy.wait(500);
-
-    // Change page title
-    cy.get('[contenteditable=true]').first().clear();
-
-    cy.get('[contenteditable=true]').first().type('My Add-on Page');
+    cy.clearSlateTitle();
+    cy.getSlateTitle().type('My Add-on Page');
 
     cy.get('.documentFirstHeading').contains('My Add-on Page');
 
-    cy.get('[contenteditable=true]').first().type('{enter}');
+    cy.getSlate().click();
 
-    // Add block
+    // Add Divider block
     cy.get('.ui.basic.icon.button.block-add-button').first().click();
     cy.get('.blocks-chooser .title').contains('Common').click();
-    cy.get('.ui.basic.icon.button.dividerBlock').contains('Divider').click();
+    cy.get('.content.active.common .button.dividerBlock')
+      .contains('Divider')
+      .click({ force: true });
+
+    cy.get('.sidebar-container label[for="field-section"]').click();
+    cy.get('.sidebar-container label[for="field-short"]').click();
 
     // Save
     cy.get('#toolbar-save').click();
@@ -28,6 +29,6 @@ describe('Blocks Tests', () => {
 
     // then the page view should contain our changes
     cy.contains('My Add-on Page');
-    cy.get('.divider');
+    cy.get('.section.divider.short');
   });
 });

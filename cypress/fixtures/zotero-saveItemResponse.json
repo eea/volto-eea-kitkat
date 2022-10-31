@@ -1,0 +1,95 @@
+{
+  "statusCode": 200,
+  "headers": {
+    "Total-Results": "14"
+  },
+  "body": {
+    "successful": {
+      "0": {
+        "key": "H8TWWRZC",
+        "version": 305,
+        "library": {
+          "type": "user",
+          "id": 6732551,
+          "name": "rexalexmede",
+          "links": {
+            "alternate": {
+              "href": "https://www.zotero.org/rexalexmede",
+              "type": "text/html"
+            }
+          }
+        },
+        "links": {
+          "self": {
+            "href": "https://api.zotero.org/users/6732551/items/H8TWWRZC",
+            "type": "application/json"
+          },
+          "alternate": {
+            "href": "https://www.zotero.org/rexalexmede/items/H8TWWRZC",
+            "type": "text/html"
+          }
+        },
+        "meta": {
+          "creatorSummary": "Bienvenu et al.",
+          "parsedDate": "2021",
+          "numChildren": 0
+        },
+        "data": {
+          "key": "H8TWWRZC",
+          "version": 305,
+          "itemType": "journalArticle",
+          "title": "The Moran forest",
+          "creators": [
+            {
+              "creatorType": "author",
+              "firstName": "François",
+              "lastName": "Bienvenu"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "Jean‐Jil",
+              "lastName": "Duchamps"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "Félix",
+              "lastName": "Foutel‐Rodier"
+            }
+          ],
+          "abstractNote": "",
+          "publicationTitle": "",
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "date": "2021",
+          "series": "",
+          "seriesTitle": "",
+          "seriesText": "",
+          "journalAbbreviation": "",
+          "language": "",
+          "DOI": "10.1002/rsa.20997",
+          "ISSN": "",
+          "shortTitle": "",
+          "url": "",
+          "accessDate": "",
+          "archive": "",
+          "archiveLocation": "",
+          "libraryCatalog": "",
+          "callNumber": "",
+          "rights": "",
+          "extra": "",
+          "tags": [],
+          "collections": ["NH578GBA"],
+          "relations": {},
+          "dateAdded": "2021-12-14T17:08:25Z",
+          "dateModified": "2021-12-14T17:08:25Z"
+        }
+      }
+    },
+    "success": {
+      "0": "H8TWWRZC"
+    },
+    "unchanged": {},
+    "failed": {}
+  }
+}

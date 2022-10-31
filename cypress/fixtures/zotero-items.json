@@ -1,0 +1,139 @@
+{
+	"statusCode": 200,
+	"headers": {
+		"Total-Results": "14"
+	},
+	"body": [
+		{
+			"key": "INFEDJ40",
+			"version": 184,
+			"library": {
+				"type": "user",
+				"id": 6732,
+				"name": "rexalexmede",
+				"links": {
+					"alternate": {
+						"href": "https://www.zotero.org/rexalexmede",
+						"type": "text/html"
+					}
+				}
+			},
+			"links": {
+				"self": {
+					"href": "https://api.zotero.org/users/6732/items/INFEDJ40",
+					"type": "application/json"
+				},
+				"alternate": {
+					"href": "https://www.zotero.org/rexalexmede/items/INFEDJ40",
+					"type": "text/html"
+				}
+			},
+			"meta": {
+				"creatorSummary": "Alexandru",
+				"numChildren": 0
+			},
+			"data": {
+				"key": "INFEDJ40",
+				"version": 184,
+				"itemType": "journalArticle",
+				"title": "Coffee rating",
+				"creators": [
+					{
+						"creatorType": "author",
+						"firstName": "Medesan",
+						"lastName": "Alexandru"
+					}
+				],
+				"abstractNote": "",
+				"publicationTitle": "",
+				"volume": "",
+				"issue": "",
+				"pages": "",
+				"date": "",
+				"series": "",
+				"seriesTitle": "",
+				"seriesText": "",
+				"journalAbbreviation": "",
+				"language": "",
+				"DOI": "",
+				"ISSN": "",
+				"shortTitle": "",
+				"url": "www.inventedTitle.com",
+				"accessDate": "",
+				"archive": "",
+				"archiveLocation": "",
+				"libraryCatalog": "",
+				"callNumber": "",
+				"rights": "",
+				"extra": "",
+				"tags": [],
+				"collections": ["83VH3", "BGJV5", "24C33"],
+				"relations": {},
+				"dateAdded": "2020-07-07T06:15:29Z",
+				"dateModified": "2020-07-07T06:17:27Z"
+			}
+		},
+		{
+			"key": "QHCG97BD",
+			"version": 185,
+			"library": {
+				"type": "user",
+				"id": 6732,
+				"name": "rexalexmede",
+				"links": {
+					"alternate": {
+						"href": "https://www.zotero.org/rexalexmede",
+						"type": "text/html"
+					}
+				}
+			},
+			"links": {
+				"self": {
+					"href": "https://api.zotero.org/users/6732/items/QHCG97BD",
+					"type": "application/json"
+				},
+				"alternate": {
+					"href": "https://www.zotero.org/rexalexmede/items/QHCG97BD",
+					"type": "text/html"
+				}
+			},
+			"meta": {
+				"numChildren": 0
+			},
+			"data": {
+				"key": "QHCG97BD",
+				"version": 185,
+				"itemType": "journalArticle",
+				"title": "Tea Rating",
+				"creators": [],
+				"abstractNote": "",
+				"publicationTitle": "Comcast",
+				"volume": "",
+				"issue": "",
+				"pages": "",
+				"date": "",
+				"series": "",
+				"seriesTitle": "",
+				"seriesText": "",
+				"journalAbbreviation": "",
+				"language": "",
+				"DOI": "",
+				"ISSN": "",
+				"shortTitle": "",
+				"url": "",
+				"accessDate": "",
+				"archive": "",
+				"archiveLocation": "",
+				"libraryCatalog": "",
+				"callNumber": "",
+				"rights": "",
+				"extra": "",
+				"tags": [],
+				"collections": ["83VH3S", "24C33"],
+				"relations": {},
+				"dateAdded": "2020-10-12T11:40:56Z",
+				"dateModified": "2020-10-12T11:41:09Z"
+			}
+		}
+	]
+}

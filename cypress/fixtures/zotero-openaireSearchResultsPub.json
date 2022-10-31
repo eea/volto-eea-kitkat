@@ -1,0 +1,1235 @@
+{
+  "statusCode": 200,
+  "headers": {
+    "Total-Results": "1"
+  },
+  "body": {
+    "response": {
+      "header": {
+        "query": {
+          "$": "(oaftype exact result) and (resulttypeid exact publication) and (resulttitle exact \"forest\")"
+        },
+        "locale": { "$": "en_US" },
+        "size": { "$": 2 },
+        "page": { "$": 1 },
+        "total": { "$": 203603 },
+        "fields": null
+      },
+      "results": {
+				"result": [
+          {
+            "header": {
+              "dri:objIdentifier": {
+                "$": "doi_dedup___::61ce61aaf4311474545a9f19c0ad1741"
+              },
+              "dri:dateOfCollection": { "$": "2021-05-16T04:18:03.723Z" },
+              "dri:dateOfTransformation": { "$": "2021-05-16T04:34:58.322Z" }
+            },
+            "metadata": {
+              "oaf:entity": {
+                "@xsi:schemaLocation": "http://namespace.openaire.eu/oaf https://www.openaire.eu/schema/1.0/oaf-1.0.xsd",
+                "oaf:result": {
+                  "collectedfrom": [
+                    {
+                      "@name": "Oskar Bordeaux",
+                      "@id": "opendoar____::f6bc7e9dc18cfe3bbacd3dc594cef296"
+                    },
+                    {
+                      "@name": "Mémoires en Sciences de l'Information et de la Communication",
+                      "@id": "opendoar____::1534b76d325a8f591b52d302e7181331"
+                    },
+                    {
+                      "@name": "Hal-Diderot",
+                      "@id": "opendoar____::18bb68e2b38e4a8ce7cf4f6b2625768c"
+                    },
+                    {
+                      "@name": "Hyper Article en Ligne",
+                      "@id": "opendoar____::7e7757b1e12abcb736ab9a754ffb617a"
+                    },
+                    {
+                      "@name": "arXiv.org e-Print Archive",
+                      "@id": "opendoar____::6f4922f45568161a8cdf4ad2299f6d23"
+                    },
+                    {
+                      "@name": "HAL-Inserm",
+                      "@id": "opendoar____::d9731321ef4e063ebbee79298fa36f56"
+                    },
+                    {
+                      "@name": "Crossref",
+                      "@id": "openaire____::081b82f96300b6a6e3d282bad31cb6e2"
+                    },
+                    {
+                      "@name": "ORCID",
+                      "@id": "openaire____::806360c771262b4d6770e7cdf04b5c5a"
+                    }
+                  ],
+                  "originalId": [
+                    {
+                      "$": "50|od______9631::2dda867935f128aae77adca9fa1aef9c"
+                    },
+                    { "$": "oai:oskar-bordeaux.fr:20.500.12278/39954" },
+                    { "$": "oai:HAL:hal-02165001v1" },
+                    {
+                      "$": "50|od_______212::6746d39ebcc4d97dc7d949065323c0a4"
+                    },
+                    { "$": "oai:HAL:hal-02165001v2" },
+                    {
+                      "$": "50|od______2592::b172733093f24e6d4620187ddfb3cef5"
+                    },
+                    {
+                      "$": "50|od_______166::b172733093f24e6d4620187ddfb3cef5"
+                    },
+                    {
+                      "$": "50|od_______212::b172733093f24e6d4620187ddfb3cef5"
+                    },
+                    {
+                      "$": "50|od________18::68dc1a0aee1be05f1623a0d95c196fa9"
+                    },
+                    { "$": "oai:arXiv.org:1906.08806" },
+                    {
+                      "$": "50|od______1398::b172733093f24e6d4620187ddfb3cef5"
+                    },
+                    {
+                      "$": "50|od_______166::6746d39ebcc4d97dc7d949065323c0a4"
+                    },
+                    { "$": "10.1002/rsa.20997" },
+                    {
+                      "$": "50|doiboost____::61ce61aaf4311474545a9f19c0ad1741"
+                    },
+                    { "$": "50|od______2592::6746d39ebcc4d97dc7d949065323c0a4" }
+                  ],
+                  "pid": [
+                    {
+                      "@classid": "arXiv",
+                      "@classname": "arXiv",
+                      "@schemeid": "dnet:pid_types",
+                      "@schemename": "dnet:pid_types",
+                      "@inferred": false,
+                      "@provenanceaction": "sysimport:crosswalk:repository",
+                      "@trust": "0.9",
+                      "$": 1906.08806
+                    },
+                    {
+                      "@classid": "doi",
+                      "@classname": "Digital Object Identifier",
+                      "@schemeid": "dnet:pid_types",
+                      "@schemename": "dnet:pid_types",
+                      "$": "10.1002/rsa.20997"
+                    }
+                  ],
+                  "title": {
+                    "@classid": "main title",
+                    "@classname": "main title",
+                    "@schemeid": "dnet:dataCite_title",
+                    "@schemename": "dnet:dataCite_title",
+                    "@inferred": false,
+                    "@provenanceaction": "sysimport:crosswalk:repository",
+                    "@trust": "0.9",
+                    "$": "The Moran forest"
+                  },
+                  "bestaccessright": {
+                    "@classid": "OPEN",
+                    "@classname": "Open Access",
+                    "@schemeid": "dnet:access_modes",
+                    "@schemename": "dnet:access_modes"
+                  },
+                  "creator": [
+                    {
+                      "@rank": "1",
+                      "@name": "François",
+                      "@surname": "Bienvenu",
+                      "@orcid": "0000-0002-5396-1193",
+                      "$": "François Bienvenu"
+                    },
+                    {
+                      "@rank": "2",
+                      "@name": "Jean‐Jil",
+                      "@surname": "Duchamps",
+                      "@orcid": "0000-0002-3823-1686",
+                      "$": "Jean‐Jil Duchamps"
+                    },
+                    {
+                      "@rank": "3",
+                      "@name": "Félix",
+                      "@surname": "Foutel‐Rodier",
+                      "$": "Félix Foutel‐Rodier"
+                    }
+                  ],
+                  "contributor": [
+                    {
+                      "$": "Centre interdisciplinaire de recherche en biologie (CIRB) ; Labex MemoLife ; École normale supérieure - Paris (ENS Paris) ; Université Paris sciences et lettres (PSL)-Université Paris sciences et lettres (PSL)-Collège de France (CdF (institution))-Ecole Superieure de Physique et de Chimie Industrielles de la Ville de Paris (ESPCI Paris) ; Université Paris sciences et lettres (PSL)-École normale supérieure - Paris (ENS Paris) ; Université Paris sciences et lettres (PSL)-Université Paris sciences et lettres (PSL)-Collège de France (CdF (institution))-Ecole Superieure de Physique et de Chimie Industrielles de la Ville de Paris (ESPCI Paris) ; Université Paris sciences et lettres (PSL)-Centre National de la Recherche Scientifique (CNRS)-Institut National de la Santé et de la Recherche Médicale (INSERM)"
+                    },
+                    {
+                      "$": "Laboratoire de Probabilités, Statistiques et Modélisations (LPSM (UMR_8001)) ; Université Paris Diderot - Paris 7 (UPD7)-Sorbonne Université (SU)-Centre National de la Recherche Scientifique (CNRS)"
+                    },
+                    {
+                      "$": "Centre interdisciplinaire de recherche en biologie (CIRB) ; Labex MemoLife ; École normale supérieure - Paris (ENS Paris) ; Université Paris sciences et lettres (PSL)-Université Paris sciences et lettres (PSL)-Collège de France (CdF (institution))-Ecole Superieure de Physique et de Chimie Industrielles de la Ville de Paris (ESPCI Paris) ; Université Paris sciences et lettres (PSL)-École normale supérieure - Paris (ENS Paris) ; Université Paris sciences et lettres (PSL)-Université Paris sciences et lettres (PSL)-Collège de France (CdF (institution))-Ecole Superieure de Physique et de Chimie Industrielles de la Ville de Paris (ESPCI Paris) ; Université Paris sciences et lettres (PSL)-Institut National de la Santé et de la Recherche Médicale (INSERM)-Centre National de la Recherche Scientifique (CNRS)"
+                    },
+                    {
+                      "$": "Laboratoire de Probabilités, Statistiques et Modélisations (LPSM (UMR_8001)) ; Sorbonne Université (SU)-Centre National de la Recherche Scientifique (CNRS)-Université de Paris (UP)"
+                    },
+                    {
+                      "$": "Laboratoire de Mathématiques de Besançon (UMR 6623) (LMB) ; Université de Bourgogne (UB)-Université de Franche-Comté (UFC) ; Université Bourgogne Franche-Comté [COMUE] (UBFC)-Université Bourgogne Franche-Comté [COMUE] (UBFC)-Centre National de la Recherche Scientifique (CNRS)"
+                    },
+                    {
+                      "$": "Centre interdisciplinaire de recherche en biologie (CIRB) ; Labex MemoLife ; Université Paris sciences et lettres (PSL)-Collège de France (CdF (institution))-École normale supérieure - Paris (ENS Paris) ; Université Paris sciences et lettres (PSL)-Ecole Superieure de Physique et de Chimie Industrielles de la Ville de Paris (ESPCI Paris) ; Université Paris sciences et lettres (PSL)-Université Paris sciences et lettres (PSL)-Collège de France (CdF (institution))-École normale supérieure - Paris (ENS Paris) ; Université Paris sciences et lettres (PSL)-Ecole Superieure de Physique et de Chimie Industrielles de la Ville de Paris (ESPCI Paris) ; Université Paris sciences et lettres (PSL)-Centre National de la Recherche Scientifique (CNRS)-Institut National de la Santé et de la Recherche Médicale (INSERM)"
+                    }
+                  ],
+                  "country": {
+                    "@classid": "FR",
+                    "@classname": "France",
+                    "@schemeid": "dnet:countries",
+                    "@schemename": "dnet:countries"
+                  },
+                  "dateofacceptance": { "$": "2021-04-26" },
+                  "description": [
+                    { "$": "Comment: Accepted version" },
+                    {
+                      "$": "Starting from any graph on $\\{1, \\ldots, n\\}$, consider the Markov chain where at each time-step a uniformly chosen vertex is disconnected from all of its neighbors and reconnected to another uniformly chosen vertex. This Markov chain has a stationary distribution whose support is the set of non-empty forests on $\\{1, \\ldots, n\\}$. The random forest corresponding to this stationary distribution has interesting connections with the uniform rooted labeled tree and the uniform attachment tree. We fully characterize its degree distribution, the distribution of its number of trees, and the limit distribution of the size of a tree sampled uniformly. We also show that the size of the largest tree is asymptotically $\\alpha \\log n$, where $\\alpha = (1 - \\log(e - 1))^{-1} \\approx 2.18$, and that the degree of the most connected vertex is asymptotically $\\log n / \\log\\log n$."
+                    }
+                  ],
+                  "subject": [
+                    {
+                      "@classid": "keyword",
+                      "@classname": "keyword",
+                      "@schemeid": "dnet:subject_classification_typologies",
+                      "@schemename": "dnet:subject_classification_typologies",
+                      "@inferred": false,
+                      "@provenanceaction": "sysimport:crosswalk:repository",
+                      "@trust": "0.9",
+                      "$": "[MATH.MATH-PR]Mathematics [math]/Probability [math.PR]"
+                    },
+                    {
+                      "@classid": "keyword",
+                      "@classname": "keyword",
+                      "@schemeid": "dnet:subject_classification_typologies",
+                      "@schemename": "dnet:subject_classification_typologies",
+                      "@inferred": false,
+                      "@provenanceaction": "sysimport:crosswalk:repository",
+                      "@trust": "0.9",
+                      "$": "[MATH.MATH-CO]Mathematics [math]/Combinatorics [math.CO]"
+                    },
+                    {
+                      "@classid": "keyword",
+                      "@classname": "keyword",
+                      "@schemeid": "dnet:subject_classification_typologies",
+                      "@schemename": "dnet:subject_classification_typologies",
+                      "@inferred": false,
+                      "@provenanceaction": "sysimport:crosswalk:repository",
+                      "@trust": "0.9",
+                      "$": "Mathematics - Probability"
+                    },
+                    {
+                      "@classid": "keyword",
+                      "@classname": "keyword",
+                      "@schemeid": "dnet:subject_classification_typologies",
+                      "@schemename": "dnet:subject_classification_typologies",
+                      "@inferred": false,
+                      "@provenanceaction": "sysimport:crosswalk:repository",
+                      "@trust": "0.9",
+                      "$": "Mathematics - Combinatorics"
+                    },
+                    {
+                      "@classid": "keyword",
+                      "@classname": "keyword",
+                      "@schemeid": "dnet:subject_classification_typologies",
+                      "@schemename": "dnet:subject_classification_typologies",
+                      "@inferred": false,
+                      "@provenanceaction": "sysimport:crosswalk:repository",
+                      "@trust": "0.9",
+                      "$": "05C80, 60C05 (Primary) 60J10, 05C05, 05C07 (Secondary)"
+                    },
+                    {
+                      "@classid": "keyword",
+                      "@classname": "keyword",
+                      "@schemeid": "dnet:subject_classification_typologies",
+                      "@schemename": "dnet:subject_classification_typologies",
+                      "$": "Applied Mathematics"
+                    },
+                    {
+                      "@classid": "keyword",
+                      "@classname": "keyword",
+                      "@schemeid": "dnet:subject_classification_typologies",
+                      "@schemename": "dnet:subject_classification_typologies",
+                      "$": "Computer Graphics and Computer-Aided Design"
+                    },
+                    {
+                      "@classid": "keyword",
+                      "@classname": "keyword",
+                      "@schemeid": "dnet:subject_classification_typologies",
+                      "@schemename": "dnet:subject_classification_typologies",
+                      "$": "General Mathematics"
+                    },
+                    {
+                      "@classid": "keyword",
+                      "@classname": "keyword",
+                      "@schemeid": "dnet:subject_classification_typologies",
+                      "@schemename": "dnet:subject_classification_typologies",
+                      "$": "Software"
+                    }
+                  ],
+                  "language": {
+                    "@classid": "eng",
+                    "@classname": "English",
+                    "@schemeid": "dnet:languages",
+                    "@schemename": "dnet:languages"
+                  },
+                  "relevantdate": [
+                    {
+                      "@classid": "created",
+                      "@classname": "created",
+                      "@schemeid": "dnet:dataCite_date",
+                      "@schemename": "dnet:dataCite_date",
+                      "$": "2021-02-18"
+                    },
+                    {
+                      "@classid": "published-online",
+                      "@classname": "published-online",
+                      "@schemeid": "dnet:dataCite_date",
+                      "@schemename": "dnet:dataCite_date",
+                      "$": "2021-02-15"
+                    }
+                  ],
+                  "source": [
+                    { "$": 2019 },
+                    { "$": 2021 },
+                    { "$": "Crossref" },
+                    { "$": "https://hal.sorbonne-universite.fr/hal-02165001" }
+                  ],
+                  "resulttype": {
+                    "@classid": "publication",
+                    "@classname": "publication",
+                    "@schemeid": "dnet:result_typologies",
+                    "@schemename": "dnet:result_typologies"
+                  },
+                  "resourcetype": {
+                    "@classid": "UNKNOWN",
+                    "@classname": "UNKNOWN",
+                    "@schemeid": "dnet:dataCite_resource",
+                    "@schemename": "dnet:dataCite_resource"
+                  },
+                  "datainfo": {
+                    "inferred": { "$": true },
+                    "deletedbyinference": { "$": false },
+                    "trust": { "$": 0.8 },
+                    "inferenceprovenance": {
+                      "$": "dedup-similarity-result-decisiontree-v2"
+                    },
+                    "provenanceaction": {
+                      "@classid": "sysimport:dedup",
+                      "@classname": "Inferred by OpenAIRE",
+                      "@schemeid": "dnet:provenanceActions",
+                      "@schemename": "dnet:provenanceActions"
+                    }
+                  },
+                  "rels": {
+                    "rel": [
+                      {
+                        "@inferred": true,
+                        "@trust": "0.85",
+                        "@inferenceprovenance": "propagation",
+                        "@provenanceaction": "result:organization:instrepo",
+                        "to": {
+                          "@class": "hasAuthorInstitution",
+                          "@scheme": "dnet:result_organization_relations",
+                          "@type": "organization",
+                          "$": "openorgs____::c80a8243a5e5c620d7931c88d93bf17a"
+                        },
+                        "country": {
+                          "@classid": "FR",
+                          "@classname": "France",
+                          "@schemeid": "dnet:countries",
+                          "@schemename": "dnet:countries"
+                        },
+                        "legalname": { "$": "Université Paris Diderot" },
+                        "legalshortname": { "$": "Université Paris Diderot" }
+                      },
+                      {
+                        "@inferred": true,
+                        "@trust": "0.85",
+                        "@inferenceprovenance": "propagation",
+                        "@provenanceaction": "result:organization:instrepo",
+                        "to": {
+                          "@class": "hasAuthorInstitution",
+                          "@scheme": "dnet:result_organization_relations",
+                          "@type": "organization",
+                          "$": "openorgs____::50c715fc6e0a1f3bcd8238b190b89f79"
+                        },
+                        "legalshortname": { "$": "INSERM" },
+                        "legalname": { "$": "Inserm" },
+                        "country": {
+                          "@classid": "FR",
+                          "@classname": "France",
+                          "@schemeid": "dnet:countries",
+                          "@schemename": "dnet:countries"
+                        }
+                      },
+                      {
+                        "@inferred": true,
+                        "@trust": "0.85",
+                        "@inferenceprovenance": "propagation",
+                        "@provenanceaction": "result:organization:instrepo",
+                        "to": {
+                          "@class": "hasAuthorInstitution",
+                          "@scheme": "dnet:result_organization_relations",
+                          "@type": "organization",
+                          "$": "openorgs____::a0f160aa60f8800f11a313d3ea2ac6dd"
+                        },
+                        "country": {
+                          "@classid": "FR",
+                          "@classname": "France",
+                          "@schemeid": "dnet:countries",
+                          "@schemename": "dnet:countries"
+                        },
+                        "legalshortname": { "$": "University of Bordeaux" },
+                        "legalname": { "$": "University of Bordeaux" }
+                      }
+                    ]
+                  },
+                  "children": {
+                    "result": [
+                      {
+                        "@objidentifier": "od______2592::b172733093f24e6d4620187ddfb3cef5",
+                        "title": {
+                          "@classid": "main title",
+                          "@classname": "main title",
+                          "@schemeid": "dnet:dataCite_title",
+                          "@schemename": "dnet:dataCite_title",
+                          "@inferred": false,
+                          "@provenanceaction": "sysimport:crosswalk:repository",
+                          "@trust": "0.9",
+                          "$": "The Moran forest"
+                        },
+                        "dateofacceptance": { "$": "2021-04-26" },
+                        "publisher": { "$": "HAL CCSD" },
+                        "collectedfrom": {
+                          "@name": "Hal-Diderot",
+                          "@id": "opendoar____::18bb68e2b38e4a8ce7cf4f6b2625768c"
+                        }
+                      },
+                      {
+                        "@objidentifier": "doi_________::61ce61aaf4311474545a9f19c0ad1741",
+                        "dateofacceptance": { "$": "2021-02-15" },
+                        "title": {
+                          "@classid": "main title",
+                          "@classname": "main title",
+                          "@schemeid": "dnet:dataCite_title",
+                          "@schemename": "dnet:dataCite_title",
+                          "$": "The Moran forest"
+                        },
+                        "publisher": { "$": "Wiley" },
+                        "collectedfrom": [
+                          {
+                            "@name": "Crossref",
+                            "@id": "openaire____::081b82f96300b6a6e3d282bad31cb6e2"
+                          },
+                          {
+                            "@name": "ORCID",
+                            "@id": "openaire____::806360c771262b4d6770e7cdf04b5c5a"
+                          }
+                        ],
+                        "pid": {
+                          "@classid": "doi",
+                          "@classname": "Digital Object Identifier",
+                          "@schemeid": "dnet:pid_types",
+                          "@schemename": "dnet:pid_types",
+                          "$": "10.1002/rsa.20997"
+                        }
+                      },
+                      {
+                        "@objidentifier": "arXiv_______::d5c0cc250fdf81a75c08c76490cc475c",
+                        "title": {
+                          "@classid": "main title",
+                          "@classname": "main title",
+                          "@schemeid": "dnet:dataCite_title",
+                          "@schemename": "dnet:dataCite_title",
+                          "@inferred": false,
+                          "@provenanceaction": "sysimport:crosswalk:repository",
+                          "@trust": "0.9",
+                          "$": "The Moran forest"
+                        },
+                        "dateofacceptance": { "$": "2019-06-20" },
+                        "collectedfrom": {
+                          "@name": "arXiv.org e-Print Archive",
+                          "@id": "opendoar____::6f4922f45568161a8cdf4ad2299f6d23"
+                        },
+                        "pid": {
+                          "@classid": "arXiv",
+                          "@classname": "arXiv",
+                          "@schemeid": "dnet:pid_types",
+                          "@schemename": "dnet:pid_types",
+                          "@inferred": false,
+                          "@provenanceaction": "sysimport:crosswalk:repository",
+                          "@trust": "0.9",
+                          "$": 1906.08806
+                        }
+                      },
+                      {
+                        "@objidentifier": "od_______166::6746d39ebcc4d97dc7d949065323c0a4",
+                        "title": {
+                          "@classid": "main title",
+                          "@classname": "main title",
+                          "@schemeid": "dnet:dataCite_title",
+                          "@schemename": "dnet:dataCite_title",
+                          "@inferred": false,
+                          "@provenanceaction": "sysimport:crosswalk:repository",
+                          "@trust": "0.9",
+                          "$": "The Moran forest"
+                        },
+                        "dateofacceptance": { "$": "2019-06-25" },
+                        "publisher": { "$": "HAL CCSD" },
+                        "collectedfrom": {
+                          "@name": "Hyper Article en Ligne",
+                          "@id": "opendoar____::7e7757b1e12abcb736ab9a754ffb617a"
+                        }
+                      },
+                      {
+                        "@objidentifier": "od______1398::b172733093f24e6d4620187ddfb3cef5",
+                        "title": {
+                          "@classid": "main title",
+                          "@classname": "main title",
+                          "@schemeid": "dnet:dataCite_title",
+                          "@schemename": "dnet:dataCite_title",
+                          "@inferred": false,
+                          "@provenanceaction": "sysimport:crosswalk:repository",
+                          "@trust": "0.9",
+                          "$": "The Moran forest"
+                        },
+                        "dateofacceptance": { "$": "2021-04-26" },
+                        "collectedfrom": {
+                          "@name": "HAL-Inserm",
+                          "@id": "opendoar____::d9731321ef4e063ebbee79298fa36f56"
+                        },
+                        "publisher": { "$": "HAL CCSD" }
+                      },
+                      {
+                        "@objidentifier": "od_______166::b172733093f24e6d4620187ddfb3cef5",
+                        "title": {
+                          "@classid": "main title",
+                          "@classname": "main title",
+                          "@schemeid": "dnet:dataCite_title",
+                          "@schemename": "dnet:dataCite_title",
+                          "@inferred": false,
+                          "@provenanceaction": "sysimport:crosswalk:repository",
+                          "@trust": "0.9",
+                          "$": "The Moran forest"
+                        },
+                        "dateofacceptance": { "$": "2021-04-26" },
+                        "publisher": { "$": "HAL CCSD" },
+                        "collectedfrom": {
+                          "@name": "Hyper Article en Ligne",
+                          "@id": "opendoar____::7e7757b1e12abcb736ab9a754ffb617a"
+                        }
+                      },
+                      {
+                        "@objidentifier": "od_______212::b172733093f24e6d4620187ddfb3cef5",
+                        "title": {
+                          "@classid": "main title",
+                          "@classname": "main title",
+                          "@schemeid": "dnet:dataCite_title",
+                          "@schemename": "dnet:dataCite_title",
+                          "@inferred": false,
+                          "@provenanceaction": "sysimport:crosswalk:repository",
+                          "@trust": "0.9",
+                          "$": "The Moran forest"
+                        },
+                        "dateofacceptance": { "$": "2021-04-26" },
+                        "publisher": { "$": "HAL CCSD" },
+                        "collectedfrom": {
+                          "@name": "Mémoires en Sciences de l'Information et de la Communication",
+                          "@id": "opendoar____::1534b76d325a8f591b52d302e7181331"
+                        }
+                      },
+                      {
+                        "@objidentifier": "od______2592::6746d39ebcc4d97dc7d949065323c0a4",
+                        "title": {
+                          "@classid": "main title",
+                          "@classname": "main title",
+                          "@schemeid": "dnet:dataCite_title",
+                          "@schemename": "dnet:dataCite_title",
+                          "@inferred": false,
+                          "@provenanceaction": "sysimport:crosswalk:repository",
+                          "@trust": "0.9",
+                          "$": "The Moran forest"
+                        },
+                        "dateofacceptance": { "$": "2019-06-25" },
+                        "publisher": { "$": "HAL CCSD" },
+                        "collectedfrom": {
+                          "@name": "Hal-Diderot",
+                          "@id": "opendoar____::18bb68e2b38e4a8ce7cf4f6b2625768c"
+                        }
+                      },
+                      {
+                        "@objidentifier": "od_______212::6746d39ebcc4d97dc7d949065323c0a4",
+                        "title": {
+                          "@classid": "main title",
+                          "@classname": "main title",
+                          "@schemeid": "dnet:dataCite_title",
+                          "@schemename": "dnet:dataCite_title",
+                          "@inferred": false,
+                          "@provenanceaction": "sysimport:crosswalk:repository",
+                          "@trust": "0.9",
+                          "$": "The Moran forest"
+                        },
+                        "dateofacceptance": { "$": "2019-06-25" },
+                        "publisher": { "$": "HAL CCSD" },
+                        "collectedfrom": {
+                          "@name": "Mémoires en Sciences de l'Information et de la Communication",
+                          "@id": "opendoar____::1534b76d325a8f591b52d302e7181331"
+                        }
+                      },
+                      {
+                        "@objidentifier": "od______9631::2dda867935f128aae77adca9fa1aef9c",
+                        "title": {
+                          "@classid": "main title",
+                          "@classname": "main title",
+                          "@schemeid": "dnet:dataCite_title",
+                          "@schemename": "dnet:dataCite_title",
+                          "@inferred": false,
+                          "@provenanceaction": "sysimport:crosswalk:repository",
+                          "@trust": "0.9",
+                          "$": "The Moran forest"
+                        },
+                        "collectedfrom": {
+                          "@name": "Oskar Bordeaux",
+                          "@id": "opendoar____::f6bc7e9dc18cfe3bbacd3dc594cef296"
+                        }
+                      }
+                    ],
+                    "instance": [
+                      {
+                        "@id": "opendoar____::f6bc7e9dc18cfe3bbacd3dc594cef296",
+                        "accessright": {
+                          "@classid": "OPEN",
+                          "@classname": "Open Access",
+                          "@schemeid": "dnet:access_modes",
+                          "@schemename": "dnet:access_modes"
+                        },
+                        "collectedfrom": {
+                          "@name": "Oskar Bordeaux",
+                          "@id": "opendoar____::f6bc7e9dc18cfe3bbacd3dc594cef296"
+                        },
+                        "hostedby": {
+                          "@name": "Oskar Bordeaux",
+                          "@id": "opendoar____::f6bc7e9dc18cfe3bbacd3dc594cef296"
+                        },
+                        "instancetype": {
+                          "@classid": "0016",
+                          "@classname": "Preprint",
+                          "@schemeid": "dnet:publication_resource",
+                          "@schemename": "dnet:publication_resource"
+                        },
+                        "refereed": {
+                          "@classid": "0002",
+                          "@classname": "nonPeerReviewed",
+                          "@schemeid": "dnet:review_levels",
+                          "@schemename": "dnet:review_levels"
+                        },
+                        "webresource": {
+                          "url": {
+                            "$": "http://hdl.handle.net/20.500.12278/39954"
+                          }
+                        }
+                      },
+                      {
+                        "@id": "opendoar____::1534b76d325a8f591b52d302e7181331",
+                        "accessright": {
+                          "@classid": "UNKNOWN",
+                          "@classname": "not available",
+                          "@schemeid": "dnet:access_modes",
+                          "@schemename": "dnet:access_modes"
+                        },
+                        "collectedfrom": {
+                          "@name": "Mémoires en Sciences de l'Information et de la Communication",
+                          "@id": "opendoar____::1534b76d325a8f591b52d302e7181331"
+                        },
+                        "hostedby": {
+                          "@name": "Mémoires en Sciences de l'Information et de la Communication",
+                          "@id": "opendoar____::1534b76d325a8f591b52d302e7181331"
+                        },
+                        "dateofacceptance": { "$": "2019-06-25" },
+                        "instancetype": {
+                          "@classid": "0016",
+                          "@classname": "Preprint",
+                          "@schemeid": "dnet:publication_resource",
+                          "@schemename": "dnet:publication_resource"
+                        },
+                        "alternateidentifier": [
+                          {
+                            "@classid": "arXiv",
+                            "@classname": "arXiv",
+                            "@schemeid": "dnet:pid_types",
+                            "@schemename": "dnet:pid_types",
+                            "@inferred": false,
+                            "@provenanceaction": "sysimport:crosswalk:repository",
+                            "@trust": "0.9",
+                            "$": 1906.08806
+                          },
+                          {
+                            "@classid": "hal",
+                            "@classname": "HAL /  Hyper Article en Ligne identifier",
+                            "@schemeid": "dnet:pid_types",
+                            "@schemename": "dnet:pid_types",
+                            "@inferred": false,
+                            "@provenanceaction": "sysimport:crosswalk:repository",
+                            "@trust": "0.9",
+                            "$": "hal-02165001"
+                          }
+                        ],
+                        "refereed": {
+                          "@classid": "0002",
+                          "@classname": "nonPeerReviewed",
+                          "@schemeid": "dnet:review_levels",
+                          "@schemename": "dnet:review_levels"
+                        },
+                        "webresource": [
+                          {
+                            "url": {
+                              "$": "https://hal.sorbonne-universite.fr/hal-02165001"
+                            }
+                          },
+                          {
+                            "url": {
+                              "$": "https://hal.sorbonne-universite.fr/hal-02165001/document"
+                            }
+                          },
+                          {
+                            "url": {
+                              "$": "https://hal.sorbonne-universite.fr/hal-02165001/file/moran_forest.pdf"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "opendoar____::18bb68e2b38e4a8ce7cf4f6b2625768c",
+                        "accessright": {
+                          "@classid": "UNKNOWN",
+                          "@classname": "not available",
+                          "@schemeid": "dnet:access_modes",
+                          "@schemename": "dnet:access_modes"
+                        },
+                        "collectedfrom": {
+                          "@name": "Hal-Diderot",
+                          "@id": "opendoar____::18bb68e2b38e4a8ce7cf4f6b2625768c"
+                        },
+                        "hostedby": {
+                          "@name": "Hal-Diderot",
+                          "@id": "opendoar____::18bb68e2b38e4a8ce7cf4f6b2625768c"
+                        },
+                        "dateofacceptance": { "$": "2021-04-26" },
+                        "instancetype": {
+                          "@classid": "0016",
+                          "@classname": "Preprint",
+                          "@schemeid": "dnet:publication_resource",
+                          "@schemename": "dnet:publication_resource"
+                        },
+                        "alternateidentifier": [
+                          {
+                            "@classid": "arXiv",
+                            "@classname": "arXiv",
+                            "@schemeid": "dnet:pid_types",
+                            "@schemename": "dnet:pid_types",
+                            "@inferred": false,
+                            "@provenanceaction": "sysimport:crosswalk:repository",
+                            "@trust": "0.9",
+                            "$": 1906.08806
+                          },
+                          {
+                            "@classid": "hal",
+                            "@classname": "HAL /  Hyper Article en Ligne identifier",
+                            "@schemeid": "dnet:pid_types",
+                            "@schemename": "dnet:pid_types",
+                            "@inferred": false,
+                            "@provenanceaction": "sysimport:crosswalk:repository",
+                            "@trust": "0.9",
+                            "$": "hal-02165001"
+                          }
+                        ],
+                        "refereed": {
+                          "@classid": "0002",
+                          "@classname": "nonPeerReviewed",
+                          "@schemeid": "dnet:review_levels",
+                          "@schemename": "dnet:review_levels"
+                        },
+                        "webresource": [
+                          {
+                            "url": {
+                              "$": "https://hal.sorbonne-universite.fr/hal-02165001"
+                            }
+                          },
+                          {
+                            "url": {
+                              "$": "https://hal.sorbonne-universite.fr/hal-02165001v2/document"
+                            }
+                          },
+                          {
+                            "url": {
+                              "$": "https://hal.sorbonne-universite.fr/hal-02165001v2/file/ms.pdf"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "opendoar____::7e7757b1e12abcb736ab9a754ffb617a",
+                        "accessright": {
+                          "@classid": "UNKNOWN",
+                          "@classname": "not available",
+                          "@schemeid": "dnet:access_modes",
+                          "@schemename": "dnet:access_modes"
+                        },
+                        "collectedfrom": {
+                          "@name": "Hyper Article en Ligne",
+                          "@id": "opendoar____::7e7757b1e12abcb736ab9a754ffb617a"
+                        },
+                        "hostedby": {
+                          "@name": "Hyper Article en Ligne",
+                          "@id": "opendoar____::7e7757b1e12abcb736ab9a754ffb617a"
+                        },
+                        "dateofacceptance": { "$": "2021-04-26" },
+                        "instancetype": {
+                          "@classid": "0016",
+                          "@classname": "Preprint",
+                          "@schemeid": "dnet:publication_resource",
+                          "@schemename": "dnet:publication_resource"
+                        },
+                        "alternateidentifier": [
+                          {
+                            "@classid": "arXiv",
+                            "@classname": "arXiv",
+                            "@schemeid": "dnet:pid_types",
+                            "@schemename": "dnet:pid_types",
+                            "@inferred": false,
+                            "@provenanceaction": "sysimport:crosswalk:repository",
+                            "@trust": "0.9",
+                            "$": 1906.08806
+                          },
+                          {
+                            "@classid": "hal",
+                            "@classname": "HAL /  Hyper Article en Ligne identifier",
+                            "@schemeid": "dnet:pid_types",
+                            "@schemename": "dnet:pid_types",
+                            "@inferred": false,
+                            "@provenanceaction": "sysimport:crosswalk:repository",
+                            "@trust": "0.9",
+                            "$": "hal-02165001"
+                          }
+                        ],
+                        "refereed": {
+                          "@classid": "0002",
+                          "@classname": "nonPeerReviewed",
+                          "@schemeid": "dnet:review_levels",
+                          "@schemename": "dnet:review_levels"
+                        },
+                        "webresource": [
+                          {
+                            "url": {
+                              "$": "https://hal.sorbonne-universite.fr/hal-02165001"
+                            }
+                          },
+                          {
+                            "url": {
+                              "$": "https://hal.sorbonne-universite.fr/hal-02165001v2/document"
+                            }
+                          },
+                          {
+                            "url": {
+                              "$": "https://hal.sorbonne-universite.fr/hal-02165001v2/file/ms.pdf"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "opendoar____::1534b76d325a8f591b52d302e7181331",
+                        "accessright": {
+                          "@classid": "UNKNOWN",
+                          "@classname": "not available",
+                          "@schemeid": "dnet:access_modes",
+                          "@schemename": "dnet:access_modes"
+                        },
+                        "collectedfrom": {
+                          "@name": "Mémoires en Sciences de l'Information et de la Communication",
+                          "@id": "opendoar____::1534b76d325a8f591b52d302e7181331"
+                        },
+                        "hostedby": {
+                          "@name": "Mémoires en Sciences de l'Information et de la Communication",
+                          "@id": "opendoar____::1534b76d325a8f591b52d302e7181331"
+                        },
+                        "dateofacceptance": { "$": "2021-04-26" },
+                        "instancetype": {
+                          "@classid": "0016",
+                          "@classname": "Preprint",
+                          "@schemeid": "dnet:publication_resource",
+                          "@schemename": "dnet:publication_resource"
+                        },
+                        "alternateidentifier": [
+                          {
+                            "@classid": "arXiv",
+                            "@classname": "arXiv",
+                            "@schemeid": "dnet:pid_types",
+                            "@schemename": "dnet:pid_types",
+                            "@inferred": false,
+                            "@provenanceaction": "sysimport:crosswalk:repository",
+                            "@trust": "0.9",
+                            "$": 1906.08806
+                          },
+                          {
+                            "@classid": "hal",
+                            "@classname": "HAL /  Hyper Article en Ligne identifier",
+                            "@schemeid": "dnet:pid_types",
+                            "@schemename": "dnet:pid_types",
+                            "@inferred": false,
+                            "@provenanceaction": "sysimport:crosswalk:repository",
+                            "@trust": "0.9",
+                            "$": "hal-02165001"
+                          }
+                        ],
+                        "refereed": {
+                          "@classid": "0002",
+                          "@classname": "nonPeerReviewed",
+                          "@schemeid": "dnet:review_levels",
+                          "@schemename": "dnet:review_levels"
+                        },
+                        "webresource": [
+                          {
+                            "url": {
+                              "$": "https://hal.sorbonne-universite.fr/hal-02165001"
+                            }
+                          },
+                          {
+                            "url": {
+                              "$": "https://hal.sorbonne-universite.fr/hal-02165001v2/document"
+                            }
+                          },
+                          {
+                            "url": {
+                              "$": "https://hal.sorbonne-universite.fr/hal-02165001v2/file/ms.pdf"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "opendoar____::6f4922f45568161a8cdf4ad2299f6d23",
+                        "accessright": {
+                          "@classid": "OPEN",
+                          "@classname": "Open Access",
+                          "@schemeid": "dnet:access_modes",
+                          "@schemename": "dnet:access_modes"
+                        },
+                        "collectedfrom": {
+                          "@name": "arXiv.org e-Print Archive",
+                          "@id": "opendoar____::6f4922f45568161a8cdf4ad2299f6d23"
+                        },
+                        "hostedby": {
+                          "@name": "arXiv.org e-Print Archive",
+                          "@id": "opendoar____::6f4922f45568161a8cdf4ad2299f6d23"
+                        },
+                        "dateofacceptance": { "$": "2019-06-20" },
+                        "instancetype": {
+                          "@classid": "0016",
+                          "@classname": "Preprint",
+                          "@schemeid": "dnet:publication_resource",
+                          "@schemename": "dnet:publication_resource"
+                        },
+                        "pid": {
+                          "@classid": "arXiv",
+                          "@classname": "arXiv",
+                          "@schemeid": "dnet:pid_types",
+                          "@schemename": "dnet:pid_types",
+                          "@inferred": false,
+                          "@provenanceaction": "sysimport:crosswalk:repository",
+                          "@trust": "0.9",
+                          "$": 1906.08806
+                        },
+                        "alternateidentifier": {
+                          "@classid": "doi",
+                          "@classname": "Digital Object Identifier",
+                          "@schemeid": "dnet:pid_types",
+                          "@schemename": "dnet:pid_types",
+                          "@inferred": false,
+                          "@provenanceaction": "sysimport:crosswalk:repository",
+                          "@trust": "0.9",
+                          "$": "10.1002/rsa.20997"
+                        },
+                        "refereed": {
+                          "@classid": "0002",
+                          "@classname": "nonPeerReviewed",
+                          "@schemeid": "dnet:review_levels",
+                          "@schemename": "dnet:review_levels"
+                        },
+                        "webresource": {
+                          "url": { "$": "http://arxiv.org/abs/1906.08806" }
+                        }
+                      },
+                      {
+                        "@id": "opendoar____::d9731321ef4e063ebbee79298fa36f56",
+                        "accessright": {
+                          "@classid": "UNKNOWN",
+                          "@classname": "not available",
+                          "@schemeid": "dnet:access_modes",
+                          "@schemename": "dnet:access_modes"
+                        },
+                        "collectedfrom": {
+                          "@name": "HAL-Inserm",
+                          "@id": "opendoar____::d9731321ef4e063ebbee79298fa36f56"
+                        },
+                        "hostedby": {
+                          "@name": "HAL-Inserm",
+                          "@id": "opendoar____::d9731321ef4e063ebbee79298fa36f56"
+                        },
+                        "dateofacceptance": { "$": "2021-04-26" },
+                        "instancetype": {
+                          "@classid": "0016",
+                          "@classname": "Preprint",
+                          "@schemeid": "dnet:publication_resource",
+                          "@schemename": "dnet:publication_resource"
+                        },
+                        "alternateidentifier": [
+                          {
+                            "@classid": "arXiv",
+                            "@classname": "arXiv",
+                            "@schemeid": "dnet:pid_types",
+                            "@schemename": "dnet:pid_types",
+                            "@inferred": false,
+                            "@provenanceaction": "sysimport:crosswalk:repository",
+                            "@trust": "0.9",
+                            "$": 1906.08806
+                          },
+                          {
+                            "@classid": "hal",
+                            "@classname": "HAL /  Hyper Article en Ligne identifier",
+                            "@schemeid": "dnet:pid_types",
+                            "@schemename": "dnet:pid_types",
+                            "@inferred": false,
+                            "@provenanceaction": "sysimport:crosswalk:repository",
+                            "@trust": "0.9",
+                            "$": "hal-02165001"
+                          }
+                        ],
+                        "refereed": {
+                          "@classid": "0002",
+                          "@classname": "nonPeerReviewed",
+                          "@schemeid": "dnet:review_levels",
+                          "@schemename": "dnet:review_levels"
+                        },
+                        "webresource": [
+                          {
+                            "url": {
+                              "$": "https://hal.sorbonne-universite.fr/hal-02165001"
+                            }
+                          },
+                          {
+                            "url": {
+                              "$": "https://hal.sorbonne-universite.fr/hal-02165001v2/document"
+                            }
+                          },
+                          {
+                            "url": {
+                              "$": "https://hal.sorbonne-universite.fr/hal-02165001v2/file/ms.pdf"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "opendoar____::7e7757b1e12abcb736ab9a754ffb617a",
+                        "accessright": {
+                          "@classid": "UNKNOWN",
+                          "@classname": "not available",
+                          "@schemeid": "dnet:access_modes",
+                          "@schemename": "dnet:access_modes"
+                        },
+                        "collectedfrom": {
+                          "@name": "Hyper Article en Ligne",
+                          "@id": "opendoar____::7e7757b1e12abcb736ab9a754ffb617a"
+                        },
+                        "hostedby": {
+                          "@name": "Hyper Article en Ligne",
+                          "@id": "opendoar____::7e7757b1e12abcb736ab9a754ffb617a"
+                        },
+                        "dateofacceptance": { "$": "2019-06-25" },
+                        "instancetype": {
+                          "@classid": "0016",
+                          "@classname": "Preprint",
+                          "@schemeid": "dnet:publication_resource",
+                          "@schemename": "dnet:publication_resource"
+                        },
+                        "alternateidentifier": [
+                          {
+                            "@classid": "arXiv",
+                            "@classname": "arXiv",
+                            "@schemeid": "dnet:pid_types",
+                            "@schemename": "dnet:pid_types",
+                            "@inferred": false,
+                            "@provenanceaction": "sysimport:crosswalk:repository",
+                            "@trust": "0.9",
+                            "$": 1906.08806
+                          },
+                          {
+                            "@classid": "hal",
+                            "@classname": "HAL /  Hyper Article en Ligne identifier",
+                            "@schemeid": "dnet:pid_types",
+                            "@schemename": "dnet:pid_types",
+                            "@inferred": false,
+                            "@provenanceaction": "sysimport:crosswalk:repository",
+                            "@trust": "0.9",
+                            "$": "hal-02165001"
+                          }
+                        ],
+                        "refereed": {
+                          "@classid": "0002",
+                          "@classname": "nonPeerReviewed",
+                          "@schemeid": "dnet:review_levels",
+                          "@schemename": "dnet:review_levels"
+                        },
+                        "webresource": [
+                          {
+                            "url": {
+                              "$": "https://hal.sorbonne-universite.fr/hal-02165001"
+                            }
+                          },
+                          {
+                            "url": {
+                              "$": "https://hal.sorbonne-universite.fr/hal-02165001/document"
+                            }
+                          },
+                          {
+                            "url": {
+                              "$": "https://hal.sorbonne-universite.fr/hal-02165001/file/moran_forest.pdf"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "issn___print::7c7535a5cdf105d0c83a0253624392cc",
+                        "accessright": {
+                          "@classid": "CLOSED",
+                          "@classname": "Closed Access",
+                          "@schemeid": "dnet:access_modes",
+                          "@schemename": "dnet:access_modes"
+                        },
+                        "collectedfrom": {
+                          "@name": "Crossref",
+                          "@id": "openaire____::081b82f96300b6a6e3d282bad31cb6e2"
+                        },
+                        "hostedby": {
+                          "@name": "Random Structures and Algorithms",
+                          "@id": "issn___print::7c7535a5cdf105d0c83a0253624392cc"
+                        },
+                        "dateofacceptance": { "$": "2021-02-15" },
+                        "instancetype": {
+                          "@classid": "0001",
+                          "@classname": "Article",
+                          "@schemeid": "dnet:publication_resource",
+                          "@schemename": "dnet:publication_resource"
+                        },
+                        "pid": {
+                          "@classid": "doi",
+                          "@classname": "Digital Object Identifier",
+                          "@schemeid": "dnet:pid_types",
+                          "@schemename": "dnet:pid_types",
+                          "$": "10.1002/rsa.20997"
+                        },
+                        "refereed": {
+                          "@classid": "0000",
+                          "@classname": "UNKNOWN",
+                          "@schemeid": "dnet:review_levels",
+                          "@schemename": "dnet:review_levels"
+                        },
+                        "webresource": [
+                          {
+                            "url": {
+                              "$": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/rsa.20997"
+                            }
+                          },
+                          {
+                            "url": {
+                              "$": "https://onlinelibrary.wiley.com/doi/full-xml/10.1002/rsa.20997"
+                            }
+                          },
+                          {
+                            "url": {
+                              "$": "http://dx.doi.org/10.1002/rsa.20997"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "opendoar____::18bb68e2b38e4a8ce7cf4f6b2625768c",
+                        "accessright": {
+                          "@classid": "UNKNOWN",
+                          "@classname": "not available",
+                          "@schemeid": "dnet:access_modes",
+                          "@schemename": "dnet:access_modes"
+                        },
+                        "collectedfrom": {
+                          "@name": "Hal-Diderot",
+                          "@id": "opendoar____::18bb68e2b38e4a8ce7cf4f6b2625768c"
+                        },
+                        "hostedby": {
+                          "@name": "Hal-Diderot",
+                          "@id": "opendoar____::18bb68e2b38e4a8ce7cf4f6b2625768c"
+                        },
+                        "dateofacceptance": { "$": "2019-06-25" },
+                        "instancetype": {
+                          "@classid": "0016",
+                          "@classname": "Preprint",
+                          "@schemeid": "dnet:publication_resource",
+                          "@schemename": "dnet:publication_resource"
+                        },
+                        "alternateidentifier": [
+                          {
+                            "@classid": "arXiv",
+                            "@classname": "arXiv",
+                            "@schemeid": "dnet:pid_types",
+                            "@schemename": "dnet:pid_types",
+                            "@inferred": false,
+                            "@provenanceaction": "sysimport:crosswalk:repository",
+                            "@trust": "0.9",
+                            "$": 1906.08806
+                          },
+                          {
+                            "@classid": "hal",
+                            "@classname": "HAL /  Hyper Article en Ligne identifier",
+                            "@schemeid": "dnet:pid_types",
+                            "@schemename": "dnet:pid_types",
+                            "@inferred": false,
+                            "@provenanceaction": "sysimport:crosswalk:repository",
+                            "@trust": "0.9",
+                            "$": "hal-02165001"
+                          }
+                        ],
+                        "refereed": {
+                          "@classid": "0002",
+                          "@classname": "nonPeerReviewed",
+                          "@schemeid": "dnet:review_levels",
+                          "@schemename": "dnet:review_levels"
+                        },
+                        "webresource": [
+                          {
+                            "url": {
+                              "$": "https://hal.sorbonne-universite.fr/hal-02165001"
+                            }
+                          },
+                          {
+                            "url": {
+                              "$": "https://hal.sorbonne-universite.fr/hal-02165001/document"
+                            }
+                          },
+                          {
+                            "url": {
+                              "$": "https://hal.sorbonne-universite.fr/hal-02165001/file/moran_forest.pdf"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "browseResults": null
+    }
+  }
+}

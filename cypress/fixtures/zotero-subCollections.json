@@ -1,0 +1,48 @@
+{
+  "statusCode": 200,
+  "headers": {
+    "Total-Results": "14"
+  },
+  "body": [
+    {
+      "key": "JGTEPMWE",
+      "version": 151,
+      "library": {
+        "type": "user",
+        "id": 6732,
+        "name": "rexalexmede",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/rexalexmede",
+            "type": "text/html"
+          }
+        }
+      },
+      "links": {
+        "self": {
+          "href": "https://api.zotero.org/users/6732/collections/JGTEPMWE",
+          "type": "application/json"
+        },
+        "alternate": {
+          "href": "https://www.zotero.org/rexalexmede/collections/JGTEPMWE",
+          "type": "text/html"
+        },
+        "up": {
+          "href": "https://api.zotero.org/users/6732/collections/TFU5DMQX",
+          "type": "application/json"
+        }
+      },
+      "meta": {
+        "numCollections": 0,
+        "numItems": 1
+      },
+      "data": {
+        "key": "JGTEPMWE",
+        "version": 151,
+        "name": "2019 a",
+        "parentCollection": "TFU5DMQX",
+        "relations": {}
+      }
+    }
+  ]
+}

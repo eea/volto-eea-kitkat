@@ -105,6 +105,7 @@
     "@cypress/code-coverage": "^3.10.0",
     "@plone/scripts": "*",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "cypress-fail-fast": "^5.0.1",
     "md5": "^2.3.0"
   },
   "scripts": {

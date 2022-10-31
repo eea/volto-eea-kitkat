@@ -1,0 +1,107 @@
+{
+	"statusCode": 200,
+	"headers": {
+		"Total-Results": "14"
+	},
+	"body": [
+		{
+			"key": "24C33",
+			"version": 145,
+			"data": {
+				"key": "24C33",
+				"version": 145,
+				"name": "2009",
+				"parentCollection": false,
+				"relations": {}
+			},
+			"library": {
+				"type": "user",
+				"id": 6732,
+				"name": "rexalexmede",
+				"links": {
+					"alternate": {
+						"href": "https://www.zotero.org/rexalexmede",
+						"type": "text/html"
+					}
+				},
+				"self": {
+					"href": "https://api.zotero.org/users/6732/collections/24C33",
+					"type": "application/json"
+				}
+			},
+			"meta": { "numCollections": 0, "numItems": 2 }
+		},
+		{
+			"key": "DH68XG",
+			"version": 144,
+			"library": {
+				"type": "user",
+				"id": 6732,
+				"name": "rexalexmede",
+				"links": {
+					"alternate": {
+						"href": "https://www.zotero.org/rexalexmede",
+						"type": "text/html"
+					}
+				}
+			},
+			"links": {
+				"self": {
+					"href": "https://api.zotero.org/users/6732/collections/DH68XG",
+					"type": "application/json"
+				},
+				"alternate": {
+					"href": "https://www.zotero.org/rexalexmede/collections/DH68XG",
+					"type": "text/html"
+				}
+			},
+			"meta": {
+				"numCollections": 0,
+				"numItems": 1
+			},
+			"data": {
+				"key": "DH68XG",
+				"version": 144,
+				"name": "2010",
+				"parentCollection": false,
+				"relations": {}
+			}
+		},
+		{
+			"key": "TFU5D",
+			"version": 135,
+			"library": {
+				"type": "user",
+				"id": 6732,
+				"name": "rexalexmede",
+				"links": {
+					"alternate": {
+						"href": "https://www.zotero.org/rexalexmede",
+						"type": "text/html"
+					}
+				}
+			},
+			"links": {
+				"self": {
+					"href": "https://api.zotero.org/users/6732/collections/TFU5D",
+					"type": "application/json"
+				},
+				"alternate": {
+					"href": "https://www.zotero.org/rexalexmede/collections/TFU5D",
+					"type": "text/html"
+				}
+			},
+			"meta": {
+				"numCollections": 1,
+				"numItems": 1
+			},
+			"data": {
+				"key": "TFU5D",
+				"version": 135,
+				"name": "2019",
+				"parentCollection": false,
+				"relations": {}
+			}
+    }
+	]
+}

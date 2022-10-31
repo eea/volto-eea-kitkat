@@ -4,8 +4,6 @@ module.exports = defineConfig({
   viewportWidth: 1280,
   defaultCommandTimeout: 8888,
   chromeWebSecurity: false,
-  videoUploadOnPasses: false,
-  screenshotOnRunFailure: false,
   reporter: 'junit',
   video: true,
   retries: {
@@ -20,11 +18,9 @@ module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
       // e2e testing node events setup code
+      require('@cypress/code-coverage/task')(on, config);
+      return config;
     },
     baseUrl: 'http://localhost:3000',
-    specPattern: '../**/cypress/e2e/**/*.cy.js',
-    // excludeSpecPattern:
-    //   '../../../node_modules/@eeacms/volto-slate-zotero/cypress/e2e/**/*.js',
-    fixturesFolder: '../volto-slate-zotero/cypress/fixtures',
   },
 });

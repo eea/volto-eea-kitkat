@@ -1,0 +1,77 @@
+{
+  "statusCode": 200,
+  "headers": {
+    "Total-Results": "14"
+  },
+  "body": [
+    {
+      "key": "STUJEJKU",
+      "version": 167,
+      "library": {
+        "type": "user",
+        "id": 6732,
+        "name": "rexalexmede",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/rexalexmede",
+            "type": "text/html"
+          }
+        }
+      },
+      "links": {
+        "self": {
+          "href": "https://api.zotero.org/users/6732/items/STUJEJKU",
+          "type": "application/json"
+        },
+        "alternate": {
+          "href": "https://www.zotero.org/rexalexmede/items/STUJEJKU",
+          "type": "text/html"
+        }
+      },
+      "meta": {
+        "creatorSummary": "alex",
+        "numChildren": 0
+      },
+      "data": {
+        "key": "STUJEJKU",
+        "version": 167,
+        "itemType": "journalArticle",
+        "title": "test",
+        "creators": [
+          {
+            "creatorType": "author",
+            "firstName": "",
+            "lastName": "alex"
+          }
+        ],
+        "abstractNote": "",
+        "publicationTitle": "norse",
+        "volume": "",
+        "issue": "",
+        "pages": "",
+        "date": "",
+        "series": "",
+        "seriesTitle": "",
+        "seriesText": "",
+        "journalAbbreviation": "",
+        "language": "",
+        "DOI": "",
+        "ISSN": "",
+        "shortTitle": "",
+        "url": "",
+        "accessDate": "",
+        "archive": "",
+        "archiveLocation": "",
+        "libraryCatalog": "",
+        "callNumber": "",
+        "rights": "",
+        "extra": "",
+        "tags": [],
+        "collections": ["TFU5DMQX"],
+        "relations": {},
+        "dateAdded": "2020-10-12T13:14:31Z",
+        "dateModified": "2020-10-12T13:15:41Z"
+      }
+    }
+  ]
+}

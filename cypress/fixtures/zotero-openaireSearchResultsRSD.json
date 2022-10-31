@@ -1,0 +1,755 @@
+{
+  "statusCode": 200,
+  "headers": {
+    "Total-Results": "1"
+  },
+  "body": {
+    "response": {
+      "header": {
+        "query": {
+          "$": "(oaftype exact result) and (resulttypeid exact dataset) and (resulttitle exact \"forest\")"
+        },
+        "locale": { "$": "en_US" },
+        "size": { "$": 2 },
+        "page": { "$": 1 },
+        "total": { "$": 172070 },
+        "fields": null
+      },
+      "results": {
+        "result": [
+          {
+            "header": {
+              "dri:objIdentifier": {
+                "$": "doi_dedup___::258645438d9b8cbe86798587f1514977"
+              },
+              "dri:dateOfCollection": { "$": "2020-09-20T00:02:57+0000" },
+              "dri:dateOfTransformation": { "$": "2020-09-20T00:02:57+0000" }
+            },
+            "metadata": {
+              "oaf:entity": {
+                "@xsi:schemaLocation": "http://namespace.openaire.eu/oaf https://www.openaire.eu/schema/1.0/oaf-1.0.xsd",
+                "oaf:result": {
+                  "collectedfrom": {
+                    "@name": "Datacite",
+                    "@id": "openaire____::9e3be59865b2c1c335d32dae2fe7b254"
+                  },
+                  "originalId": [
+                    { "$": "10.25549/impa-m78492" },
+                    { "$": "10.25549/impa-m78491" },
+                    { "$": "10.25549/impa-m79576" },
+                    { "$": "10.25549/impa-m77990" },
+                    { "$": "10.25549/impa-m78739" },
+                    { "$": "10.25549/impa-m79742" },
+                    { "$": "10.25549/impa-m77989" }
+                  ],
+                  "pid": [
+                    {
+                      "@classid": "doi",
+                      "@classname": "Digital Object Identifier",
+                      "@schemeid": "dnet:pid_types",
+                      "@schemename": "dnet:pid_types",
+                      "@inferred": false,
+                      "@provenanceaction": "sysimport:actionset",
+                      "@trust": "0.9",
+                      "$": "10.25549/impa-m78492"
+                    },
+                    {
+                      "@classid": "doi",
+                      "@classname": "Digital Object Identifier",
+                      "@schemeid": "dnet:pid_types",
+                      "@schemename": "dnet:pid_types",
+                      "@inferred": false,
+                      "@provenanceaction": "sysimport:actionset",
+                      "@trust": "0.9",
+                      "$": "10.25549/impa-m78491"
+                    },
+                    {
+                      "@classid": "doi",
+                      "@classname": "Digital Object Identifier",
+                      "@schemeid": "dnet:pid_types",
+                      "@schemename": "dnet:pid_types",
+                      "@inferred": false,
+                      "@provenanceaction": "sysimport:actionset",
+                      "@trust": "0.9",
+                      "$": "10.25549/impa-m79576"
+                    },
+                    {
+                      "@classid": "doi",
+                      "@classname": "Digital Object Identifier",
+                      "@schemeid": "dnet:pid_types",
+                      "@schemename": "dnet:pid_types",
+                      "@inferred": false,
+                      "@provenanceaction": "sysimport:actionset",
+                      "@trust": "0.9",
+                      "$": "10.25549/impa-m77990"
+                    },
+                    {
+                      "@classid": "doi",
+                      "@classname": "Digital Object Identifier",
+                      "@schemeid": "dnet:pid_types",
+                      "@schemename": "dnet:pid_types",
+                      "@inferred": false,
+                      "@provenanceaction": "sysimport:actionset",
+                      "@trust": "0.9",
+                      "$": "10.25549/impa-m78739"
+                    },
+                    {
+                      "@classid": "doi",
+                      "@classname": "Digital Object Identifier",
+                      "@schemeid": "dnet:pid_types",
+                      "@schemename": "dnet:pid_types",
+                      "@inferred": false,
+                      "@provenanceaction": "sysimport:actionset",
+                      "@trust": "0.9",
+                      "$": "10.25549/impa-m79742"
+                    },
+                    {
+                      "@classid": "doi",
+                      "@classname": "Digital Object Identifier",
+                      "@schemeid": "dnet:pid_types",
+                      "@schemename": "dnet:pid_types",
+                      "@inferred": false,
+                      "@provenanceaction": "sysimport:actionset",
+                      "@trust": "0.9",
+                      "$": "10.25549/impa-m77989"
+                    }
+                  ],
+                  "title": {
+                    "@classid": "main title",
+                    "@classname": "main title",
+                    "@schemeid": "dnet:dataCite_title",
+                    "@schemename": "dnet:dataCite_title",
+                    "$": "Forest, in Gabon"
+                  },
+                  "bestaccessright": {
+                    "@classid": "UNKNOWN",
+                    "@classname": "not available",
+                    "@schemeid": "dnet:access_modes",
+                    "@schemename": "dnet:access_modes"
+                  },
+                  "creator": { "@rank": "1", "$": "Unknown" },
+                  "dateofacceptance": { "$": "2012-01-01" },
+                  "description": {
+                    "$": "Missionary of the Société des missions évangéliques de Paris (Paris evangelical missionary society) standing next to a giant tree in the forest near Samkita."
+                  },
+                  "subject": [
+                    {
+                      "@classid": "keyword",
+                      "@classname": "keyword",
+                      "@schemeid": "dnet:subject_classification_typologies",
+                      "@schemename": "dnet:subject_classification_typologies",
+                      "$": "Trees"
+                    },
+                    {
+                      "@classid": "keyword",
+                      "@classname": "keyword",
+                      "@schemeid": "dnet:subject_classification_typologies",
+                      "@schemename": "dnet:subject_classification_typologies",
+                      "$": "Forests"
+                    },
+                    {
+                      "@classid": "keyword",
+                      "@classname": "keyword",
+                      "@schemeid": "dnet:subject_classification_typologies",
+                      "@schemename": "dnet:subject_classification_typologies",
+                      "$": "Landscape"
+                    },
+                    {
+                      "@classid": "keyword",
+                      "@classname": "keyword",
+                      "@schemeid": "dnet:subject_classification_typologies",
+                      "@schemename": "dnet:subject_classification_typologies",
+                      "$": "Houses"
+                    },
+                    {
+                      "@classid": "keyword",
+                      "@classname": "keyword",
+                      "@schemeid": "dnet:subject_classification_typologies",
+                      "@schemename": "dnet:subject_classification_typologies",
+                      "$": "Vegetation"
+                    },
+                    {
+                      "@classid": "keyword",
+                      "@classname": "keyword",
+                      "@schemeid": "dnet:subject_classification_typologies",
+                      "@schemename": "dnet:subject_classification_typologies",
+                      "$": "Missionary"
+                    },
+                    {
+                      "@classid": "keyword",
+                      "@classname": "keyword",
+                      "@schemeid": "dnet:subject_classification_typologies",
+                      "@schemename": "dnet:subject_classification_typologies",
+                      "$": "Société des missions évangéliques de Paris, SMEP (Paris evangelical missionary society)"
+                    }
+                  ],
+                  "language": {
+                    "@classid": "eng",
+                    "@classname": "English",
+                    "@schemeid": "dnet:languages",
+                    "@schemename": "dnet:languages"
+                  },
+                  "relevantdate": {
+                    "@classid": "issued",
+                    "@classname": "issued",
+                    "@schemeid": "dnet:dataCite_date",
+                    "@schemename": "dnet:dataCite_date",
+                    "$": "2012-01-01"
+                  },
+                  "publisher": {
+                    "$": "University of Southern California Digital Library (USC.DL)"
+                  },
+                  "resulttype": {
+                    "@classid": "dataset",
+                    "@classname": "dataset",
+                    "@schemeid": "dnet:result_typologies",
+                    "@schemename": "dnet:result_typologies"
+                  },
+                  "resourcetype": {
+                    "@classid": "UNKNOWN",
+                    "@classname": "UNKNOWN",
+                    "@schemeid": "dnet:dataCite_resource",
+                    "@schemename": "dnet:dataCite_resource"
+                  },
+                  "datainfo": {
+                    "inferred": { "$": true },
+                    "deletedbyinference": { "$": false },
+                    "trust": { "$": 0.8 },
+                    "inferenceprovenance": {
+                      "$": "dedup-similarity-result-decisiontree-v2"
+                    },
+                    "provenanceaction": {
+                      "@classid": "sysimport:dedup",
+                      "@classname": "Inferred by OpenAIRE",
+                      "@schemeid": "dnet:provenanceActions",
+                      "@schemename": "dnet:provenanceActions"
+                    }
+                  },
+                  "rels": null,
+                  "children": {
+                    "result": [
+                      {
+                        "@objidentifier": "doi_________::e0685fbf4c4960fb91176e24851923c4",
+                        "pid": {
+                          "@classid": "doi",
+                          "@classname": "Digital Object Identifier",
+                          "@schemeid": "dnet:pid_types",
+                          "@schemename": "dnet:pid_types",
+                          "@inferred": false,
+                          "@provenanceaction": "sysimport:actionset",
+                          "@trust": "0.9",
+                          "$": "10.25549/impa-m78491"
+                        },
+                        "publisher": {
+                          "$": "University of Southern California Digital Library (USC.DL)"
+                        },
+                        "title": {
+                          "@classid": "main title",
+                          "@classname": "main title",
+                          "@schemeid": "dnet:dataCite_title",
+                          "@schemename": "dnet:dataCite_title",
+                          "$": "Forest, in Gabon"
+                        },
+                        "dateofacceptance": { "$": "2012-01-01" },
+                        "collectedfrom": {
+                          "@name": "Datacite",
+                          "@id": "openaire____::9e3be59865b2c1c335d32dae2fe7b254"
+                        }
+                      },
+                      {
+                        "@objidentifier": "doi_________::d1b15e4cb18f520614170aa1c24c9fd7",
+                        "publisher": {
+                          "$": "University of Southern California Digital Library (USC.DL)"
+                        },
+                        "dateofacceptance": { "$": "2012-01-01" },
+                        "collectedfrom": {
+                          "@name": "Datacite",
+                          "@id": "openaire____::9e3be59865b2c1c335d32dae2fe7b254"
+                        },
+                        "pid": {
+                          "@classid": "doi",
+                          "@classname": "Digital Object Identifier",
+                          "@schemeid": "dnet:pid_types",
+                          "@schemename": "dnet:pid_types",
+                          "@inferred": false,
+                          "@provenanceaction": "sysimport:actionset",
+                          "@trust": "0.9",
+                          "$": "10.25549/impa-m79576"
+                        },
+                        "title": {
+                          "@classid": "main title",
+                          "@classname": "main title",
+                          "@schemeid": "dnet:dataCite_title",
+                          "@schemename": "dnet:dataCite_title",
+                          "$": "[Forest in Gabon]"
+                        }
+                      },
+                      {
+                        "@objidentifier": "doi_________::f17cca7b2a283db79767128183a52859",
+                        "publisher": {
+                          "$": "University of Southern California Digital Library (USC.DL)"
+                        },
+                        "title": {
+                          "@classid": "main title",
+                          "@classname": "main title",
+                          "@schemeid": "dnet:dataCite_title",
+                          "@schemename": "dnet:dataCite_title",
+                          "$": "Forest, in Gabon"
+                        },
+                        "dateofacceptance": { "$": "2012-01-01" },
+                        "pid": {
+                          "@classid": "doi",
+                          "@classname": "Digital Object Identifier",
+                          "@schemeid": "dnet:pid_types",
+                          "@schemename": "dnet:pid_types",
+                          "@inferred": false,
+                          "@provenanceaction": "sysimport:actionset",
+                          "@trust": "0.9",
+                          "$": "10.25549/impa-m78492"
+                        },
+                        "collectedfrom": {
+                          "@name": "Datacite",
+                          "@id": "openaire____::9e3be59865b2c1c335d32dae2fe7b254"
+                        }
+                      },
+                      {
+                        "@objidentifier": "doi_________::7cb50a27bdae5efd132bb8430f1592d8",
+                        "publisher": {
+                          "$": "University of Southern California Digital Library (USC.DL)"
+                        },
+                        "pid": {
+                          "@classid": "doi",
+                          "@classname": "Digital Object Identifier",
+                          "@schemeid": "dnet:pid_types",
+                          "@schemename": "dnet:pid_types",
+                          "@inferred": false,
+                          "@provenanceaction": "sysimport:actionset",
+                          "@trust": "0.9",
+                          "$": "10.25549/impa-m78739"
+                        },
+                        "dateofacceptance": { "$": "2012-01-01" },
+                        "collectedfrom": {
+                          "@name": "Datacite",
+                          "@id": "openaire____::9e3be59865b2c1c335d32dae2fe7b254"
+                        },
+                        "title": {
+                          "@classid": "main title",
+                          "@classname": "main title",
+                          "@schemeid": "dnet:dataCite_title",
+                          "@schemename": "dnet:dataCite_title",
+                          "$": "[Forest in Gabon]"
+                        }
+                      },
+                      {
+                        "@objidentifier": "doi_________::93d3de78d534fe158bbbf5d29c7f337c",
+                        "pid": {
+                          "@classid": "doi",
+                          "@classname": "Digital Object Identifier",
+                          "@schemeid": "dnet:pid_types",
+                          "@schemename": "dnet:pid_types",
+                          "@inferred": false,
+                          "@provenanceaction": "sysimport:actionset",
+                          "@trust": "0.9",
+                          "$": "10.25549/impa-m77989"
+                        },
+                        "publisher": {
+                          "$": "University of Southern California Digital Library (USC.DL)"
+                        },
+                        "title": {
+                          "@classid": "main title",
+                          "@classname": "main title",
+                          "@schemeid": "dnet:dataCite_title",
+                          "@schemename": "dnet:dataCite_title",
+                          "$": "Forest in Gabon"
+                        },
+                        "dateofacceptance": { "$": "2012-01-01" },
+                        "collectedfrom": {
+                          "@name": "Datacite",
+                          "@id": "openaire____::9e3be59865b2c1c335d32dae2fe7b254"
+                        }
+                      },
+                      {
+                        "@objidentifier": "doi_________::258645438d9b8cbe86798587f1514977",
+                        "publisher": {
+                          "$": "University of Southern California Digital Library (USC.DL)"
+                        },
+                        "pid": {
+                          "@classid": "doi",
+                          "@classname": "Digital Object Identifier",
+                          "@schemeid": "dnet:pid_types",
+                          "@schemename": "dnet:pid_types",
+                          "@inferred": false,
+                          "@provenanceaction": "sysimport:actionset",
+                          "@trust": "0.9",
+                          "$": "10.25549/impa-m77990"
+                        },
+                        "title": {
+                          "@classid": "main title",
+                          "@classname": "main title",
+                          "@schemeid": "dnet:dataCite_title",
+                          "@schemename": "dnet:dataCite_title",
+                          "$": "Forest, in Gabon"
+                        },
+                        "dateofacceptance": { "$": "2012-01-01" },
+                        "collectedfrom": {
+                          "@name": "Datacite",
+                          "@id": "openaire____::9e3be59865b2c1c335d32dae2fe7b254"
+                        }
+                      },
+                      {
+                        "@objidentifier": "doi_________::262d86ca21cc931d000cb2183471c343",
+                        "pid": {
+                          "@classid": "doi",
+                          "@classname": "Digital Object Identifier",
+                          "@schemeid": "dnet:pid_types",
+                          "@schemename": "dnet:pid_types",
+                          "@inferred": false,
+                          "@provenanceaction": "sysimport:actionset",
+                          "@trust": "0.9",
+                          "$": "10.25549/impa-m79742"
+                        },
+                        "title": {
+                          "@classid": "main title",
+                          "@classname": "main title",
+                          "@schemeid": "dnet:dataCite_title",
+                          "@schemename": "dnet:dataCite_title",
+                          "$": "[Forest, in Gabon]"
+                        },
+                        "publisher": {
+                          "$": "University of Southern California Digital Library (USC.DL)"
+                        },
+                        "dateofacceptance": { "$": "2012-01-01" },
+                        "collectedfrom": {
+                          "@name": "Datacite",
+                          "@id": "openaire____::9e3be59865b2c1c335d32dae2fe7b254"
+                        }
+                      }
+                    ],
+                    "instance": [
+                      {
+                        "@id": "openaire____::55045bd2a65019fd8e6741a755395c8c",
+                        "accessright": {
+                          "@classid": "UNKNOWN",
+                          "@classname": "not available",
+                          "@schemeid": "dnet:access_modes",
+                          "@schemename": "dnet:access_modes"
+                        },
+                        "collectedfrom": {
+                          "@name": "Datacite",
+                          "@id": "openaire____::9e3be59865b2c1c335d32dae2fe7b254"
+                        },
+                        "hostedby": {
+                          "@name": "Unknown Repository",
+                          "@id": "openaire____::55045bd2a65019fd8e6741a755395c8c"
+                        },
+                        "dateofacceptance": { "$": "2012-01-01" },
+                        "instancetype": {
+                          "@classid": "0021",
+                          "@classname": "Dataset",
+                          "@schemeid": "dnet:publication_resource",
+                          "@schemename": "dnet:publication_resource"
+                        },
+                        "pid": {
+                          "@classid": "doi",
+                          "@classname": "Digital Object Identifier",
+                          "@schemeid": "dnet:pid_types",
+                          "@schemename": "dnet:pid_types",
+                          "@inferred": false,
+                          "@provenanceaction": "sysimport:actionset",
+                          "@trust": "0.9",
+                          "$": "10.25549/impa-m78492"
+                        },
+                        "refereed": {
+                          "@classid": "0000",
+                          "@classname": "UNKNOWN",
+                          "@schemeid": "dnet:review_levels",
+                          "@schemename": "dnet:review_levels"
+                        },
+                        "webresource": {
+                          "url": {
+                            "$": "https://dx.doi.org/10.25549/impa-m78492"
+                          }
+                        }
+                      },
+                      {
+                        "@id": "openaire____::55045bd2a65019fd8e6741a755395c8c",
+                        "accessright": {
+                          "@classid": "UNKNOWN",
+                          "@classname": "not available",
+                          "@schemeid": "dnet:access_modes",
+                          "@schemename": "dnet:access_modes"
+                        },
+                        "collectedfrom": {
+                          "@name": "Datacite",
+                          "@id": "openaire____::9e3be59865b2c1c335d32dae2fe7b254"
+                        },
+                        "hostedby": {
+                          "@name": "Unknown Repository",
+                          "@id": "openaire____::55045bd2a65019fd8e6741a755395c8c"
+                        },
+                        "dateofacceptance": { "$": "2012-01-01" },
+                        "instancetype": {
+                          "@classid": "0021",
+                          "@classname": "Dataset",
+                          "@schemeid": "dnet:publication_resource",
+                          "@schemename": "dnet:publication_resource"
+                        },
+                        "pid": {
+                          "@classid": "doi",
+                          "@classname": "Digital Object Identifier",
+                          "@schemeid": "dnet:pid_types",
+                          "@schemename": "dnet:pid_types",
+                          "@inferred": false,
+                          "@provenanceaction": "sysimport:actionset",
+                          "@trust": "0.9",
+                          "$": "10.25549/impa-m78491"
+                        },
+                        "refereed": {
+                          "@classid": "0000",
+                          "@classname": "UNKNOWN",
+                          "@schemeid": "dnet:review_levels",
+                          "@schemename": "dnet:review_levels"
+                        },
+                        "webresource": {
+                          "url": {
+                            "$": "https://dx.doi.org/10.25549/impa-m78491"
+                          }
+                        }
+                      },
+                      {
+                        "@id": "openaire____::55045bd2a65019fd8e6741a755395c8c",
+                        "accessright": {
+                          "@classid": "UNKNOWN",
+                          "@classname": "not available",
+                          "@schemeid": "dnet:access_modes",
+                          "@schemename": "dnet:access_modes"
+                        },
+                        "collectedfrom": {
+                          "@name": "Datacite",
+                          "@id": "openaire____::9e3be59865b2c1c335d32dae2fe7b254"
+                        },
+                        "hostedby": {
+                          "@name": "Unknown Repository",
+                          "@id": "openaire____::55045bd2a65019fd8e6741a755395c8c"
+                        },
+                        "dateofacceptance": { "$": "2012-01-01" },
+                        "instancetype": {
+                          "@classid": "0021",
+                          "@classname": "Dataset",
+                          "@schemeid": "dnet:publication_resource",
+                          "@schemename": "dnet:publication_resource"
+                        },
+                        "pid": {
+                          "@classid": "doi",
+                          "@classname": "Digital Object Identifier",
+                          "@schemeid": "dnet:pid_types",
+                          "@schemename": "dnet:pid_types",
+                          "@inferred": false,
+                          "@provenanceaction": "sysimport:actionset",
+                          "@trust": "0.9",
+                          "$": "10.25549/impa-m79576"
+                        },
+                        "refereed": {
+                          "@classid": "0000",
+                          "@classname": "UNKNOWN",
+                          "@schemeid": "dnet:review_levels",
+                          "@schemename": "dnet:review_levels"
+                        },
+                        "webresource": {
+                          "url": {
+                            "$": "https://dx.doi.org/10.25549/impa-m79576"
+                          }
+                        }
+                      },
+                      {
+                        "@id": "openaire____::55045bd2a65019fd8e6741a755395c8c",
+                        "accessright": {
+                          "@classid": "UNKNOWN",
+                          "@classname": "not available",
+                          "@schemeid": "dnet:access_modes",
+                          "@schemename": "dnet:access_modes"
+                        },
+                        "collectedfrom": {
+                          "@name": "Datacite",
+                          "@id": "openaire____::9e3be59865b2c1c335d32dae2fe7b254"
+                        },
+                        "hostedby": {
+                          "@name": "Unknown Repository",
+                          "@id": "openaire____::55045bd2a65019fd8e6741a755395c8c"
+                        },
+                        "dateofacceptance": { "$": "2012-01-01" },
+                        "instancetype": {
+                          "@classid": "0021",
+                          "@classname": "Dataset",
+                          "@schemeid": "dnet:publication_resource",
+                          "@schemename": "dnet:publication_resource"
+                        },
+                        "pid": {
+                          "@classid": "doi",
+                          "@classname": "Digital Object Identifier",
+                          "@schemeid": "dnet:pid_types",
+                          "@schemename": "dnet:pid_types",
+                          "@inferred": false,
+                          "@provenanceaction": "sysimport:actionset",
+                          "@trust": "0.9",
+                          "$": "10.25549/impa-m77990"
+                        },
+                        "refereed": {
+                          "@classid": "0000",
+                          "@classname": "UNKNOWN",
+                          "@schemeid": "dnet:review_levels",
+                          "@schemename": "dnet:review_levels"
+                        },
+                        "webresource": {
+                          "url": {
+                            "$": "https://dx.doi.org/10.25549/impa-m77990"
+                          }
+                        }
+                      },
+                      {
+                        "@id": "openaire____::55045bd2a65019fd8e6741a755395c8c",
+                        "accessright": {
+                          "@classid": "UNKNOWN",
+                          "@classname": "not available",
+                          "@schemeid": "dnet:access_modes",
+                          "@schemename": "dnet:access_modes"
+                        },
+                        "collectedfrom": {
+                          "@name": "Datacite",
+                          "@id": "openaire____::9e3be59865b2c1c335d32dae2fe7b254"
+                        },
+                        "hostedby": {
+                          "@name": "Unknown Repository",
+                          "@id": "openaire____::55045bd2a65019fd8e6741a755395c8c"
+                        },
+                        "dateofacceptance": { "$": "2012-01-01" },
+                        "instancetype": {
+                          "@classid": "0021",
+                          "@classname": "Dataset",
+                          "@schemeid": "dnet:publication_resource",
+                          "@schemename": "dnet:publication_resource"
+                        },
+                        "pid": {
+                          "@classid": "doi",
+                          "@classname": "Digital Object Identifier",
+                          "@schemeid": "dnet:pid_types",
+                          "@schemename": "dnet:pid_types",
+                          "@inferred": false,
+                          "@provenanceaction": "sysimport:actionset",
+                          "@trust": "0.9",
+                          "$": "10.25549/impa-m78739"
+                        },
+                        "refereed": {
+                          "@classid": "0000",
+                          "@classname": "UNKNOWN",
+                          "@schemeid": "dnet:review_levels",
+                          "@schemename": "dnet:review_levels"
+                        },
+                        "webresource": {
+                          "url": {
+                            "$": "https://dx.doi.org/10.25549/impa-m78739"
+                          }
+                        }
+                      },
+                      {
+                        "@id": "openaire____::55045bd2a65019fd8e6741a755395c8c",
+                        "accessright": {
+                          "@classid": "UNKNOWN",
+                          "@classname": "not available",
+                          "@schemeid": "dnet:access_modes",
+                          "@schemename": "dnet:access_modes"
+                        },
+                        "collectedfrom": {
+                          "@name": "Datacite",
+                          "@id": "openaire____::9e3be59865b2c1c335d32dae2fe7b254"
+                        },
+                        "hostedby": {
+                          "@name": "Unknown Repository",
+                          "@id": "openaire____::55045bd2a65019fd8e6741a755395c8c"
+                        },
+                        "dateofacceptance": { "$": "2012-01-01" },
+                        "instancetype": {
+                          "@classid": "0021",
+                          "@classname": "Dataset",
+                          "@schemeid": "dnet:publication_resource",
+                          "@schemename": "dnet:publication_resource"
+                        },
+                        "pid": {
+                          "@classid": "doi",
+                          "@classname": "Digital Object Identifier",
+                          "@schemeid": "dnet:pid_types",
+                          "@schemename": "dnet:pid_types",
+                          "@inferred": false,
+                          "@provenanceaction": "sysimport:actionset",
+                          "@trust": "0.9",
+                          "$": "10.25549/impa-m79742"
+                        },
+                        "refereed": {
+                          "@classid": "0000",
+                          "@classname": "UNKNOWN",
+                          "@schemeid": "dnet:review_levels",
+                          "@schemename": "dnet:review_levels"
+                        },
+                        "webresource": {
+                          "url": {
+                            "$": "https://dx.doi.org/10.25549/impa-m79742"
+                          }
+                        }
+                      },
+                      {
+                        "@id": "openaire____::55045bd2a65019fd8e6741a755395c8c",
+                        "accessright": {
+                          "@classid": "UNKNOWN",
+                          "@classname": "not available",
+                          "@schemeid": "dnet:access_modes",
+                          "@schemename": "dnet:access_modes"
+                        },
+                        "collectedfrom": {
+                          "@name": "Datacite",
+                          "@id": "openaire____::9e3be59865b2c1c335d32dae2fe7b254"
+                        },
+                        "hostedby": {
+                          "@name": "Unknown Repository",
+                          "@id": "openaire____::55045bd2a65019fd8e6741a755395c8c"
+                        },
+                        "dateofacceptance": { "$": "2012-01-01" },
+                        "instancetype": {
+                          "@classid": "0021",
+                          "@classname": "Dataset",
+                          "@schemeid": "dnet:publication_resource",
+                          "@schemename": "dnet:publication_resource"
+                        },
+                        "pid": {
+                          "@classid": "doi",
+                          "@classname": "Digital Object Identifier",
+                          "@schemeid": "dnet:pid_types",
+                          "@schemename": "dnet:pid_types",
+                          "@inferred": false,
+                          "@provenanceaction": "sysimport:actionset",
+                          "@trust": "0.9",
+                          "$": "10.25549/impa-m77989"
+                        },
+                        "refereed": {
+                          "@classid": "0000",
+                          "@classname": "UNKNOWN",
+                          "@schemeid": "dnet:review_levels",
+                          "@schemename": "dnet:review_levels"
+                        },
+                        "webresource": {
+                          "url": {
+                            "$": "https://dx.doi.org/10.25549/impa-m77989"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "browseResults": null
+    }
+  }
+}

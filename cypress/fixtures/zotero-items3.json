@@ -1,0 +1,76 @@
+{
+  "statusCode": 200,
+  "headers": {
+    "Total-Results": "14"
+  },
+  "body": [
+    {
+      "key": "STUJEJKU",
+      "version": 172,
+      "library": {
+        "type": "user",
+        "id": 6732,
+        "name": "rexalexmede",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/rexalexmede",
+            "type": "text/html"
+          }
+        }
+      },
+      "links": {
+        "self": {
+          "href": "https://api.zotero.org/users/6732/items/STUJEJKU",
+          "type": "application/json"
+        },
+        "alternate": {
+          "href": "https://www.zotero.org/rexalexmede/items/STUJEJKU",
+          "type": "text/html"
+        }
+      },
+      "meta": {
+        "numChildren": 0
+      },
+      "data": {
+        "key": "STUJEJKU",
+        "version": 172,
+        "itemType": "journalArticle",
+        "title": "test a",
+        "creators": [
+          {
+            "creatorType": "author",
+            "firstName": "boss",
+            "lastName": ""
+          }
+        ],
+        "abstractNote": "",
+        "publicationTitle": "",
+        "volume": "",
+        "issue": "",
+        "pages": "",
+        "date": "",
+        "series": "",
+        "seriesTitle": "",
+        "seriesText": "",
+        "journalAbbreviation": "",
+        "language": "",
+        "DOI": "",
+        "ISSN": "",
+        "shortTitle": "",
+        "url": "",
+        "accessDate": "",
+        "archive": "",
+        "archiveLocation": "",
+        "libraryCatalog": "",
+        "callNumber": "",
+        "rights": "",
+        "extra": "",
+        "tags": [],
+        "collections": ["P6W4MR6W"],
+        "relations": {},
+        "dateAdded": "2020-10-12T13:15:59Z",
+        "dateModified": "2020-10-12T13:16:10Z"
+      }
+    }
+  ]
+}

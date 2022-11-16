@@ -58,7 +58,7 @@
     "@eeacms/volto-block-image-cards"
   ],
   "dependencies": {
-    "@eeacms/volto-accordion-block": "5.0.0",
+    "@eeacms/volto-accordion-block": "6.0.0",
     "@eeacms/volto-banner": "3.0.0",
     "@eeacms/volto-block-divider": "4.0.0",
     "@eeacms/volto-block-image-cards": "1.0.0",
@@ -105,7 +105,7 @@
     "@eeacms/volto-description-block": "1.0.0",
     "@eeacms/volto-slate-label": "0.4.3",
     "@plone-collective/volto-sentry": "0.2.0",
-    "@eeacms/volto-accordion-block": "5.0.0",
+    "@eeacms/volto-accordion-block": "6.0.0",
     "@eeacms/volto-banner": "3.0.0",
     "@eeacms/volto-block-divider": "4.0.0",
     "@eeacms/volto-block-image-cards": "1.0.0",

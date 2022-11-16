@@ -21,6 +21,8 @@ The [eea.kitkat](https://github.com/eea/eea.kitkat) Plone add-on is the backend 
 
 ## Included Volto Add-ons
 
+1. [![Releases](https://img.shields.io/github/v/release/collective/volto-sentry)](https://github.com/collective/volto-sentry/releases) [@plone-collective/volto-sentry](https://github.com/collective/volto-sentry)
+1. [![Releases](https://img.shields.io/github/v/release/kitconcept/volto-blocks-grid)](https://github.com/kitconcept/volto-blocks-grid/releases) [@kitconcept/volto-blocks-grid](https://github.com/kitconcept/volto-blocks-grid)
 1. [![Releases](https://img.shields.io/github/v/release/eea/volto-matomo)](https://github.com/eea/volto-matomo/releases) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-matomo%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-matomo/job/master/display/redirect) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-matomo%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-matomo/job/develop/display/redirect) [@eeacms/volto-matomo](https://github.com/eea/volto-matomo)
 1. [![Releases](https://img.shields.io/github/v/release/eea/volto-sentry-rancher-config)](https://github.com/eea/volto-sentry-rancher-config/releases) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-sentry-rancher-config%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-sentry-rancher-config/job/master/display/redirect) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-sentry-rancher-config%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-sentry-rancher-config/job/develop/display/redirect) [@eeacms/volto-sentry-rancher-config](https://github.com/eea/volto-sentry-rancher-config)
 1. [![Releases](https://img.shields.io/github/v/release/eea/volto-corsproxy)](https://github.com/eea/volto-corsproxy/releases) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-corsproxy%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-corsproxy/job/master/display/redirect) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-corsproxy%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-corsproxy/job/develop/display/redirect) [@eeacms/volto-corsproxy](https://github.com/eea/volto-corsproxy)
@@ -47,15 +49,45 @@ The [eea.kitkat](https://github.com/eea/eea.kitkat) Plone add-on is the backend 
 1. [![Releases](https://img.shields.io/github/v/release/eea/volto-block-style)](https://github.com/eea/volto-block-style/releases) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-block-style%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-block-style/job/master/display/redirect) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-block-style%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-block-style/job/develop/display/redirect) [@eeacms/volto-block-style](https://github.com/eea/volto-block-style)
 1. [![Releases](https://img.shields.io/github/v/release/eea/volto-widget-dataprovenance)](https://github.com/eea/volto-widget-dataprovenance/releases) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-widget-dataprovenance%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-widget-dataprovenance/job/master/display/redirect) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-widget-dataprovenance%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-widget-dataprovenance/job/develop/display/redirect) [@eeacms/volto-widget-dataprovenance](https://github.com/eea/volto-widget-dataprovenance)
 
-# Upgrade
+
+
+1. [![Releases](https://img.shields.io/github/v/release/eea/volto-slate-label)](https://github.com/eea/volto-slate-label/releases) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-slate-label%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-slate-label/job/master/display/redirect) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-slate-label%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-slate-label/job/develop/display/redirect) [@eeacms/volto-slate-label](https://github.com/eea/volto-slate-label)
+1. [![Releases](https://img.shields.io/github/v/release/eea/volto-call-to-action-block)](https://github.com/eea/volto-call-to-action-block/releases) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-call-to-action-block%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-call-to-action-block/job/master/display/redirect) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-call-to-action-block%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-call-to-action-block/job/develop/display/redirect) [@eeacms/volto-call-to-action-block](https://github.com/eea/volto-call-to-action-block)
+1. [![Releases](https://img.shields.io/github/v/release/eea/volto-description-block)](https://github.com/eea/volto-description-block/releases) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-description-block%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-description-block/job/master/display/redirect) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-description-block%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-description-block/job/develop/display/redirect) [@eeacms/volto-description-block](https://github.com/eea/volto-description-block)
+1. [![Releases](https://img.shields.io/github/v/release/eea/volto-hero-block)](https://github.com/eea/volto-hero-block/releases) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-hero-block%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-hero-block/job/master/display/redirect) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-hero-block%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-hero-block/job/develop/display/redirect) [@eeacms/volto-hero-block](https://github.com/eea/volto-hero-block)
+1. [![Releases](https://img.shields.io/github/v/release/eea/volto-quote-block)](https://github.com/eea/volto-quote-block/releases) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-quote-block%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-quote-block/job/master/display/redirect) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-quote-block%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-quote-block/job/develop/display/redirect) [@eeacms/volto-quote-block](https://github.com/eea/volto-quote-block)
+1. [![Releases](https://img.shields.io/github/v/release/eea/volto-statistic-block)](https://github.com/eea/volto-statistic-block/releases) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-statistic-block%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-statistic-block/job/master/display/redirect) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-statistic-block%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-statistic-block/job/develop/display/redirect) [@eeacms/volto-statistic-block](https://github.com/eea/volto-statistic-block)
+1. [![Releases](https://img.shields.io/github/v/release/eea/volto-tags-block)](https://github.com/eea/volto-tags-block/releases) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-tags-block%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-tags-block/job/master/display/redirect) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-tags-block%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-tags-block/job/develop/display/redirect) [@eeacms/volto-tags-block](https://github.com/eea/volto-tags-block)
+1. [![Releases](https://img.shields.io/github/v/release/eea/volto-timeline-block)](https://github.com/eea/volto-timeline-block/releases) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-timeline-block%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-timeline-block/job/master/display/redirect) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-timeline-block%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-timeline-block/job/develop/display/redirect) [@eeacms/volto-timeline-block](https://github.com/eea/volto-timeline-block)
+
+
+## Upgrade
+
+### Upgrading to 10.x
+
+> This version requires: `@plone/volto >= 16.0.0.alpha.45` (Sentry removed from Volto Core).
+
+#### New add-ons added
+
+1. [@plone-collective/volto-sentry](https://github.com/collective/volto-sentry#volto-sentry)
+1. [@kitconcept/volto-blocks-grid](https://github.com/kitconcept/volto-blocks-grid#volto-blocks-grid-by-kitconcept)
+1. [@eeacms/volto-slate-label](https://github.com/eea/volto-slate-label#volto-slate-label)
+1. [@eeacms/volto-call-to-action-block](https://github.com/eea/volto-call-to-action-block#volto-call-to-action-block)
+1. [@eeacms/volto-description-block](https://github.com/eea/volto-description-block#volto-description-block)
+1. [@eeacms/volto-hero-block](https://github.com/eea/volto-hero-block#volto-hero-block)
+1. [@eeacms/volto-quote-block](https://github.com/eea/volto-quote-block#volto-quote-block)
+1. [@eeacms/volto-statistic-block](https://github.com/eea/volto-statistic-block#volto-statistic-block)
+1. [@eeacms/volto-tags-block](https://github.com/eea/volto-tags-block#volto-tags-block)
+1. [@eeacms/volto-timeline-block](https://github.com/eea/volto-timeline-block#volto-timeline-block)
 
 ### Upgrading to 9.x
 
-This version requires: `@plone/volto >= 16.0.0.alpha.15` (`volto-slate` part of Volto Core).
+> This version requires: `@plone/volto >= 16.0.0.alpha.15` (`volto-slate` part of Volto Core).
 
-**Dropped dependencies (moved to Volto Core):**
-* volto-slate
-* volto-block-toc
+#### Dropped dependencies (moved to Volto Core)
+
+1. volto-slate
+2. volto-block-toc
 
 
 ## Getting started

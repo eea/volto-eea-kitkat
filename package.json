@@ -86,7 +86,7 @@
     "@eeacms/volto-tags-block": "1.0.0",
     "@eeacms/volto-taxonomy": "3.0.1",
     "@eeacms/volto-timeline-block": "1.0.0",
-    "@eeacms/volto-widget-dataprovenance": "0.2.0",
+    "@eeacms/volto-widget-dataprovenance": "0.2.1",
     "@eeacms/volto-widget-geolocation": "5.0.1",
     "@eeacms/volto-widget-temporal-coverage": "5.0.1",
     "@eeacms/volto-widget-toggle": "3.0.1",
@@ -126,7 +126,7 @@
     "@eeacms/volto-tabs-block": "3.0.0",
     "@eeacms/volto-taxonomy": "3.0.1",
     "@eeacms/volto-widget-geolocation": "5.0.1",
-    "@eeacms/volto-widget-dataprovenance": "0.2.0",
+    "@eeacms/volto-widget-dataprovenance": "0.2.1",
     "@eeacms/volto-widget-temporal-coverage": "5.0.1",
     "@eeacms/volto-widget-toggle": "3.0.1",
     "@eeacms/volto-widgets-view": "4.0.1"

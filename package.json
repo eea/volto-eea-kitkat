@@ -74,7 +74,7 @@
     "@eeacms/volto-matomo": "3.0.1",
     "@eeacms/volto-metadata-block": "5.0.1",
     "@eeacms/volto-object-widget": "5.0.1",
-    "@eeacms/volto-quote-block": "1.0.0",
+    "@eeacms/volto-quote-block": "1.0.1",
     "@eeacms/volto-resize-helper": "1.0.1",
     "@eeacms/volto-sentry-rancher-config": "3.0.1",
     "@eeacms/volto-slate-footnote": "6.0.2",
@@ -96,7 +96,7 @@
   },
   "resolutions": {
     "@kitconcept/volto-blocks-grid": "5.1.1",
-    "@eeacms/volto-quote-block": "1.0.0",
+    "@eeacms/volto-quote-block": "1.0.1",
     "@eeacms/volto-statistic-block": "1.0.1",
     "@eeacms/volto-tags-block": "1.0.0",
     "@eeacms/volto-call-to-action-block": "2.0.0",

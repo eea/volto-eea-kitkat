@@ -1,6 +1,6 @@
 {
   "name": "@eeacms/volto-eea-kitkat",
-  "version": "9.0.0",
+  "version": "10.0.0",
   "description": "@eeacms/volto-eea-kitkat: Volto Add-ons bundle - A known good set of Volto addons to be used within all EEA projects and beyond",
   "main": "src/index.js",
   "author": "European Environment Agency: IDM2 A-Team",
@@ -22,6 +22,7 @@
   },
   "addons": [
     "@eeacms/volto-matomo",
+    "@plone-collective/volto-sentry",
     "@eeacms/volto-sentry-rancher-config",
     "@eeacms/volto-corsproxy",
     "@eeacms/volto-depiction",
@@ -48,6 +49,7 @@
     "@eeacms/volto-block-image-cards"
   ],
   "dependencies": {
+    "@plone-collective/volto-sentry": "0.2.0",
     "@eeacms/volto-accordion-block": "5.0.0",
     "@eeacms/volto-banner": "3.0.0",
     "@eeacms/volto-block-divider": "4.0.0",
@@ -75,6 +77,7 @@
     "@eeacms/volto-widgets-view": "4.0.0"
   },
   "resolutions": {
+    "@plone-collective/volto-sentry": "0.2.0",
     "@eeacms/volto-accordion-block": "5.0.0",
     "@eeacms/volto-banner": "3.0.0",
     "@eeacms/volto-block-divider": "4.0.0",

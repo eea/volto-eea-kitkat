@@ -49,6 +49,10 @@ The [eea.kitkat](https://github.com/eea/eea.kitkat) Plone add-on is the backend 
 
 # Upgrade
 
+### Upgrading to 10.x
+
+This version requires: `@plone/volto >= 16.0.0.alpha.45` (Sentry removed from Volto Core).
+
 ### Upgrading to 9.x
 
 This version requires: `@plone/volto >= 16.0.0.alpha.15` (`volto-slate` part of Volto Core).

@@ -1,6 +1,6 @@
 {
   "name": "@eeacms/volto-eea-kitkat",
-  "version": "11.0.0",
+  "version": "12.0.0",
   "description": "@eeacms/volto-eea-kitkat: Volto Add-ons bundle - A known good set of Volto addons to be used within all EEA projects and beyond",
   "main": "src/index.js",
   "author": "European Environment Agency: IDM2 A-Team",
@@ -29,6 +29,7 @@
     "@eeacms/volto-taxonomy",
     "@eeacms/volto-object-widget",
     "@eeacms/volto-widgets-view",
+    "@eeacms/volto-widget-theme-picker",
     "@eeacms/volto-widget-toggle",
     "@eeacms/volto-widget-temporal-coverage",
     "@eeacms/volto-widget-geolocation",
@@ -55,14 +56,16 @@
     "@eeacms/volto-block-style",
     "@eeacms/volto-tabs-block",
     "@eeacms/volto-banner",
-    "@eeacms/volto-block-image-cards"
+    "@eeacms/volto-block-image-cards",
+    "@eeacms/volto-anchors"
   ],
   "dependencies": {
     "@eeacms/volto-accordion-block": "7.0.0",
+    "@eeacms/volto-anchors": "0.1.4",
     "@eeacms/volto-banner": "3.0.1",
     "@eeacms/volto-block-divider": "6.0.0",
     "@eeacms/volto-block-image-cards": "1.0.2",
-    "@eeacms/volto-block-style": "5.0.0",
+    "@eeacms/volto-block-style": "5.0.1",
     "@eeacms/volto-call-to-action-block": "4.0.0",
     "@eeacms/volto-columns-block": "6.0.0",
     "@eeacms/volto-corsproxy": "3.0.1",
@@ -89,12 +92,14 @@
     "@eeacms/volto-widget-dataprovenance": "0.2.1",
     "@eeacms/volto-widget-geolocation": "5.0.1",
     "@eeacms/volto-widget-temporal-coverage": "5.0.1",
+    "@eeacms/volto-widget-theme-picker": "1.0.3",
     "@eeacms/volto-widget-toggle": "3.0.1",
     "@eeacms/volto-widgets-view": "4.0.1",
     "@kitconcept/volto-blocks-grid": "5.1.1",
     "@plone-collective/volto-sentry": "0.3.0"
   },
   "resolutions": {
+    "@eeacms/volto-anchors": "0.1.4",
     "@kitconcept/volto-blocks-grid": "5.1.1",
     "@eeacms/volto-quote-block": "1.0.1",
     "@eeacms/volto-statistic-block": "1.0.1",
@@ -109,7 +114,7 @@
     "@eeacms/volto-banner": "3.0.1",
     "@eeacms/volto-block-divider": "6.0.0",
     "@eeacms/volto-block-image-cards": "1.0.2",
-    "@eeacms/volto-block-style": "5.0.0",
+    "@eeacms/volto-block-style": "5.0.1",
     "@eeacms/volto-columns-block": "6.0.0",
     "@eeacms/volto-corsproxy": "3.0.1",
     "@eeacms/volto-depiction": "1.0.1",
@@ -129,7 +134,8 @@
     "@eeacms/volto-widget-dataprovenance": "0.2.1",
     "@eeacms/volto-widget-temporal-coverage": "5.0.1",
     "@eeacms/volto-widget-toggle": "3.0.1",
-    "@eeacms/volto-widgets-view": "4.0.1"
+    "@eeacms/volto-widgets-view": "4.0.1",
+    "@eeacms/volto-widget-theme-picker": "1.0.3"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.10.0",

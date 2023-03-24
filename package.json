@@ -60,7 +60,7 @@
     "@eeacms/volto-anchors"
   ],
   "dependencies": {
-    "@eeacms/volto-accordion-block": "7.1.0",
+    "@eeacms/volto-accordion-block": "8.0.0",
     "@eeacms/volto-anchors": "0.1.5",
     "@eeacms/volto-banner": "3.0.1",
     "@eeacms/volto-block-divider": "6.0.0",
@@ -110,7 +110,7 @@
     "@eeacms/volto-description-block": "1.0.1",
     "@eeacms/volto-slate-label": "0.4.4",
     "@plone-collective/volto-sentry": "0.3.0",
-    "@eeacms/volto-accordion-block": "7.1.0",
+    "@eeacms/volto-accordion-block": "8.0.0",
     "@eeacms/volto-banner": "3.0.1",
     "@eeacms/volto-block-divider": "6.0.0",
     "@eeacms/volto-block-image-cards": "1.0.2",

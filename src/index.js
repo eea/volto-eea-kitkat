@@ -1,5 +1,7 @@
-import { version as frontendVersion } from '../../../../package.json';
-import { name as frontendName } from '../../../../package.json';
+import {
+  version as frontendVersion,
+  name as frontendName,
+} from '../../../../package.json';
 import { updateSystemInfo } from '@eeacms/volto-eea-kitkat/system';
 
 const applyConfig = (config) => {

@@ -1,6 +1,6 @@
 /* eslint no-console: ["error", { allow: ["warn", "log"] }] */
 export const updateSystemInfo = (config) => {
-  var fetch = require('node-fetch');
+  let fetch = require('node-fetch');
   const internalApi =
     config.settings.internalApiPath || config.settings.devProxyToApiPath;
   const version = config.settings.frontendVersion;

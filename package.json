@@ -54,10 +54,10 @@
     "@eeacms/volto-tags-block",
     "@eeacms/volto-timeline-block",
     "@eeacms/volto-resize-helper",
+    "@eeacms/volto-block-image-cards",
     "@eeacms/volto-block-style",
     "@eeacms/volto-tabs-block",
     "@eeacms/volto-banner",
-    "@eeacms/volto-block-image-cards",
     "@eeacms/volto-anchors"
   ],
   "dependencies": {

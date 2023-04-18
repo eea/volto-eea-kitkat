@@ -58,7 +58,8 @@
     "@eeacms/volto-block-style",
     "@eeacms/volto-tabs-block",
     "@eeacms/volto-banner",
-    "@eeacms/volto-anchors"
+    "@eeacms/volto-anchors",
+    "volto-rss-block"
   ],
   "dependencies": {
     "@eeacms/volto-accordion-block": "8.0.0",
@@ -98,7 +99,8 @@
     "@eeacms/volto-widget-toggle": "3.1.0",
     "@eeacms/volto-widgets-view": "4.1.0",
     "@kitconcept/volto-blocks-grid": "5.1.1",
-    "@plone-collective/volto-sentry": "0.3.0"
+    "@plone-collective/volto-sentry": "0.3.0",
+    "volto-rss-block": "3.0.0"
   },
   "resolutions": {
     "@eeacms/volto-nextcloud-video-block": "0.3.1",
@@ -138,7 +140,8 @@
     "@eeacms/volto-widget-temporal-coverage": "5.1.0",
     "@eeacms/volto-widget-toggle": "3.1.0",
     "@eeacms/volto-widgets-view": "4.1.0",
-    "@eeacms/volto-widget-theme-picker": "1.1.0"
+    "@eeacms/volto-widget-theme-picker": "1.1.0",
+    "volto-rss-block": "3.0.0"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.10.0",

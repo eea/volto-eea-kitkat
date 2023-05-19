@@ -138,7 +138,8 @@
     "@eeacms/volto-widget-temporal-coverage": "5.1.0",
     "@eeacms/volto-widget-toggle": "3.1.0",
     "@eeacms/volto-widgets-view": "4.2.0",
-    "@eeacms/volto-widget-theme-picker": "1.1.0"
+    "@eeacms/volto-widget-theme-picker": "1.1.0",
+    "react-countup/countup.js": "2.5.0"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.10.0",

@@ -57,7 +57,6 @@
     "@eeacms/volto-block-style",
     "@eeacms/volto-tabs-block",
     "@eeacms/volto-banner",
-    "@eeacms/volto-anchors",
     "@eeacms/volto-citation"
   ],
   "dependencies": {

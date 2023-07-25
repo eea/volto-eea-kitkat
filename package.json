@@ -94,7 +94,8 @@
     "@eeacms/volto-widget-theme-picker": "1.1.2",
     "@eeacms/volto-widget-toggle": "3.1.2",
     "@kitconcept/volto-blocks-grid": "7.0.2",
-    "@plone-collective/volto-sentry": "0.3.0"
+    "@plone-collective/volto-sentry": "0.3.0",
+    "@eeacms/countup": "2.0.4"
   },
   "resolutions": {
     "@eeacms/volto-nextcloud-video-block": "0.4.2",
@@ -132,7 +133,7 @@
     "@eeacms/volto-widget-temporal-coverage": "5.1.2",
     "@eeacms/volto-widget-toggle": "3.1.2",
     "@eeacms/volto-widget-theme-picker": "1.1.2",
-    "react-countup/countup.js": "2.5.0"
+    "@eeacms/countup": "2.0.4"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.10.0",

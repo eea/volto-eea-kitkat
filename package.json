@@ -57,7 +57,8 @@
     "@eeacms/volto-block-style",
     "@eeacms/volto-tabs-block",
     "@eeacms/volto-banner",
-    "@eeacms/volto-anchors"
+    "@eeacms/volto-anchors",
+    "@eeacms/volto-citation"
   ],
   "dependencies": {
     "@eeacms/volto-accordion-block": "9.2.0",
@@ -95,6 +96,7 @@
     "@eeacms/volto-widget-theme-picker": "1.1.2",
     "@eeacms/volto-widget-toggle": "3.1.2",
     "@eeacms/volto-widgets-view": "4.2.2",
+    "@eeacms/volto-citation": "0.1.2",
     "@kitconcept/volto-blocks-grid": "7.0.2",
     "@plone-collective/volto-sentry": "0.3.0"
   },
@@ -135,6 +137,7 @@
     "@eeacms/volto-widget-toggle": "3.1.2",
     "@eeacms/volto-widgets-view": "4.2.2",
     "@eeacms/volto-widget-theme-picker": "1.1.2",
+    "@eeacms/volto-citation": "0.1.2",
     "react-countup/countup.js": "2.5.0"
   },
   "devDependencies": {

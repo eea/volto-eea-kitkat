@@ -1,7 +1,5 @@
 # volto-eea-kitkat
 
-[Volto](https://github.com/plone/volto) Add-ons bundle - A known good set of Volto addons to be used within all EEA projects and beyond
-
 ## Develop
 
 1. Make sure you have `docker` and `docker compose` installed and running on your machine:

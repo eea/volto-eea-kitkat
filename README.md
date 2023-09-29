@@ -87,6 +87,25 @@ The [eea.kitkat](https://github.com/eea/eea.kitkat) Plone add-on is the backend 
 1. volto-slate
 2. volto-block-toc
 
+## Resolutions
+
+Volto EEA KitKat provides a set of generic Volto Add-ons and a `Known Good Set` of these add-ons versions to be used within your Volto projects without having to worry about which add-on version works best with another add-on.
+
+While in other systems when you pin a package version to a specific number you will get that package version, in Javascript world [is not that simple](https://medium.com/swlh/welcome-to-dependency-hell-754a896f0440).
+
+For this, Volto EEA Kitkat is using [selective dependency resolutions](https://classic.yarnpkg.com/lang/en/docs/selective-version-resolutions/). While this work as expected in most of the cases, you may still have some surprises.
+
+### Troubleshooting
+
+1. Make sure your Volto project `yarn.lock` is not polluted. You can always reset your Volto project `yarn.lock` with:
+
+        $ npm install -g @plone/generator-volto
+        $ cd my-volto-project
+        $ yo @plone/volto --skip-install --no-interactive /tmp/new-volto-project
+        $ cp /tmp/new-volto-project/yarn.lock .
+        $ yarn
+
+2. Add-on `resolutions` don't work with `workspaces` (development mode), thus you'll need to define `resolutions` within Volto project. To tackle this issue, this Docker image automatically extracts `resolutions` from add-on and add them also to the Volto project before running tests.
 
 ## Getting started
 
@@ -125,9 +144,13 @@ Go to http://localhost:3000
 
    ```
    npm install -g yo @plone/generator-volto
-   yo @plone/volto new-project --addon @eeacms/volto-eea-kitkat
-   cd new-project
+   yo @plone/volto my-volto-project --canary --addon @eeacms/volto-eea-kitkat
+   cd my-volto-project
+   ```
 
+1. Install new add-ons and restart Volto:
+
+   ```
    yarn
    yarn start
    ```
@@ -135,26 +158,6 @@ Go to http://localhost:3000
 1. Go to http://localhost:3000
 
 1. Happy editing!
-
-## Resolutions
-
-Volto EEA KitKat provides a set of generic Volto Add-ons and a `Known Good Set` of these add-ons versions to be used within your Volto projects without having to worry about which add-on version works best with another add-on. 
-
-While in other systems when you pin a package version to a specific number you will get that package version, in Javascript world [is not that simple](https://medium.com/swlh/welcome-to-dependency-hell-754a896f0440).
-
-For this, Volto EEA Kitkat is using [selective dependency resolutions](https://classic.yarnpkg.com/lang/en/docs/selective-version-resolutions/). While this work as expected in most of the cases, you may still have some surprises.
-
-### Troubleshooting
-
-1. Make sure your Volto project `yarn.lock` is not polluted. You can always reset your Volto project `yarn.lock` with:
-
-        $ npm install -g @plone/generator-volto
-        $ cd my-volto-project
-        $ yo @plone/volto --skip-install --no-interactive /tmp/new-volto-project
-        $ cp /tmp/new-volto-project/yarn.lock .
-        $ yarn
-
-2. Add-on `resolutions` don't work with `workspaces` (development mode), thus you'll need to define `resolutions` within Volto project. To tackle this issue, this Docker image automatically extracts `resolutions` from add-on and add them also to the Volto project before running tests.
 
 ## Release
 

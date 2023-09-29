@@ -90,11 +90,38 @@ The [eea.kitkat](https://github.com/eea/eea.kitkat) Plone add-on is the backend 
 
 ## Getting started
 
-### Creating a Volto Frontend for your new EEA project
+### Try volto-eea-kitkat with Docker
+
+      git clone https://github.com/eea/volto-eea-kitkat.git
+      cd volto-eea-kitkat
+      make
+      make start
+
+Go to http://localhost:3000
+
+### Add volto-eea-kitkat to your Volto project
 
 1. Make sure you have a [Plone backend](https://plone.org/download) up-and-running at http://localhost:8080/Plone
 
-1. Create and start Volto frontend
+   ```Bash
+   docker compose up backend
+   ```
+
+1. Start Volto frontend
+
+* If you already have a volto project, just update `package.json`:
+
+   ```JSON
+   "addons": [
+       "@eeacms/volto-eea-kitkat"
+   ],
+
+   "dependencies": {
+       "@eeacms/volto-eea-kitkat": "*"
+   }
+   ```
+
+* If not, create one:
 
    ```
    npm install -g yo @plone/generator-volto
@@ -107,32 +134,7 @@ The [eea.kitkat](https://github.com/eea/eea.kitkat) Plone add-on is the backend 
 
 1. Go to http://localhost:3000
 
-1. Happy hacking!
-
-### Add `volto-eea-kitkat` to your existing Volto Frontend
-
-1. Make sure you have a [Plone backend](https://plone.org/download) up-and-running at http://localhost:8080/Plone
-
-1. Setup Volto frontend
-
-   * Update `package.json`:
-
-      ```JSON
-      "addons": [
-         "@eeacms/volto-eea-kitkat"
-      ],
-      ```
-
-   * Install new add-ons and restart Volto:
-
-      ```
-      yarn add -W @eeacms/volto-eea-kitkat
-      yarn start
-      ```
-
-1. Go to http://localhost:3000
-
-1. Happy hacking!
+1. Happy editing!
 
 ## Resolutions
 

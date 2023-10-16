@@ -1,7 +1,4 @@
-import {
-  version as frontendVersion,
-  name as frontendName,
-} from '../../../../package.json';
+import packageJson from '../../../../package.json';
 import { updateSystemInfo } from '@eeacms/volto-eea-kitkat/system';
 
 const applyConfig = (config) => {
@@ -29,12 +26,12 @@ const applyConfig = (config) => {
   config.settings.frontendVersion =
     config.settings.frontendVersion || __SERVER__
       ? process.env?.RAZZLE_FRONTEND_VERSION
-      : window.env?.RAZZLE_FRONTEND_VERSION || frontendVersion;
+      : window.env?.RAZZLE_FRONTEND_VERSION || packageJson.version;
 
   config.settings.frontendName =
     config.settings.frontendName || __SERVER__
       ? process.env?.RAZZLE_FRONTEND_NAME
-      : window.env?.RAZZLE_FRONTEND_NAME || frontendName;
+      : window.env?.RAZZLE_FRONTEND_NAME || packageJson.name;
 
   config.settings.backendVersion =
     config.settings.backendVersion || __SERVER__

@@ -7,7 +7,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Grid, Label, Header } from 'semantic-ui-react';
 import { formatDate } from '@plone/volto/helpers/Utils/Date';
-import { version as voltoVersion } from '@plone/volto/../package.json';
+import packageJson from '@plone/volto/../package.json';
 
 import config from '@plone/volto/registry';
 
@@ -27,6 +27,7 @@ const VersionOverview = ({
   const locale = config.settings.dateLocale || 'en-gb';
   const frontendVersion = frontend.version || config.settings.frontendVersion;
   const backendVersion = backend.version || config.settings.backendVersion;
+  const voltoVersion = packageJson.version;
 
   return (
     <Grid columns={2} stackable>

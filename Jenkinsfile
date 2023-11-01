@@ -164,7 +164,7 @@ pipeline {
                     try {
                       sh '''rm -rf cypress-videos cypress-results cypress-coverage cypress-screenshots'''
                       sh '''mkdir -p cypress-videos cypress-results cypress-coverage cypress-screenshots'''
-                      sh '''docker cp $IMAGE_NAME-cypress:/app/src/addons/$GIT_NAME/cypress/videos cypress-videos/'''
+                      videos = sh script: '''docker cp $IMAGE_NAME-cypress:/app/src/addons/$GIT_NAME/cypress/videos cypress-videos/''', returnStatus: true
                       sh '''docker cp $IMAGE_NAME-cypress:/app/src/addons/$GIT_NAME/cypress/reports cypress-results/'''
                       screenshots = sh script: '''docker cp $IMAGE_NAME-cypress:/app/src/addons/$GIT_NAME/cypress/screenshots cypress-screenshots''', returnStatus: true
 
@@ -181,8 +181,10 @@ pipeline {
                              reportName: 'CypressCoverage',
                              reportTitles: 'Integration Tests Code Coverage'])
                       }
-                      sh '''for file in $(find cypress-results -name *.xml); do if [ $(grep -E 'failures="[1-9].*"' $file | wc -l) -eq 0 ]; then testname=$(grep -E 'file=.*failures="0"' $file | sed 's#.* file=".*\\/\\(.*\\.[jsxt]\\+\\)" time.*#\\1#' );  rm -f cypress-videos/videos/$testname.mp4; fi; done'''
-                      archiveArtifacts artifacts: 'cypress-videos/**', fingerprint: true, allowEmptyArchive: true
+                      if ( videos == 0 ) {
+                        sh '''for file in $(find cypress-results -name *.xml); do if [ $(grep -E 'failures="[1-9].*"' $file | wc -l) -eq 0 ]; then testname=$(grep -E 'file=.*failures="0"' $file | sed 's#.* file=".*\\/\\(.*\\.[jsxt]\\+\\)" time.*#\\1#' );  rm -f cypress-videos/videos/$testname.mp4; fi; done'''
+                        archiveArtifacts artifacts: 'cypress-videos/**/*.mp4', fingerprint: true, allowEmptyArchive: true
+                      }
                     } finally {
                       catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
                         junit testResults: 'cypress-results/**/*.xml', allowEmptyResults: true

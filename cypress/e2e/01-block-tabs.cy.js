@@ -27,7 +27,7 @@ describe('Blocks Tests', () => {
       .click({ force: true });
 
     cy.get('.field-wrapper-title input').last().type('Tab 1');
-    cy.get('.field-wrapper-template #field-template').click();
+    cy.get('.field-wrapper-variation #field-variation').click();
     cy.get('.react-select__menu').contains('Default').click();
     cy.get('.field-wrapper-verticalAlign #field-verticalAlign').click();
     cy.get('.react-select__menu').contains('Middle').click();
@@ -49,7 +49,7 @@ describe('Blocks Tests', () => {
       .contains('Tabs')
       .click({ force: true });
 
-    cy.get('.field-wrapper-template #field-template').click();
+    cy.get('.field-wrapper-variation #field-variation').click();
     cy.get('.react-select__menu').contains('Carousel horizontal').click();
     cy.get('.field-wrapper-verticalAlign #field-verticalAlign').click();
     cy.get('.react-select__menu').contains('Bottom').click();

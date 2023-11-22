@@ -171,7 +171,7 @@ pipeline {
                     sh '''timeout -s 9 1800 docker exec --workdir=/app/src/addons/${GIT_NAME} $IMAGE_NAME-cypress make cypress-ci'''
                   } finally {
                     try {
-                      if ( frontend == 0 ) P
+                      if ( frontend == 0 ) { 
                       sh '''rm -rf cypress-videos cypress-results cypress-coverage cypress-screenshots'''
                       sh '''mkdir -p cypress-videos cypress-results cypress-coverage cypress-screenshots'''
                       videos = sh script: '''docker cp $IMAGE_NAME-cypress:/app/src/addons/$GIT_NAME/cypress/videos cypress-videos/''', returnStatus: true

@@ -153,7 +153,8 @@ test-ci:
 start-ci:
 	cp .coverage.babel.config.js /app/babel.config.js
 	cd ../..
-	yarn start
+	sleep 10 
+	#yarn start
 
 .PHONY: check-ci
 check-ci:

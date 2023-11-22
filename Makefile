@@ -86,7 +86,7 @@ cypress-open:		## Open cypress integration tests
 
 .PHONY: cypress-run
 cypress-run:	## Run cypress integration tests
-	CYPRESS_API_PATH="${RAZZLE_DEV_PROXY_API_PATH}" NODE_ENV=development  $(NODE_MODULES)/cypress/bin/cypress run --browser chromium
+	CYPRESS_API_PATH="${RAZZLE_DEV_PROXY_API_PATH}" NODE_ENV=development  $(NODE_MODULES)/cypress/bin/cypress run
 
 .PHONY: test
 test:			## Run jest tests
@@ -155,8 +155,12 @@ start-ci:
 	cd ../..
 	yarn start
 
+.PHONY: check-ci
+check-ci:
+	$(NODE_MODULES)/.bin/wait-on -t 240000  http://localhost:3000
+
 .PHONY: cypress-ci
 cypress-ci:
 	$(NODE_MODULES)/.bin/wait-on -t 240000  http://localhost:3000
-	NODE_ENV=development make cypress-run
+	CYPRESS_API_PATH="${RAZZLE_DEV_PROXY_API_PATH}" NODE_ENV=development  $(NODE_MODULES)/cypress/bin/cypress run --browser chromium
 

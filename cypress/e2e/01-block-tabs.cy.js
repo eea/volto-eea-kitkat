@@ -66,7 +66,7 @@ describe('Blocks Tests', () => {
     cy.contains('My Add-on Page');
     cy.contains('Hydrogen');
 
-    cy.get('.tabs-block p').contains('Tab 2').click();
+    cy.get('.tabs-block .menu-item-text').contains('Tab 2').click();
     cy.contains('Oxygen');
 
     cy.get('.slick-arrow').click();

@@ -1,6 +1,6 @@
 {
   "name": "@eeacms/volto-eea-kitkat",
-  "version": "22.1.0",
+  "version": "23.0.0",
   "description": "@eeacms/volto-eea-kitkat: Volto Add-ons bundle - A known good set of Volto addons to be used within all EEA projects and beyond",
   "main": "src/index.js",
   "author": "European Environment Agency: IDM2 A-Team",
@@ -21,6 +21,7 @@
     "url": "git@github.com:eea/volto-eea-kitkat.git"
   },
   "addons": [
+    "@eeacms/volto-controlpanel",
     "@eeacms/volto-matomo",
     "@plone-collective/volto-sentry",
     "@eeacms/volto-sentry-rancher-config",
@@ -56,7 +57,8 @@
     "@eeacms/volto-block-style",
     "@eeacms/volto-tabs-block",
     "@eeacms/volto-banner",
-    "@eeacms/volto-anchors"
+    "@eeacms/volto-anchors",
+    "@eeacms/volto-toolbar-actions"
   ],
   "dependencies": {
     "@eeacms/countup": "2.0.6",
@@ -68,6 +70,7 @@
     "@eeacms/volto-block-style": "6.1.0",
     "@eeacms/volto-call-to-action-block": "4.3.1",
     "@eeacms/volto-columns-block": "7.0.1",
+    "@eeacms/volto-controlpanel": "0.2.0",
     "@eeacms/volto-corsproxy": "3.1.5",
     "@eeacms/volto-description-block": "1.2.4",
     "@eeacms/volto-group-block": "6.4.0",
@@ -89,8 +92,9 @@
     "@eeacms/volto-tags-block": "1.2.4",
     "@eeacms/volto-taxonomy": "4.1.1",
     "@eeacms/volto-timeline-block": "1.1.5",
+    "@eeacms/volto-toolbar-actions": "1.0.3",
     "@eeacms/volto-widget-dataprovenance": "0.4.3",
-    "@eeacms/volto-widget-geolocation": "5.2.0",
+    "@eeacms/volto-widget-geolocation": "5.3.0",
     "@eeacms/volto-widget-temporal-coverage": "5.2.0",
     "@eeacms/volto-widget-theme-picker": "1.1.5",
     "@eeacms/volto-widget-toggle": "3.1.4",
@@ -98,6 +102,7 @@
     "@plone-collective/volto-sentry": "0.3.1"
   },
   "resolutions": {
+    "@eeacms/volto-controlpanel": "0.2.0",
     "@eeacms/volto-nextcloud-video-block": "0.4.8",
     "@eeacms/volto-anchors": "0.6.0",
     "@eeacms/volto-quote-block": "1.2.3",
@@ -128,7 +133,8 @@
     "@eeacms/volto-slate-zotero": "5.2.7",
     "@eeacms/volto-tabs-block": "7.5.0",
     "@eeacms/volto-taxonomy": "4.1.1",
-    "@eeacms/volto-widget-geolocation": "5.2.0",
+    "@eeacms/volto-toolbar-actions": "1.0.3",
+    "@eeacms/volto-widget-geolocation": "5.3.0",
     "@eeacms/volto-widget-dataprovenance": "0.4.3",
     "@eeacms/volto-widget-temporal-coverage": "5.2.0",
     "@eeacms/volto-widget-toggle": "3.1.4",

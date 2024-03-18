@@ -25,6 +25,8 @@ import '@cypress/code-coverage/support';
 import 'cypress-fail-fast';
 
 export const slateBeforeEach = (contentType = 'Document') => {
+  cy.intercept('GET', `/**/*?expand*`).as('content');
+  
   cy.autologin();
   cy.createContent({
     contentType: 'Document',
@@ -38,11 +40,8 @@ export const slateBeforeEach = (contentType = 'Document') => {
     path: 'cypress',
   });
   cy.visit('/cypress/my-page');
-  // cy.waitForResourceToLoad('@navigation');
-  // cy.waitForResourceToLoad('@breadcrumbs');
-  // cy.waitForResourceToLoad('@actions');
-  // cy.waitForResourceToLoad('@types');
-  // cy.waitForResourceToLoad('my-page');
+  cy.wait('@content')
+  
   cy.navigate('/cypress/my-page/edit');
 };
 

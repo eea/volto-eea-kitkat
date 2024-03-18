@@ -448,11 +448,7 @@ Cypress.Commands.add('toolbarSave', () => {
 
   // Save
   cy.get('#toolbar-save').click();
-  // cy.waitForResourceToLoad('@navigation');
-  // cy.waitForResourceToLoad('@breadcrumbs');
-  // cy.waitForResourceToLoad('@actions');
-  // cy.waitForResourceToLoad('@types');
-  // cy.waitForResourceToLoad('my-page');
+  cy.waitForResourceToLoad('');
   cy.url().should('eq', Cypress.config().baseUrl + '/cypress/my-page');
 });
 

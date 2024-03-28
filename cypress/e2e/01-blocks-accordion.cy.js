@@ -122,6 +122,7 @@ describe('Blocks Tests', () => {
     cy.get('.accordion:nth-child(2) > .title > .icon').click();
     cy.get('div.content')
       .should('have.class', 'active')
+      .last()
       .within(() => {
         cy.get('p').contains('children');
       });

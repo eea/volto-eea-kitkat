@@ -120,7 +120,7 @@ describe('Blocks Tests', () => {
     cy.get('div.accordion-title > span').contains('panel 2');
     // after save, the 3 child becomes second
     cy.get('.accordion:nth-child(2) > .title > .icon').click();
-    cy.get('div.content')
+    cy.get('div.content.active')
       .should('have.class', 'active')
       .within(() => {
         cy.get('p').contains('children');

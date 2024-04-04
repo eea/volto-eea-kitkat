@@ -58,7 +58,8 @@
     "@eeacms/volto-tabs-block",
     "@eeacms/volto-banner",
     "@eeacms/volto-anchors",
-    "@eeacms/volto-toolbar-actions"
+    "@eeacms/volto-toolbar-actions",
+    "@eeacms/volto-block-data-table"
   ],
   "dependencies": {
     "@eeacms/countup": "2.0.6",
@@ -93,6 +94,7 @@
     "@eeacms/volto-taxonomy": "4.1.2",
     "@eeacms/volto-timeline-block": "1.1.5",
     "@eeacms/volto-toolbar-actions": "1.0.3",
+    "@eeacms/volto-block-data-table": "0.1.1",
     "@eeacms/volto-widget-dataprovenance": "0.4.3",
     "@eeacms/volto-widget-geolocation": "5.3.0",
     "@eeacms/volto-widget-temporal-coverage": "5.2.0",
@@ -134,6 +136,7 @@
     "@eeacms/volto-tabs-block": "7.5.1",
     "@eeacms/volto-taxonomy": "4.1.2",
     "@eeacms/volto-toolbar-actions": "1.0.3",
+    "@eeacms/volto-block-data-table": "0.1.1",
     "@eeacms/volto-widget-geolocation": "5.3.0",
     "@eeacms/volto-widget-dataprovenance": "0.4.3",
     "@eeacms/volto-widget-temporal-coverage": "5.2.0",

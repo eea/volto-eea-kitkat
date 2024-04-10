@@ -17,8 +17,6 @@ describe('Block Tests: Metadata', () => {
     cy.get('.sidebar-container .form .header button:first-of-type').click();
 
     // Remove link
-    cy.setSlateSelection('Colorless')
-      .setSlateSelection('green');
     cy.clickSlateButton('Remove metadata');
 
     // Re-add link

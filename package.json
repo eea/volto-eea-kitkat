@@ -37,9 +37,9 @@
     "@eeacms/volto-slate-footnote",
     "@eeacms/volto-slate-zotero",
     "@eeacms/volto-slate-label",
-    "@kitconcept/volto-blocks-grid",
     "@eeacms/volto-accordion-block",
     "@eeacms/volto-block-divider",
+    "@eeacms/volto-block-toc",
     "@eeacms/volto-call-to-action-block",
     "@eeacms/volto-description-block",
     "@eeacms/volto-hero-block",
@@ -70,6 +70,7 @@
     "@eeacms/volto-block-divider": "6.2.0",
     "@eeacms/volto-block-image-cards": "1.3.8",
     "@eeacms/volto-block-style": "6.1.0",
+    "@eeacms/volto-block-toc": "4.0.0",
     "@eeacms/volto-call-to-action-block": "4.3.1",
     "@eeacms/volto-columns-block": "7.1.0",
     "@eeacms/volto-controlpanel": "0.3.0",
@@ -100,10 +101,10 @@
     "@eeacms/volto-widget-temporal-coverage": "5.2.0",
     "@eeacms/volto-widget-theme-picker": "1.1.5",
     "@eeacms/volto-widget-toggle": "3.1.4",
-    "@kitconcept/volto-blocks-grid": "7.0.2",
     "@plone-collective/volto-sentry": "0.3.1"
   },
   "resolutions": {
+    "@eeacms/volto-block-toc": "4.0.0",
     "@eeacms/volto-controlpanel": "0.3.0",
     "@eeacms/volto-nextcloud-video-block": "0.4.8",
     "@eeacms/volto-anchors": "0.7.0",
@@ -149,6 +150,7 @@
     "@plone/scripts": "*",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "cypress-fail-fast": "^5.0.1",
+    "dotenv": "^16.3.2",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "md5": "^2.3.0"

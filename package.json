@@ -100,7 +100,7 @@
     "@eeacms/volto-widget-geolocation": "5.3.1",
     "@eeacms/volto-widget-temporal-coverage": "5.2.0",
     "@eeacms/volto-widget-theme-picker": "1.1.5",
-    "@eeacms/volto-widget-toggle": "3.1.4",
+    "@eeacms/volto-widget-toggle": "4.0.0",
     "@plone-collective/volto-sentry": "0.3.1"
   },
   "resolutions": {
@@ -141,7 +141,7 @@
     "@eeacms/volto-widget-geolocation": "5.3.1",
     "@eeacms/volto-widget-dataprovenance": "0.4.3",
     "@eeacms/volto-widget-temporal-coverage": "5.2.0",
-    "@eeacms/volto-widget-toggle": "3.1.4",
+    "@eeacms/volto-widget-toggle": "4.0.0",
     "@eeacms/volto-widget-theme-picker": "1.1.5",
     "@eeacms/countup": "2.0.6"
   },

@@ -98,7 +98,7 @@
     "@eeacms/volto-toolbar-actions": "2.0.0",
     "@eeacms/volto-widget-dataprovenance": "1.0.0",
     "@eeacms/volto-widget-geolocation": "5.3.1",
-    "@eeacms/volto-widget-temporal-coverage": "5.2.0",
+    "@eeacms/volto-widget-temporal-coverage": "6.0.0",
     "@eeacms/volto-widget-theme-picker": "1.1.5",
     "@eeacms/volto-widget-toggle": "4.0.0",
     "@plone-collective/volto-sentry": "0.3.1"
@@ -140,7 +140,7 @@
     "@eeacms/volto-block-data-table": "1.0.0",
     "@eeacms/volto-widget-geolocation": "5.3.1",
     "@eeacms/volto-widget-dataprovenance": "1.0.0",
-    "@eeacms/volto-widget-temporal-coverage": "5.2.0",
+    "@eeacms/volto-widget-temporal-coverage": "6.0.0",
     "@eeacms/volto-widget-toggle": "4.0.0",
     "@eeacms/volto-widget-theme-picker": "1.1.5",
     "@eeacms/countup": "2.0.6"

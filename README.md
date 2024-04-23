@@ -64,6 +64,10 @@ The [eea.kitkat](https://github.com/eea/eea.kitkat) Plone add-on is the backend 
 
 ## Upgrade
 
+### Upgrading to 25.x
+
+> This version adds support for `Volto 17` and it is meant to be used with `Volto 17+`. It may work with `Volto 16` but it is not fully backward compatible (especially in Teaser block, anchors, listing), thus upgrading `volto-eea-kitkat` to version `25+` implies also upgrading to `Volto 17+`.
+
 ### Upgrading to 20.x
 
 > This versions comes with `@eeacms/volto-tabs-block 17.x`. See this package [upgrade guide](https://github.com/eea/volto-tabs-block#upgrading-to-700)

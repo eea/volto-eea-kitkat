@@ -22,8 +22,6 @@ The [eea.kitkat](https://github.com/eea/eea.kitkat) Plone add-on is the backend 
 ## Included Volto Add-ons
 
 1. [![Releases](https://img.shields.io/github/v/release/eea/volto-anchors)](https://github.com/eea/volto-anchors/releases) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-anchors%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-anchors/job/master/display/redirect) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-anchors%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-anchors/job/develop/display/redirect) [@eeacms/volto-anchors](https://github.com/eea/volto-anchors)
-1. [![Releases](https://img.shields.io/github/v/release/collective/volto-sentry)](https://github.com/collective/volto-sentry/releases) [@plone-collective/volto-sentry](https://github.com/collective/volto-sentry)
-1. [![Releases](https://img.shields.io/github/v/release/kitconcept/volto-blocks-grid)](https://github.com/kitconcept/volto-blocks-grid/releases) [@kitconcept/volto-blocks-grid](https://github.com/kitconcept/volto-blocks-grid)
 1. [![Releases](https://img.shields.io/github/v/release/eea/volto-matomo)](https://github.com/eea/volto-matomo/releases) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-matomo%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-matomo/job/master/display/redirect) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-matomo%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-matomo/job/develop/display/redirect) [@eeacms/volto-matomo](https://github.com/eea/volto-matomo)
 1. [![Releases](https://img.shields.io/github/v/release/eea/volto-sentry-rancher-config)](https://github.com/eea/volto-sentry-rancher-config/releases) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-sentry-rancher-config%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-sentry-rancher-config/job/master/display/redirect) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-sentry-rancher-config%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-sentry-rancher-config/job/develop/display/redirect) [@eeacms/volto-sentry-rancher-config](https://github.com/eea/volto-sentry-rancher-config)
 1. [![Releases](https://img.shields.io/github/v/release/eea/volto-controlpanel)](https://github.com/eea/volto-controlpanel/releases) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-controlpanel%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-controlpanel/job/master/display/redirect) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-controlpanel%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-controlpanel/job/develop/display/redirect) [@eeacms/volto-controlpanel](https://github.com/eea/volto-controlpanel)
@@ -60,13 +58,21 @@ The [eea.kitkat](https://github.com/eea/eea.kitkat) Plone add-on is the backend 
 1. [![Releases](https://img.shields.io/github/v/release/eea/volto-timeline-block)](https://github.com/eea/volto-timeline-block/releases) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-timeline-block%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-timeline-block/job/master/display/redirect) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-timeline-block%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-timeline-block/job/develop/display/redirect) [@eeacms/volto-timeline-block](https://github.com/eea/volto-timeline-block)
 1. [![Releases](https://img.shields.io/github/v/release/eea/volto-toolbar-actions)](https://github.com/eea/volto-toolbar-actions/releases) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-toolbar-actions%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-toolbar-actions/job/master/display/redirect) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-toolbar-actions%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-toolbar-actions/job/develop/display/redirect) [@eeacms/volto-toolbar-actions](https://github.com/eea/volto-toolbar-actions)
 1. [![Releases](https://img.shields.io/github/v/release/eea/volto-block-data-table)](https://github.com/eea/volto-block-data-table/releases) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-block-data-table%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-block-data-table/job/master/display/redirect) [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-block-data-table%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-block-data-table/job/develop/display/redirect) [@eeacms/volto-block-data-table](https://github.com/eea/volto-block-data-table)
-
+1. [![Releases](https://img.shields.io/github/v/release/collective/volto-sentry)](https://github.com/collective/volto-sentry/releases) [@plone-collective/volto-sentry](https://github.com/collective/volto-sentry)
 
 ## Upgrade
 
 ### Upgrading to 25.x
 
 > This version adds support for `Volto 17` and it is meant to be used with `Volto 17+`. It may work with `Volto 16` but it is not fully backward compatible (especially in Teaser block, anchors, listing), thus upgrading `volto-eea-kitkat` to version `25+` implies also upgrading to `Volto 17+`.
+
+#### Add-ons removed
+
+1. [@kitconcept/volto-blocks-grid](https://github.com/kitconcept/volto-blocks-grid#volto-blocks-grid-by-kitconcept)
+
+#### Add-ons added
+
+1. [@eeacms/volto-block-toc](https://github.com/eea/volto-block-toc)
 
 ### Upgrading to 20.x
 

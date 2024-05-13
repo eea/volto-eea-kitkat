@@ -146,10 +146,10 @@
     "@eeacms/countup": "2.0.6"
   },
   "devDependencies": {
-    "cypress": "13.1.0",
     "@cypress/code-coverage": "^3.10.0",
     "@plone/scripts": "*",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "cypress": "13.1.0",
     "cypress-fail-fast": "^5.0.1",
     "dotenv": "^16.3.2",
     "husky": "^8.0.3",

@@ -22,9 +22,11 @@ import './commands';
 import '@cypress/code-coverage/support';
 
 // Fail Fast
-import "cypress-fail-fast";
+import 'cypress-fail-fast';
 
 export const slateBeforeEach = (contentType = 'Document') => {
+  cy.intercept('GET', `/**/*?expand*`).as('content');
+  
   cy.autologin();
   cy.createContent({
     contentType: 'Document',
@@ -38,7 +40,8 @@ export const slateBeforeEach = (contentType = 'Document') => {
     path: 'cypress',
   });
   cy.visit('/cypress/my-page');
-  cy.waitForResourceToLoad('my-page');
+  cy.wait('@content')
+  
   cy.navigate('/cypress/my-page/edit');
 };
 

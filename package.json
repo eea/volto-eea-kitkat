@@ -72,6 +72,7 @@
     "@eeacms/volto-block-style": "7.1.0",
     "@eeacms/volto-block-toc": "6.0.0",
     "@eeacms/volto-call-to-action-block": "5.1.1",
+    "@eeacms/volto-chatbot": "0.1.2",
     "@eeacms/volto-columns-block": "8.0.1",
     "@eeacms/volto-controlpanel": "1.0.1",
     "@eeacms/volto-corsproxy": "4.0.0",

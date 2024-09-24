@@ -145,7 +145,7 @@
     "@eeacms/volto-widget-toggle": "4.0.0",
     "@eeacms/volto-widget-theme-picker": "2.0.0",
     "@eeacms/countup": "2.0.6",
-    @eeacms/volto-chatbot": "0.1.4"
+    "@eeacms/volto-chatbot": "0.1.4"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.10.0",

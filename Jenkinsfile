@@ -159,7 +159,7 @@ pipeline {
                 }
               }
           }
-            
+
           stage('Integration tests') {
               when { environment name: 'SKIP_TESTS', value: '' }
               steps {
@@ -256,9 +256,9 @@ pipeline {
         }
       }
 
-      stage('Volto 16') { 
+      stage('Volto 16') {
         agent { node { label 'integration'} }
-        when { 
+        when {
           environment name: 'SKIP_TESTS', value: ''
           not { environment name: 'VOLTO16_BREAKING_CHANGES', value: 'yes' }
         }
@@ -349,10 +349,10 @@ pipeline {
           allOf {
             not { environment name: 'CHANGE_ID', value: '' }
             environment name: 'CHANGE_TARGET', value: 'develop'
-            environment name: 'SKIP_TESTS', value: '' 
+            environment name: 'SKIP_TESTS', value: ''
           }
           allOf {
-            environment name: 'SKIP_TESTS', value: '' 
+            environment name: 'SKIP_TESTS', value: ''
             environment name: 'CHANGE_ID', value: ''
             branch 'develop'
             not { changelog '.*^Automated release [0-9\\.]+$' }
@@ -386,7 +386,7 @@ pipeline {
             error 'Pipeline aborted due to PR not made from develop branch'
           }
           withCredentials([string(credentialsId: 'eea-jenkins-token', variable: 'GITHUB_TOKEN')]) {
-            sh '''docker run --pull always -i --rm --name="$IMAGE_NAME-gitflow-pr" -e GIT_CHANGE_TARGET="$CHANGE_TARGET" -e GIT_CHANGE_BRANCH="$CHANGE_BRANCH" -e GIT_CHANGE_AUTHOR="$CHANGE_AUTHOR" -e GIT_CHANGE_TITLE="$CHANGE_TITLE" -e GIT_TOKEN="$GITHUB_TOKEN" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" -e GIT_ORG="$GIT_ORG" -e GIT_NAME="$GIT_NAME" -e LANGUAGE=javascript eeacms/gitflow'''
+            sh '''docker run --pull always -i --rm --name="$IMAGE_NAME-gitflow-pr" -e NODEJS_VERSION=18 -e GIT_CHANGE_TARGET="$CHANGE_TARGET" -e GIT_CHANGE_BRANCH="$CHANGE_BRANCH" -e GIT_CHANGE_AUTHOR="$CHANGE_AUTHOR" -e GIT_CHANGE_TITLE="$CHANGE_TITLE" -e GIT_TOKEN="$GITHUB_TOKEN" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" -e GIT_ORG="$GIT_ORG" -e GIT_NAME="$GIT_NAME" -e LANGUAGE=javascript eeacms/gitflow'''
           }
         }
       }

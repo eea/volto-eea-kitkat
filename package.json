@@ -59,7 +59,8 @@
     "@eeacms/volto-banner",
     "@eeacms/volto-anchors",
     "@eeacms/volto-toolbar-actions",
-    "@eeacms/volto-block-data-table"
+    "@eeacms/volto-block-data-table",
+    "@eeacms/volto-chatbot"
   ],
   "dependencies": {
     "@eeacms/countup": "2.0.6",

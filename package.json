@@ -71,7 +71,7 @@
     "@eeacms/volto-block-divider": "7.0.1",
     "@eeacms/volto-block-image-cards": "2.0.1",
     "@eeacms/volto-block-style": "7.2.0",
-    "@eeacms/volto-block-toc": "6.1.0",
+    "@eeacms/volto-block-toc": "6.2.0",
     "@eeacms/volto-call-to-action-block": "5.1.2",
     "@eeacms/volto-chatbot": "0.1.7",
     "@eeacms/volto-columns-block": "8.0.1",
@@ -106,7 +106,7 @@
     "@plone-collective/volto-sentry": "0.3.1"
   },
   "resolutions": {
-    "@eeacms/volto-block-toc": "6.1.0",
+    "@eeacms/volto-block-toc": "6.2.0",
     "@eeacms/volto-controlpanel": "1.0.1",
     "@eeacms/volto-nextcloud-video-block": "1.0.0",
     "@eeacms/volto-anchors": "1.0.0",

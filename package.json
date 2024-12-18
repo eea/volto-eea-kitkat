@@ -1,6 +1,6 @@
 {
   "name": "@eeacms/volto-eea-kitkat",
-  "version": "26.4.0",
+  "version": "26.4.1",
   "description": "@eeacms/volto-eea-kitkat: Volto Add-ons bundle - A known good set of Volto addons to be used within all EEA projects and beyond",
   "main": "src/index.js",
   "author": "European Environment Agency: IDM2 A-Team",
@@ -70,10 +70,10 @@
     "@eeacms/volto-block-data-table": "1.1.0",
     "@eeacms/volto-block-divider": "7.0.1",
     "@eeacms/volto-block-image-cards": "2.0.1",
-    "@eeacms/volto-block-style": "7.2.0",
+    "@eeacms/volto-block-style": "7.2.1",
     "@eeacms/volto-block-toc": "6.2.0",
     "@eeacms/volto-call-to-action-block": "5.1.2",
-    "@eeacms/volto-chatbot": "0.1.9",
+    "@eeacms/volto-chatbot": "0.1.10",
     "@eeacms/volto-columns-block": "8.0.1",
     "@eeacms/volto-controlpanel": "1.0.1",
     "@eeacms/volto-corsproxy": "4.0.0",
@@ -123,7 +123,7 @@
     "@eeacms/volto-banner": "4.0.1",
     "@eeacms/volto-block-divider": "7.0.1",
     "@eeacms/volto-block-image-cards": "2.0.1",
-    "@eeacms/volto-block-style": "7.2.0",
+    "@eeacms/volto-block-style": "7.2.1",
     "@eeacms/volto-columns-block": "8.0.1",
     "@eeacms/volto-corsproxy": "4.0.0",
     "@eeacms/volto-group-block": "7.1.0",
@@ -146,7 +146,7 @@
     "@eeacms/volto-widget-toggle": "4.0.0",
     "@eeacms/volto-widget-theme-picker": "2.0.0",
     "@eeacms/countup": "2.0.6",
-    "@eeacms/volto-chatbot": "0.1.9"
+    "@eeacms/volto-chatbot": "0.1.10"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.10.0",

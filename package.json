@@ -73,7 +73,7 @@
     "@eeacms/volto-block-style": "7.2.0",
     "@eeacms/volto-block-toc": "6.2.0",
     "@eeacms/volto-call-to-action-block": "5.1.2",
-    "@eeacms/volto-chatbot": "0.1.9",
+    "@eeacms/volto-chatbot": "0.1.10",
     "@eeacms/volto-columns-block": "8.0.1",
     "@eeacms/volto-controlpanel": "1.0.1",
     "@eeacms/volto-corsproxy": "4.0.0",
@@ -146,7 +146,7 @@
     "@eeacms/volto-widget-toggle": "4.0.0",
     "@eeacms/volto-widget-theme-picker": "2.0.0",
     "@eeacms/countup": "2.0.6",
-    "@eeacms/volto-chatbot": "0.1.9"
+    "@eeacms/volto-chatbot": "0.1.10"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.10.0",

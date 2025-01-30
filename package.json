@@ -75,7 +75,7 @@
     "@eeacms/volto-call-to-action-block": "5.1.2",
     "@eeacms/volto-chatbot": "0.1.11",
     "@eeacms/volto-columns-block": "8.0.2",
-    "@eeacms/volto-controlpanel": "1.0.1",
+    "@eeacms/volto-controlpanel": "1.0.2",
     "@eeacms/volto-corsproxy": "4.0.0",
     "@eeacms/volto-description-block": "2.2.2",
     "@eeacms/volto-group-block": "7.1.1",
@@ -107,7 +107,7 @@
   },
   "resolutions": {
     "@eeacms/volto-block-toc": "6.2.0",
-    "@eeacms/volto-controlpanel": "1.0.1",
+    "@eeacms/volto-controlpanel": "1.0.2",
     "@eeacms/volto-nextcloud-video-block": "1.0.0",
     "@eeacms/volto-anchors": "1.0.0",
     "@eeacms/volto-quote-block": "2.0.0",

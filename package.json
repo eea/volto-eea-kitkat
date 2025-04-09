@@ -1,6 +1,6 @@
 {
   "name": "@eeacms/volto-eea-kitkat",
-  "version": "26.5.1",
+  "version": "26.5.2",
   "description": "@eeacms/volto-eea-kitkat: Volto Add-ons bundle - A known good set of Volto addons to be used within all EEA projects and beyond",
   "main": "src/index.js",
   "author": "European Environment Agency: IDM2 A-Team",
@@ -63,7 +63,7 @@
     "@eeacms/volto-chatbot"
   ],
   "dependencies": {
-    "@eeacms/countup": "2.0.6",
+    "@eeacms/countup": "2.0.7",
     "@eeacms/volto-accordion-block": "11.0.4",
     "@eeacms/volto-anchors": "1.0.1",
     "@eeacms/volto-banner": "4.0.1",
@@ -145,7 +145,7 @@
     "@eeacms/volto-widget-temporal-coverage": "6.0.0",
     "@eeacms/volto-widget-toggle": "4.0.0",
     "@eeacms/volto-widget-theme-picker": "2.0.0",
-    "@eeacms/countup": "2.0.6",
+    "@eeacms/countup": "2.0.7",
     "@eeacms/volto-chatbot": "0.1.14"
   },
   "devDependencies": {

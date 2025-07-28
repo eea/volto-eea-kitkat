@@ -83,7 +83,7 @@
     "@eeacms/volto-listing-block": "8.1.5",
     "@eeacms/volto-matomo": "6.0.0",
     "@eeacms/volto-metadata-block": "8.0.5",
-    "@eeacms/volto-nextcloud-video-block": "1.0.0",
+    "@eeacms/volto-nextcloud-video-block": "2.0.0",
     "@eeacms/volto-object-widget": "8.0.0",
     "@eeacms/volto-quote-block": "3.0.0",
     "@eeacms/volto-resize-helper": "2.0.0",
@@ -108,7 +108,7 @@
   "resolutions": {
     "@eeacms/volto-block-toc": "7.0.0",
     "@eeacms/volto-controlpanel": "1.0.2",
-    "@eeacms/volto-nextcloud-video-block": "1.0.0",
+    "@eeacms/volto-nextcloud-video-block": "2.0.0",
     "@eeacms/volto-anchors": "1.0.1",
     "@eeacms/volto-quote-block": "3.0.0",
     "@eeacms/volto-statistic-block": "6.0.1",

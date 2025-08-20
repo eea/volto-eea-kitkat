@@ -1,6 +1,6 @@
 {
   "name": "@eeacms/volto-eea-kitkat",
-  "version": "28.0.2",
+  "version": "28.0.3",
   "description": "@eeacms/volto-eea-kitkat: Volto Add-ons bundle - A known good set of Volto addons to be used within all EEA projects and beyond",
   "main": "src/index.js",
   "author": "European Environment Agency: IDM2 A-Team",
@@ -71,16 +71,16 @@
     "@eeacms/volto-block-divider": "7.0.2",
     "@eeacms/volto-block-image-cards": "3.0.0",
     "@eeacms/volto-block-style": "8.0.0",
-    "@eeacms/volto-block-toc": "8.0.0",
+    "@eeacms/volto-block-toc": "8.1.0",
     "@eeacms/volto-call-to-action-block": "5.1.3",
-    "@eeacms/volto-chatbot": "0.2.5",
+    "@eeacms/volto-chatbot": "0.3.1",
     "@eeacms/volto-columns-block": "8.1.0",
     "@eeacms/volto-controlpanel": "1.0.2",
     "@eeacms/volto-corsproxy": "4.0.0",
     "@eeacms/volto-description-block": "2.2.3",
     "@eeacms/volto-group-block": "7.1.1",
     "@eeacms/volto-hero-block": "8.0.0",
-    "@eeacms/volto-listing-block": "9.0.1",
+    "@eeacms/volto-listing-block": "9.0.2",
     "@eeacms/volto-matomo": "6.0.1",
     "@eeacms/volto-metadata-block": "8.0.5",
     "@eeacms/volto-nextcloud-video-block": "2.0.0",
@@ -106,7 +106,7 @@
     "@plone-collective/volto-sentry": "0.3.1"
   },
   "resolutions": {
-    "@eeacms/volto-block-toc": "8.0.0",
+    "@eeacms/volto-block-toc": "8.1.0",
     "@eeacms/volto-controlpanel": "1.0.2",
     "@eeacms/volto-nextcloud-video-block": "2.0.0",
     "@eeacms/volto-anchors": "1.0.1",
@@ -127,7 +127,7 @@
     "@eeacms/volto-columns-block": "8.1.0",
     "@eeacms/volto-corsproxy": "4.0.0",
     "@eeacms/volto-group-block": "7.1.1",
-    "@eeacms/volto-listing-block": "9.0.1",
+    "@eeacms/volto-listing-block": "9.0.2",
     "@eeacms/volto-matomo": "6.0.1",
     "@eeacms/volto-metadata-block": "8.0.5",
     "@eeacms/volto-object-widget": "8.0.0",
@@ -146,7 +146,7 @@
     "@eeacms/volto-widget-toggle": "4.0.0",
     "@eeacms/volto-widget-theme-picker": "2.0.0",
     "@eeacms/countup": "2.0.7",
-    "@eeacms/volto-chatbot": "0.2.5"
+    "@eeacms/volto-chatbot": "0.3.1"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.10.0",

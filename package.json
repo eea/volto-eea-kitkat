@@ -64,7 +64,7 @@
   ],
   "dependencies": {
     "@eeacms/countup": "2.0.7",
-    "@eeacms/volto-accordion-block": "11.0.4",
+    "@eeacms/volto-accordion-block": "12.0.0",
     "@eeacms/volto-anchors": "1.0.1",
     "@eeacms/volto-banner": "4.0.2",
     "@eeacms/volto-block-data-table": "1.3.0",
@@ -119,7 +119,7 @@
     "@eeacms/volto-description-block": "2.2.3",
     "@eeacms/volto-slate-label": "1.0.1",
     "@plone-collective/volto-sentry": "0.4.0",
-    "@eeacms/volto-accordion-block": "11.0.4",
+    "@eeacms/volto-accordion-block": "12.0.0",
     "@eeacms/volto-banner": "4.0.2",
     "@eeacms/volto-block-divider": "7.0.2",
     "@eeacms/volto-block-image-cards": "3.0.0",

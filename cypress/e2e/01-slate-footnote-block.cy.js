@@ -1,84 +1,117 @@
 import { slateBeforeEach, slateAfterEach } from '../support/e2e';
 
+const API_PATH = Cypress.env('API_PATH') || 'http://localhost:8080/Plone';
+const AUTH = {
+  user: 'admin',
+  pass: 'admin',
+};
+
+const buildFootnoteNode = ({ footnote, extra = [] }) => ({
+  type: 'footnote',
+  data: {
+    uid: 'uid1',
+    footnote,
+    ...(extra.length
+      ? {
+          extra: extra.map((citation, index) => ({
+            uid: `uid${index + 2}`,
+            footnote: citation,
+          })),
+        }
+      : {}),
+  },
+  children: [{ text: 'green' }],
+});
+
+const setFootnoteBlocks = ({
+  footnote = null,
+  extra = [],
+  title = 'Footnotes',
+}) => {
+  const blocks = {
+    title: {
+      '@type': 'title',
+    },
+    slate: {
+      '@type': 'slate',
+      plaintext: footnote
+        ? 'Colorless green ideas sleep furiously.'
+        : 'Colorless ideas sleep furiously.',
+      value: [
+        {
+          type: 'p',
+          children: footnote
+            ? [
+                { text: 'Colorless ' },
+                buildFootnoteNode({ footnote, extra }),
+                { text: ' ideas sleep furiously.' },
+              ]
+            : [{ text: 'Colorless ideas sleep furiously.' }],
+        },
+      ],
+    },
+  };
+
+  if (footnote) {
+    blocks.footnotes = {
+      '@type': 'slateFootnotes',
+      title,
+      global: true,
+    };
+  }
+
+  return cy.request({
+    method: 'PATCH',
+    url: `${API_PATH}/cypress/my-page`,
+    headers: {
+      Accept: 'application/json',
+    },
+    auth: AUTH,
+    body: {
+      blocks,
+      blocks_layout: {
+        items: Object.keys(blocks),
+      },
+    },
+  });
+};
+
+const visitPageView = () => {
+  cy.visit('/cypress/my-page');
+  cy.waitForResourceToLoad('my-page');
+};
+
 describe('Slate citations', () => {
   beforeEach(slateBeforeEach);
   afterEach(slateAfterEach);
 
-  it('Add Footnotes block and create citation', () => {
-    // Complete chained commands
-    cy.getSlateEditorAndType('Colorless green ideas sleep furiously.')
-      .type('{selectAll}')
-      .dblclick();
+  it('renders a single citation and footnotes block', () => {
+    setFootnoteBlocks({ footnote: 'Citation' });
+    visitPageView();
 
-    // Footnote
-    cy.setSlateCursor('Colorless').dblclick();
-    cy.setSlateSelection('Colorless', 'green');
-    cy.clickSlateButton('Footnote');
-
-    cy.get('.sidebar-container .field-wrapper-footnote .react-select-container')
-      .click()
-      .type('Citation{enter}');
-    cy.get('.sidebar-container .form .header button:first-of-type').click();
-
-    // Add block
-    cy.getSlateEditorAndType('{enter}');
-
-    cy.get('.ui.basic.icon.button.block-add-button').first().click();
-    cy.get('.blocks-chooser .title').contains('Text').click();
-    cy.get('.content.active.text .button.slateFootnotes')
-      .contains('Footnotes')
-      .click();
-
-    // Configure block
-    cy.get('[id=sidebar-properties] [name=title]').click().type('Footnotes');
-    cy.get('[id=sidebar-properties] label[for=field-global]').click();
-
-    // Save
-    cy.get('#toolbar-save').click();
-    cy.url().should('eq', Cypress.config().baseUrl + '/cypress/my-page');
-
-    // then the page view should contain our changes
-    cy.get('span.citation-item').contains('Colorless green');
+    cy.get('span.citation-item').contains('green');
     cy.contains('Footnotes');
     cy.contains('Citation');
+    cy.get('[aria-label="Back to content"]').first().click();
   });
 
-  it('Add Footnotes block and create multiple citations', () => {
-    // Complete chained commands
-    cy.getSlateEditorAndType('Colorless green ideas sleep furiously.')
-      .type('{selectAll}')
-      .dblclick();
+  it('does not render footnotes when no citation is saved', () => {
+    setFootnoteBlocks({});
+    visitPageView();
 
-    // Footnote
-    cy.setSlateCursor('Colorless').dblclick();
-    cy.setSlateSelection('Colorless', 'green');
-    cy.clickSlateButton('Footnote');
+    cy.contains('My Page');
+    cy.get('span.citation-item').should('not.exist');
+    cy.contains('Footnotes').should('not.exist');
+  });
 
-    cy.get('.sidebar-container .field-wrapper-footnote .react-select-container')
-      .click()
-      .type('Citation{enter}')
-      .type('Yet another citation{enter}');
-    cy.get('.sidebar-container .form .header button:first-of-type').click();
+  it('renders multiple citations for the same reference', () => {
+    setFootnoteBlocks({
+      footnote: 'Citation',
+      extra: ['Yet another citation'],
+    });
+    visitPageView();
 
-    // Add block
-    cy.getSlateEditorAndType('{enter}');
-
-    cy.get('.ui.basic.icon.button.block-add-button').first().click();
-    cy.get('.blocks-chooser .title').contains('Text').click();
-    cy.get('.content.active.text .button.slateFootnotes')
-      .contains('Footnotes')
-      .click();
-
-    // Configure block
-    cy.get('[id=sidebar-properties] [name=title]').click().type('Footnotes');
-    cy.get('[id=sidebar-properties] label[for=field-global]').click();
-
-    // Save
-    cy.get('#toolbar-save').click();
-    cy.url().should('eq', Cypress.config().baseUrl + '/cypress/my-page');
-
-    // then the page view should contain our changes
-    cy.get('span.citation-item').contains('Colorless green');
+    cy.get('span.citation-item').contains('green');
     cy.contains('Footnotes');
     cy.contains('Citation');
     cy.contains('Yet another citation');

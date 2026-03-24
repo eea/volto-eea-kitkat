@@ -388,7 +388,10 @@ Cypress.Commands.add('getSlate', ({ createNewSlate = true } = {}) => {
     },
     () => {
       if (createNewSlate) {
-        cy.get('.block.inner').last().type('{moveToEnd}{enter}');
+        cy.get(SLATE_TITLE_SELECTOR)
+          .focus()
+          .click()
+          .type('{moveToEnd}{enter}');
       }
       slate = cy.get(SLATE_SELECTOR, { timeout: 10000 }).last();
     },
@@ -400,7 +403,7 @@ Cypress.Commands.add('clearSlate', (selector) => {
   return cy
     .get(selector)
     .focus()
-    .click()
+    .click({ force: true })
     .wait(1000)
     .type('{selectAll}')
     .wait(1000)

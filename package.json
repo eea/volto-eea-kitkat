@@ -62,7 +62,7 @@
     "@eeacms/volto-block-data-table"
   ],
   "dependencies": {
-    "@eeacms/countup": "2.0.7",
+    "@eeacms/countup": "3.0.0",
     "@eeacms/volto-accordion-block": "12.0.0",
     "@eeacms/volto-anchors": "1.0.1",
     "@eeacms/volto-banner": "4.0.2",
@@ -79,7 +79,7 @@
     "@eeacms/volto-group-block": "9.0.0",
     "@eeacms/volto-hero-block": "8.0.0",
     "@eeacms/volto-listing-block": "9.1.1",
-    "@eeacms/volto-matomo": "6.0.1",
+    "@eeacms/volto-matomo": "7.0.0",
     "@eeacms/volto-metadata-block": "8.0.5",
     "@eeacms/volto-nextcloud-video-block": "2.0.1",
     "@eeacms/volto-object-widget": "8.0.0",
@@ -126,7 +126,7 @@
     "@eeacms/volto-corsproxy": "4.0.0",
     "@eeacms/volto-group-block": "9.0.0",
     "@eeacms/volto-listing-block": "9.1.1",
-    "@eeacms/volto-matomo": "6.0.1",
+    "@eeacms/volto-matomo": "7.0.0",
     "@eeacms/volto-metadata-block": "8.0.5",
     "@eeacms/volto-object-widget": "8.0.0",
     "@eeacms/volto-resize-helper": "2.0.0",
@@ -143,7 +143,7 @@
     "@eeacms/volto-widget-temporal-coverage": "6.0.0",
     "@eeacms/volto-widget-toggle": "4.0.0",
     "@eeacms/volto-widget-theme-picker": "2.0.0",
-    "@eeacms/countup": "2.0.7"
+    "@eeacms/countup": "3.0.0"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.10.0",

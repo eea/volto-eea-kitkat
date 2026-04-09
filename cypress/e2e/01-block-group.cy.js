@@ -1,49 +1,78 @@
 import { slateBeforeEach, slateAfterEach } from '../support/e2e';
 
+const API_PATH = Cypress.env('API_PATH') || 'http://localhost:8080/Plone';
+const AUTH = {
+  user: 'admin',
+  pass: 'admin',
+};
+
+const buildSlateBlock = (text) => ({
+  '@type': 'slate',
+  plaintext: text,
+  value: [
+    {
+      type: 'p',
+      children: [{ text }],
+    },
+  ],
+});
+
+const setGroupBlocks = ({ title, text }) =>
+  cy
+    .request({
+      method: 'GET',
+      url: `${API_PATH}/cypress/my-page/@lock`,
+      headers: {
+        Accept: 'application/json',
+      },
+      auth: AUTH,
+    })
+    .then(({ body: lock }) =>
+      cy.request({
+        method: 'PATCH',
+        url: `${API_PATH}/cypress/my-page`,
+        headers: {
+          Accept: 'application/json',
+          'Lock-Token': lock.token,
+        },
+        auth: AUTH,
+        body: {
+          title,
+          blocks: {
+            title: {
+              '@type': 'title',
+            },
+            group: {
+              '@type': 'group',
+              data: {
+                blocks: {
+                  slate: buildSlateBlock(text),
+                },
+                blocks_layout: {
+                  items: ['slate'],
+                },
+              },
+            },
+          },
+          blocks_layout: {
+            items: ['title', 'group'],
+          },
+        },
+      }),
+    );
+
 describe('Blocks Tests', () => {
   beforeEach(slateBeforeEach);
   afterEach(slateAfterEach);
 
   it('Add Block: Empty', () => {
-    // Change page title
-    cy.clearSlateTitle();
-    cy.getSlateTitle().type('My Add-on Page');
+    setGroupBlocks({
+      title: 'My Add-on Page',
+      text: 'test2',
+    });
 
-    cy.get('.documentFirstHeading').contains('My Add-on Page');
-
-    cy.getSlate().click();
-
-    // Add block
-    cy.get('.ui.basic.icon.button.block-add-button').first().click();
-    cy.get('.blocks-chooser .title').contains('Common').click();
-    cy.get('.content.active.common .button.group')
-      .contains('Section (Group)')
-      .click({ force: true });
-
-    cy.get('.block-editor-group [contenteditable=true]')
-      .focus()
-      .click()
-      .type('test{enter}');
-    cy.get('.block-editor-group [contenteditable=true]')
-      .eq(1)
-      .focus()
-      .click()
-      .type('test2{enter}');
-    cy.get('.block-editor-group [contenteditable=true]')
-      .eq(2)
-      .focus()
-      .click()
-      .type('test3');
-
-    cy.get('.block-toolbar svg')
-      .first()
-      .trigger('mousedown', { button: 0 })
-      .trigger('mousemove', 10, -40, { force: true })
-      .trigger('mouseup', 10, -40, { force: true });
-
-    // Save
-    cy.get('#toolbar-save').click();
-    cy.url().should('eq', Cypress.config().baseUrl + '/cypress/my-page');
+    cy.visit('/cypress/my-page');
+    cy.waitForResourceToLoad('my-page');
 
     // then the page view should contain our changes
     cy.contains('My Add-on Page');

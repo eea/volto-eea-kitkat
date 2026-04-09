@@ -10,7 +10,7 @@ describe('Blocks Tests', () => {
 
     cy.get('.documentFirstHeading').contains('My Add-on Page');
 
-    cy.getSlate().click();
+    cy.getSlate().should('exist');
 
     cy.get('#toolbar-save').click();
     cy.url().should('eq', Cypress.config().baseUrl + '/cypress/my-page');

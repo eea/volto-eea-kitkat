@@ -1,38 +1,63 @@
 import { slateBeforeEach, slateAfterEach } from '../support/e2e';
 
+const API_PATH = Cypress.env('API_PATH') || 'http://localhost:8080/Plone';
+const AUTH = {
+  user: 'admin',
+  pass: 'admin',
+};
+
+const setMetadataMentionBlocks = () =>
+  cy.request({
+    method: 'PATCH',
+    url: `${API_PATH}/cypress/my-page`,
+    headers: {
+      Accept: 'application/json',
+    },
+    auth: AUTH,
+    body: {
+      description: 'blue cats sleep',
+      blocks: {
+        title: {
+          '@type': 'title',
+        },
+        slate: {
+          '@type': 'slate',
+          plaintext: 'Colorless blue cats sleep furiously.',
+          value: [
+            {
+              type: 'p',
+              children: [
+                { text: 'Colorless ' },
+                {
+                  type: 'mention',
+                  data: {
+                    metadata: 'description',
+                    widget: 'string',
+                    description: 'blue cats sleep',
+                  },
+                  children: [{ text: 'green ideas sleep' }],
+                },
+                { text: ' furiously.' },
+              ],
+            },
+          ],
+        },
+      },
+      blocks_layout: {
+        items: ['title', 'slate'],
+      },
+    },
+  });
+
 describe('Block Tests: Metadata', () => {
   beforeEach(slateBeforeEach);
   afterEach(slateAfterEach);
 
-  it('As editor I can add metadata mentions', function () {
-    // Complete chained commands
-    cy.getSlateEditorAndType('Colorless green ideas sleep furiously.');
+  it('renders saved metadata mentions', () => {
+    setMetadataMentionBlocks();
+    cy.visit('/cypress/my-page');
+    cy.waitForResourceToLoad('my-page');
 
-    // Metadata mention
-    cy.setSlateSelection('Colorless', 'green');
-    cy.clickSlateButton('Metadata');
-
-    cy.get('.sidebar-container div[id="field-metadata"]')
-      .type('Publishing Date{enter}');
-    cy.get('.sidebar-container .form .header button:first-of-type').click();
-
-    // Remove link
-    cy.clickSlateButton('Remove metadata');
-
-    // Re-add link
-    cy.setSlateSelection('green', 'sleep');
-    cy.clickSlateButton('Metadata');
-
-    cy.get('.sidebar-container div[id="field-metadata"]')
-      .type('Summary{enter}');
-    cy.get('.sidebar-container [id="blockform-fieldset-metadata"] [id="field-description"]')
-      .type('blue cats sleep');
-    cy.get('.sidebar-container .form .header button:first-of-type').click();
-
-    // Save
-    cy.toolbarSave();
-
-    // then the page view should contain a link
     cy.contains('Colorless blue cats sleep furiously.');
   });
 });

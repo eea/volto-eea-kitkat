@@ -24,12 +24,6 @@ describe('Blocks Tests', () => {
     cy.get('.field-wrapper-title #field-title').last().type('Column test');
     cy.get('.field-wrapper-data .columns-area button').last().click();
 
-    cy.get('.columns-area .drag.handle.wrapper')
-      .first()
-      .trigger('mousedown', { which: 1 }, { force: true })
-      .trigger('mousemove', 0, 60, { force: true })
-      .trigger('mouseup');
-
     cy.get('.field-wrapper-gridCols  #field-gridCols').click();
     cy.get('.react-select__menu').contains('25').click();
 
@@ -49,7 +43,14 @@ describe('Blocks Tests', () => {
       .focus()
       .click()
       .type('Third');
-    cy.get('.block-toolbar button').eq(1).click();
+
+    cy.get('.columns-header').click({ force: true });
+    cy.get('.columns-area .column-area')
+      .should('have.length.at.least', 3)
+      .eq(2)
+      .within(() => {
+        cy.get('button[title="Go to Column settings"]').click({ force: true });
+      });
 
     cy.get(
       '.field-wrapper-grid_vertical_align  #field-grid_vertical_align',

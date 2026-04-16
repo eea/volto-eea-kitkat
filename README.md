@@ -62,6 +62,10 @@ The [eea.kitkat](https://github.com/eea/eea.kitkat) Plone add-on is the backend 
 
 ## Upgrade
 
+### Upgrading to 33.x
+
+> This version line adds support for `Volto 18` and is compatible with `Volto 17+` projects.
+
 ### Upgrading to 32.x
 
 > This version removes [volto-chatbot](https://github.com/eea/volto-chatbot) dependency, thus you'll have to explicitly add it to your project's `package.json` if you still need it.

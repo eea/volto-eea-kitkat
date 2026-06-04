@@ -101,7 +101,7 @@
     "@eeacms/volto-widget-temporal-coverage": "7.0.1",
     "@eeacms/volto-widget-theme-picker": "3.0.1",
     "@eeacms/volto-widget-toggle": "5.0.1",
-    "@plone-collective/volto-sentry": "1.0.0"
+    "@plone-collective/volto-sentry": "1.0.1"
   },
   "resolutions": {
     "@eeacms/volto-block-toc": "9.0.1",
@@ -116,7 +116,7 @@
     "@eeacms/volto-timeline-block": "3.0.1",
     "@eeacms/volto-description-block": "3.0.1",
     "@eeacms/volto-slate-label": "2.0.1",
-    "@plone-collective/volto-sentry": "1.0.0",
+    "@plone-collective/volto-sentry": "1.0.1",
     "@eeacms/volto-accordion-block": "13.0.3",
     "@eeacms/volto-banner": "5.1.1",
     "@eeacms/volto-block-divider": "8.0.2",

@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const projectRootPath = fs.realpathSync(__dirname + '/../../../');
+const projectRootPath = fs.realpathSync(__dirname + '/../..');
 
 let voltoPath = path.join(projectRootPath, 'node_modules/@plone/volto');
 let configFile;
@@ -40,7 +40,7 @@ const defaultConfig = {
           ['@root', `${__dirname}/src`],
           ['~', `${__dirname}/src`],
         ],
-        extensions: ['.js', '.jsx', '.json'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       },
       'babel-plugin-root-import': {
         rootPathSuffix: 'src',

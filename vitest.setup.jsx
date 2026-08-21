@@ -1,19 +1,25 @@
-import { jest } from '@jest/globals';
+import { vi } from 'vitest';
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import { blocksConfig } from '@plone/volto/config/Blocks';
 import installSlate from '@plone/volto-slate/index';
 
-var mockSemanticComponents = jest.requireActual('semantic-ui-react');
-var mockComponents = jest.requireActual('@plone/volto/components');
-var config = jest.requireActual('@plone/volto/registry').default;
+global.jest = {
+  ...global.jest,
+  advanceTimersByTime: vi.advanceTimersByTime.bind(vi),
+};
+
+var mockSemanticComponents = await vi.importActual('semantic-ui-react');
+var mockComponents = await vi.importActual('@plone/volto/components');
+var mockRegistry = await vi.importActual('@plone/volto/registry');
+var config = mockRegistry.default;
 
 config.blocks.blocksConfig = {
   ...blocksConfig,
   ...config.blocks.blocksConfig,
 };
 
-jest.doMock('semantic-ui-react', () => ({
+vi.doMock('semantic-ui-react', () => ({
   __esModule: true,
   ...mockSemanticComponents,
   Popup: ({ content, trigger }) => {
@@ -26,7 +32,7 @@ jest.doMock('semantic-ui-react', () => ({
   },
 }));
 
-jest.doMock('@plone/volto/components', () => {
+vi.doMock('@plone/volto/components', () => {
   return {
     __esModule: true,
     ...mockComponents,
@@ -34,13 +40,14 @@ jest.doMock('@plone/volto/components', () => {
   };
 });
 
-jest.doMock('@plone/volto/registry', () =>
-  [installSlate].reduce((acc, apply) => apply(acc), config),
-);
+vi.doMock('@plone/volto/registry', () => ({
+  ...mockRegistry,
+  default: [installSlate].reduce((acc, apply) => apply(acc), config),
+}));
 
 const mockStore = configureStore([thunk]);
 
-global.fetch = jest.fn(() =>
+global.fetch = vi.fn(() =>
   Promise.resolve({
     json: () => Promise.resolve({}),
   }),
@@ -50,7 +57,7 @@ global.store = mockStore({
   intl: {
     locale: 'en',
     messages: {},
-    formatMessage: jest.fn(),
+    formatMessage: vi.fn(),
   },
   content: {
     create: {},

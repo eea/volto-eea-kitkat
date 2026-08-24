@@ -43,11 +43,11 @@ endif
 
 ##############################################################################
 # SETTINGS AND VARIABLE
-DIR=$(shell basename $$(pwd))
+DIR=$(shell basename "$$(pwd)")
 PLONE_VERSION?=6
 VOLTO_VERSION?=19
-ADDON_PATH="${DIR}"
-ADDON_NAME="@eeacms/${ADDON_PATH}"
+ADDON_PATH?=${DIR}
+ADDON_NAME?=$(shell node -p "require('./package.json').name")
 DOCKER_COMPOSE=PLONE_VERSION=${PLONE_VERSION} VOLTO_VERSION=${VOLTO_VERSION} ADDON_NAME=${ADDON_NAME} ADDON_PATH=${ADDON_PATH} docker compose
 RAZZLE_INTERNAL_API_PATH?="http://localhost:8080/Plone"
 RAZZLE_DEV_PROXY_API_PATH?="${RAZZLE_INTERNAL_API_PATH}"

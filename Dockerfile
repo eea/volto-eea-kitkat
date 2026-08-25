@@ -96,6 +96,7 @@ RUN --mount=type=cache,id=pnpm,target=/app/.pnpm-store,uid=1000 \
     pnpm --config.auto-install-peers=false add --workspace-root --lockfile-only "$@"; \
     pnpm --config.auto-install-peers=false install --force --no-frozen-lockfile
 RUN if [ -f /app/core/packages/registry/package.json ]; then pnpm --filter @plone/registry build; fi
+RUN pnpm --dir /app --filter "${ADDON_NAME}" exec cypress install
 
 COPY --chown=node:node ./ /app/packages/${ADDON_PATH}/
 COPY --chown=node:node ./volto.config.js /app/volto.config.js

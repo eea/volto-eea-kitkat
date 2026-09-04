@@ -4,6 +4,8 @@ import thunk from 'redux-thunk';
 import { blocksConfig } from '@plone/volto/config/Blocks';
 import installSlate from '@plone/volto-slate/index';
 
+global.jest = vi;
+
 global.jest = {
   ...global.jest,
   advanceTimersByTime: vi.advanceTimersByTime.bind(vi),

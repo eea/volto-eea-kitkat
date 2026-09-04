@@ -6,6 +6,7 @@ import { defineConfig } from 'vitest/config';
 import { transformWithEsbuild } from 'vite';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+process.env.TZ = 'UTC';
 const workspaceCandidate = path.resolve(__dirname, '../..');
 const projectRoot = fs.existsSync(
   path.join(workspaceCandidate, 'core/packages/volto'),
@@ -37,8 +38,16 @@ const componentsRoot = fs.existsSync(
         import.meta.resolve('@plone/components/package.json'),
       ),
     );
+const registryRoot = fs.existsSync(
+  path.join(projectRoot, 'core/packages/registry'),
+)
+  ? path.join(projectRoot, 'core/packages/registry')
+  : path.dirname(
+      fileURLToPath(import.meta.resolve('@plone/registry/package.json')),
+    );
 
 const requireFromVolto = createRequire(path.join(voltoRoot, 'package.json'));
+const requireFromAddon = createRequire(path.join(__dirname, 'package.json'));
 const voltoPackage = JSON.parse(
   fs.readFileSync(path.join(voltoRoot, 'package.json'), 'utf8'),
 );
@@ -74,21 +83,23 @@ const addonSetup = path.join(__dirname, 'vitest.setup.jsx');
 if (useAddonSetup && fs.existsSync(addonSetup)) setupFiles.push(addonSetup);
 
 function resolvePackageRoot(packageName) {
-  try {
-    return path.dirname(requireFromVolto.resolve(`${packageName}/package.json`));
-  } catch {
+  for (const packageRequire of [requireFromAddon, requireFromVolto]) {
     try {
-      let current = path.dirname(requireFromVolto.resolve(packageName));
-      while (current !== path.dirname(current)) {
-        const manifest = path.join(current, 'package.json');
-        if (fs.existsSync(manifest)) {
-          const candidate = JSON.parse(fs.readFileSync(manifest, 'utf8'));
-          if (candidate.name === packageName) return current;
-        }
-        current = path.dirname(current);
-      }
+      return path.dirname(packageRequire.resolve(`${packageName}/package.json`));
     } catch {
-      return null;
+      try {
+        let current = path.dirname(packageRequire.resolve(packageName));
+        while (current !== path.dirname(current)) {
+          const manifest = path.join(current, 'package.json');
+          if (fs.existsSync(manifest)) {
+            const candidate = JSON.parse(fs.readFileSync(manifest, 'utf8'));
+            if (candidate.name === packageName) return current;
+          }
+          current = path.dirname(current);
+        }
+      } catch {
+        // Try the next package resolution context.
+      }
     }
   }
   return null;
@@ -102,6 +113,7 @@ const aliases = {
   '@plone/volto': path.join(voltoRoot, 'src'),
   '@plone/volto-slate': path.join(voltoSlateRoot, 'src'),
   '@plone/components': path.join(componentsRoot, 'src'),
+  '@plone/registry': path.join(registryRoot, 'src'),
   '@root': path.join(voltoRoot, 'src'),
   '@package': path.join(__dirname, 'src'),
   '~': path.join(voltoRoot, 'src'),
@@ -161,11 +173,18 @@ for (const dependency of Object.keys({
   const dependencyRoot = resolvePackageRoot(dependency);
   if (dependencyRoot) aliases[dependency] = dependencyRoot;
 }
-const searchlibPath = fs.existsSync(
-  path.join(projectRoot, 'packages/volto-searchlib/searchlib'),
-)
-  ? path.join(projectRoot, 'packages/volto-searchlib/searchlib')
-  : path.join(__dirname, 'searchlib');
+const workspaceSearchlib = path.join(
+  projectRoot,
+  'packages/volto-searchlib/searchlib',
+);
+const installedSearchlib = resolvePackageRoot('@eeacms/volto-searchlib');
+const searchlibPath = fs.existsSync(workspaceSearchlib)
+  ? workspaceSearchlib
+  : fs.existsSync(path.join(__dirname, 'searchlib'))
+    ? path.join(__dirname, 'searchlib')
+    : installedSearchlib
+      ? path.join(installedSearchlib, 'searchlib')
+      : '';
 if (fs.existsSync(searchlibPath)) aliases['@eeacms/search'] = searchlibPath;
 const subsitesMock = path.join(
   __dirname,
@@ -217,6 +236,9 @@ export default defineConfig({
   },
   resolve: { alias: aliases },
   server: {
+    fs: {
+      allow: [projectRoot, __dirname],
+    },
     deps: {
       inline: [/@eeacms/, /@plone/, /query-string/],
     },
@@ -228,7 +250,6 @@ export default defineConfig({
     environment: 'jsdom',
     css: false,
     setupFiles,
-    globalSetup: path.join(voltoRoot, 'global-test-setup.js'),
     include: [
       'src/**/*.{test,spec}.{js,jsx,ts,tsx}',
       'searchlib/**/*.{test,spec}.{js,jsx,ts,tsx}',

@@ -1,7 +1,10 @@
 .git
+node_modules
+core
+build
 coverage
-cypress/reports
+*.log
+.DS_Store
 cypress/screenshots
 cypress/videos
-node_modules
-xunit-reports-*
+cypress/reports

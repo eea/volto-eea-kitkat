@@ -7,47 +7,59 @@ const AUTH = {
 };
 
 const setMetadataMentionBlocks = () =>
-  cy.request({
-    method: 'PATCH',
-    url: `${API_PATH}/cypress/my-page`,
-    headers: {
-      Accept: 'application/json',
-    },
-    auth: AUTH,
-    body: {
-      description: 'blue cats sleep',
-      blocks: {
-        title: {
-          '@type': 'title',
+  cy
+    .request({
+      method: 'GET',
+      url: `${API_PATH}/cypress/my-page/@lock`,
+      headers: {
+        Accept: 'application/json',
+      },
+      auth: AUTH,
+    })
+    .then(({ body: lock }) =>
+      cy.request({
+        method: 'PATCH',
+        url: `${API_PATH}/cypress/my-page`,
+        headers: {
+          Accept: 'application/json',
+          'Lock-Token': lock.token,
         },
-        slate: {
-          '@type': 'slate',
-          plaintext: 'Colorless blue cats sleep furiously.',
-          value: [
-            {
-              type: 'p',
-              children: [
-                { text: 'Colorless ' },
+        auth: AUTH,
+        body: {
+          description: 'blue cats sleep',
+          blocks: {
+            title: {
+              '@type': 'title',
+            },
+            slate: {
+              '@type': 'slate',
+              plaintext: 'Colorless blue cats sleep furiously.',
+              value: [
                 {
-                  type: 'mention',
-                  data: {
-                    metadata: 'description',
-                    widget: 'string',
-                    description: 'blue cats sleep',
-                  },
-                  children: [{ text: 'green ideas sleep' }],
+                  type: 'p',
+                  children: [
+                    { text: 'Colorless ' },
+                    {
+                      type: 'mention',
+                      data: {
+                        metadata: 'description',
+                        widget: 'string',
+                        description: 'blue cats sleep',
+                      },
+                      children: [{ text: 'green ideas sleep' }],
+                    },
+                    { text: ' furiously.' },
+                  ],
                 },
-                { text: ' furiously.' },
               ],
             },
-          ],
+          },
+          blocks_layout: {
+            items: ['title', 'slate'],
+          },
         },
-      },
-      blocks_layout: {
-        items: ['title', 'slate'],
-      },
-    },
-  });
+      }),
+    );
 
 describe('Block Tests: Metadata', () => {
   beforeEach(slateBeforeEach);

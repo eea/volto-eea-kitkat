@@ -23,7 +23,7 @@ import '@cypress/code-coverage/support';
 
 export const slateBeforeEach = (contentType = 'Document') => {
   cy.intercept('GET', `/**/*?expand*`).as('content');
-  
+
   cy.autologin();
   cy.createContent({
     contentType: 'Document',

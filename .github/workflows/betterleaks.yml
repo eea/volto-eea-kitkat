@@ -18,30 +18,55 @@ jobs:
       SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 1
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
+      - name: Install Betterleaks
+        shell: bash
+        env:
+          BETTERLEAKS_VERSION: "1.8.1"
+          BETTERLEAKS_SHA256: "efa407244e1ea8e35f582b8a42becdeac08bdead04f68eb752adda722d583c2a"
+        run: |
+          set -euo pipefail
+          archive="${RUNNER_TEMP}/betterleaks.tar.gz"
+          install_dir="${RUNNER_TEMP}/betterleaks-bin"
+          curl --fail --location --silent --show-error \
+            "https://github.com/betterleaks/betterleaks/releases/download/v${BETTERLEAKS_VERSION}/betterleaks_${BETTERLEAKS_VERSION}_linux_x64.tar.gz" \
+            --output "${archive}"
+          echo "${BETTERLEAKS_SHA256}  ${archive}" | sha256sum --check -
+          mkdir -p "${install_dir}"
+          tar -xzf "${archive}" -C "${install_dir}"
+          echo "${install_dir}" >> "${GITHUB_PATH}"
+
       - name: Run Betterleaks
         id: betterleaks
         continue-on-error: true
-        uses: dortort/betterleaks-action@v0.1.0
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          scan-mode: dir
-          scan-path: .
-          config: .gitleaks.toml
-          report-format: json
-          report-path: betterleaks-report.json
-          redact: "true"
-          no-color: "true"
-          no-banner: "true"
-          fail-on-leak: "true"
+        shell: bash
+        run: |
+          set +e
+          betterleaks dir . \
+            --config .gitleaks.toml \
+            --report-format json \
+            --report-path betterleaks-report.json \
+            --redact \
+            --no-color \
+            --no-banner
+          exit_code="$?"
+          set -e
+
+          echo "exit_code=${exit_code}" >> "${GITHUB_OUTPUT}"
+          if [[ "${exit_code}" -eq 1 ]]; then
+            echo "leaks_found=true" >> "${GITHUB_OUTPUT}"
+          else
+            echo "leaks_found=false" >> "${GITHUB_OUTPUT}"
+          fi
+          exit "${exit_code}"
 
       - name: Upload Betterleaks report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: betterleaks-report
           path: betterleaks-report.json
@@ -49,7 +74,7 @@ jobs:
 
       - name: Build Betterleaks email summary
         id: leak_summary
-        if: steps.betterleaks.outcome == 'failure'
+        if: steps.betterleaks.outputs.leaks_found == 'true'
         shell: bash
         run: |
           if [[ -s betterleaks-report.json ]]; then
@@ -85,7 +110,7 @@ jobs:
 
       - name: Resolve committer email
         id: committer
-        if: steps.betterleaks.outcome == 'failure'
+        if: steps.betterleaks.outputs.leaks_found == 'true'
         shell: bash
         run: |
           committer_email="$(git log -1 --format='%ce')"
@@ -102,7 +127,7 @@ jobs:
           fi
 
       - name: Email committer on Betterleaks failure
-        if: steps.betterleaks.outcome == 'failure' && steps.committer.outputs.email != '' && env.SMTP_URL != '' && env.SMTP_EMAIL != ''
+        if: steps.betterleaks.outputs.leaks_found == 'true' && steps.committer.outputs.email != '' && env.SMTP_URL != '' && env.SMTP_EMAIL != ''
         uses: dawidd6/action-send-mail@v18
         with:
           server_address: ${{ env.SMTP_URL }}
@@ -127,7 +152,13 @@ jobs:
             Download the betterleaks-report artifact from the workflow run for details.
 
       - name: Fail if Betterleaks found leaks
-        if: steps.betterleaks.outcome == 'failure'
+        if: steps.betterleaks.outputs.leaks_found == 'true'
         run: |
           echo "Betterleaks detected one or more secrets. Download the betterleaks-report artifact from this workflow run for details."
+          exit 1
+
+      - name: Fail if Betterleaks scan errored
+        if: steps.betterleaks.outcome == 'failure' && steps.betterleaks.outputs.leaks_found != 'true'
+        run: |
+          echo "Betterleaks failed with exit code ${{ steps.betterleaks.outputs.exit_code }}. Check the scan logs for the underlying error."
           exit 1

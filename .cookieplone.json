@@ -1,0 +1,7 @@
+{
+  "title": "Eea Kitkat",
+  "frontend_addon_name": "volto-eea-kitkat",
+  "description": "@eeacms/volto-eea-kitkat: Volto Add-ons bundle - A known good set of Volto addons to be used within all EEA projects and beyond",
+  "volto_version": "19.3.0",
+  "__template__": "frontend_addon"
+}

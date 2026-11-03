@@ -62,6 +62,73 @@ The [eea.kitkat](https://github.com/eea/eea.kitkat) Plone add-on is the backend 
 
 ## Upgrade
 
+### Upgrading to 34.x
+
+> This version comes with `@eeacms/volto-listing-block 11.x`, which replaces the many card templates and
+> listing variations with two card templates and a set of controls. There is **no Plone upgrade step** to run:
+> existing content is migrated on the fly. See the
+> [volto-listing-block 11.x upgrade guide](https://github.com/eea/volto-listing-block#upgrading-to-11x).
+
+#### What changed
+
+**Layouts.** The listing block offers four layouts: List (`summary`, now the default), Grid (`cardsGallery`),
+Carousel (`cardsCarousel`) and Accordion. The layout picks the card template: List uses the list item,
+Grid and Carousel use the card.
+
+**Card templates.** Only `Card` and `List item` are left. Every former template is now a combination of
+their controls:
+
+| Former template (`itemModel['@type']`) | Now       | Controls                                      |
+| -------------------------------------- | --------- | --------------------------------------------- |
+| `card`                                 | Card      | image on top                                  |
+| `imageOnLeft` / `imageOnRight`         | Card      | image on the left / right                     |
+| `imageCard`                            | Card      | content mode: image only (title on image)     |
+| `imageOnBottom`                        | Card      | content mode: title and logo                  |
+| `visualizationCard`                    | Card      | visualization elements order, benchmark level |
+| `item`                                 | List item | image on the left / right / none              |
+| `searchItem`                           | List item | content type and date above the title         |
+| `simpleItem`                           | List item | size: compact (title only)                    |
+
+The Visualization Cards layout (`cardsVisualization`) becomes a Grid with five columns and the
+"Top accent border" card style.
+
+**Card controls.** Card elements (reorder/expand the metadata of the card), content mode, image position,
+flip card, size (list item) and border (styling).
+
+#### How the content is migrated
+
+The migration is a JavaScript function
+(`src/components/UniversalCard/migrate.js` and `src/blocks/Listing/variations.js`), not a Plone upgrade step:
+
+- **View:** blocks are migrated in memory on every render, the stored data is not changed.
+- **Edit:** when a listing, search or teaser block is selected, its data is rewritten to the new model.
+- **Save:** saving the page stores the migrated data. Pages that are never edited keep the old data and
+  keep being migrated on the fly.
+
+#### How to upgrade
+
+1. Update `volto-eea-kitkat` in your project's `package.json` and run `yarn`:
+
+   ```JSON
+   "dependencies": {
+       "@eeacms/volto-eea-kitkat": "^34.0.0"
+   }
+   ```
+
+2. Update the customizations (shadows) and imports of the removed modules:
+
+   - `blocks/Listing/item-templates/CardTemplates.jsx`, `ItemTemplates.jsx`, `SearchItemTemplate.jsx`,
+     `SimpleItemTemplates.jsx` and `VisualizationCard.jsx`, replaced by `CardTemplate.jsx` and
+     `ItemTemplate.jsx`
+   - `blocks/Listing/layout-templates/VisualizationCards.jsx`, replaced by `Gallery.jsx`
+
+3. Card templates registered by other add-ons in
+   `config.blocks.blocksConfig.listing.extensions.cardTemplates` are not migrated and keep rendering
+   themselves. Check that they still look right with the new layouts.
+
+4. Check a few pages with listings, search results and teasers: open them in edit mode, select the blocks,
+   check the card controls and save.
+
 ### Upgrading to 33.x
 
 > This version line adds support for `Volto 18` and is compatible with `Volto 17+` projects.

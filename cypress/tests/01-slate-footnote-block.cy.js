@@ -60,20 +60,32 @@ const setFootnoteBlocks = ({
     };
   }
 
-  return cy.request({
-    method: 'PATCH',
-    url: `${API_PATH}/cypress/my-page`,
-    headers: {
-      Accept: 'application/json',
-    },
-    auth: AUTH,
-    body: {
-      blocks,
-      blocks_layout: {
-        items: Object.keys(blocks),
+  return cy
+    .request({
+      method: 'GET',
+      url: `${API_PATH}/cypress/my-page/@lock`,
+      headers: {
+        Accept: 'application/json',
       },
-    },
-  });
+      auth: AUTH,
+    })
+    .then(({ body: lock }) =>
+      cy.request({
+        method: 'PATCH',
+        url: `${API_PATH}/cypress/my-page`,
+        headers: {
+          Accept: 'application/json',
+          'Lock-Token': lock.token,
+        },
+        auth: AUTH,
+        body: {
+          blocks,
+          blocks_layout: {
+            items: Object.keys(blocks),
+          },
+        },
+      }),
+    );
 };
 
 const visitPageView = () => {

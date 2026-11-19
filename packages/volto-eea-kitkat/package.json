@@ -68,7 +68,7 @@
   "dependencies": {
     "@eeacms/countup": "3.0.1",
     "@eeacms/volto-accordion-block": "14.0.0",
-    "@eeacms/volto-anchors": "2.0.1",
+    "@eeacms/volto-anchors": "3.0.0",
     "@eeacms/volto-banner": "6.0.0",
     "@eeacms/volto-block-data-table": "2.0.5",
     "@eeacms/volto-block-divider": "9.0.0",
@@ -111,7 +111,7 @@
     "@eeacms/volto-block-toc": "9.0.4",
     "@eeacms/volto-controlpanel": "2.0.1",
     "@eeacms/volto-nextcloud-video-block": "3.0.2",
-    "@eeacms/volto-anchors": "2.0.1",
+    "@eeacms/volto-anchors": "3.0.0",
     "@eeacms/volto-quote-block": "4.0.1",
     "@eeacms/volto-statistic-block": "7.0.2",
     "@eeacms/volto-tags-block": "4.0.1",

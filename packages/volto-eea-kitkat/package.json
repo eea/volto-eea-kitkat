@@ -66,7 +66,7 @@
     "@eeacms/volto-block-data-table"
   ],
   "dependencies": {
-    "@eeacms/countup": "3.0.1",
+    "@eeacms/countup": "4.0.3",
     "@eeacms/volto-accordion-block": "14.0.0",
     "@eeacms/volto-anchors": "3.0.0",
     "@eeacms/volto-banner": "6.0.0",
@@ -147,7 +147,7 @@
     "@eeacms/volto-widget-temporal-coverage": "7.0.1",
     "@eeacms/volto-widget-toggle": "5.0.1",
     "@eeacms/volto-widget-theme-picker": "4.0.0",
-    "@eeacms/countup": "3.0.1"
+    "@eeacms/countup": "4.0.3"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.10.0",
